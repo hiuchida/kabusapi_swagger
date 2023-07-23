@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**symbolGet**](InfoApi.md#symbolGet) | **GET** /symbol/{symbol} | 銘柄情報
 [**symbolnameFutureGet**](InfoApi.md#symbolnameFutureGet) | **GET** /symbolname/future | 先物銘柄コード取得
 [**symbolnameOptionGet**](InfoApi.md#symbolnameOptionGet) | **GET** /symbolname/option | オプション銘柄コード取得
+[**symbolnameOptionMiniGet**](InfoApi.md#symbolnameOptionMiniGet) | **GET** /symbolname/minioptionweekly | ミニオプション（限週）銘柄コード取得
 
 <a name="apisoftlimitGet"></a>
 # **apisoftlimitGet**
@@ -527,7 +528,7 @@ No authorization required
 InfoApi apiInstance = new InfoApi();
 String X_API_KEY = "X_API_KEY_example"; // String | トークン発行メソッドで取得した文字列
 Integer derivMonth = 56; // Integer | 限月<br> ※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。<br> ※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、 取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。
-String futureCode = "futureCode_example"; // String | 先物コード<br> ※大文字小文字は区別しません。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>NK225</td>           <td>日経平均先物</td>       </tr>       <tr>           <td>NK225mini</td>           <td>日経225mini先物</td>       </tr>       <tr>           <td>TOPIX</td>           <td>TOPIX先物</td>       </tr>       <tr>           <td>TOPIXmini</td>           <td>ミニTOPIX先物</td>       </tr>       <tr>           <td>MOTHERS</td>           <td>東証マザーズ先物</td>       </tr>       <tr>           <td>JPX400</td>           <td>JPX日経400先物</td>       </tr>       <tr>           <td>DOW</td>           <td>NYダウ先物</td>       </tr>       <tr>           <td>VI</td>           <td>日経平均VI先物</td>       </tr>       <tr>           <td>Core30</td>           <td>TOPIX Core30先物</td>       </tr>       <tr>           <td>REIT</td>           <td>東証REIT指数先物</td>       </tr>   </tbody> </table>
+String futureCode = "futureCode_example"; // String | 先物コード<br> ※大文字小文字は区別しません。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>NK225</td>           <td>日経平均先物</td>       </tr>       <tr>           <td>NK225mini</td>           <td>日経225mini先物</td>       </tr>       <tr>           <td>TOPIX</td>           <td>TOPIX先物</td>       </tr>       <tr>           <td>TOPIXmini</td>           <td>ミニTOPIX先物</td>       </tr>       <tr>           <td>MOTHERS</td>           <td>東証マザーズ先物</td>       </tr>       <tr>           <td>JPX400</td>           <td>JPX日経400先物</td>       </tr>       <tr>           <td>DOW</td>           <td>NYダウ先物</td>       </tr>       <tr>           <td>VI</td>           <td>日経平均VI先物</td>       </tr>       <tr>           <td>Core30</td>           <td>TOPIX Core30先物</td>       </tr>       <tr>           <td>REIT</td>           <td>東証REIT指数先物</td>       </tr>       <tr>           <td>NK225micro</td>           <td>日経225マイクロ先物</td>       </tr>   </tbody> </table>
 try {
     SymbolNameSuccess result = apiInstance.symbolnameFutureGet(X_API_KEY, derivMonth, futureCode);
     System.out.println(result);
@@ -543,7 +544,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **String**| トークン発行メソッドで取得した文字列 |
  **derivMonth** | **Integer**| 限月&lt;br&gt; ※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。&lt;br&gt; ※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、 取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。 |
- **futureCode** | **String**| 先物コード&lt;br&gt; ※大文字小文字は区別しません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;NK225&lt;/td&gt;           &lt;td&gt;日経平均先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;NK225mini&lt;/td&gt;           &lt;td&gt;日経225mini先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TOPIX&lt;/td&gt;           &lt;td&gt;TOPIX先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TOPIXmini&lt;/td&gt;           &lt;td&gt;ミニTOPIX先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;MOTHERS&lt;/td&gt;           &lt;td&gt;東証マザーズ先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JPX400&lt;/td&gt;           &lt;td&gt;JPX日経400先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;DOW&lt;/td&gt;           &lt;td&gt;NYダウ先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;VI&lt;/td&gt;           &lt;td&gt;日経平均VI先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;Core30&lt;/td&gt;           &lt;td&gt;TOPIX Core30先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;REIT&lt;/td&gt;           &lt;td&gt;東証REIT指数先物&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | [optional]
+ **futureCode** | **String**| 先物コード&lt;br&gt; ※大文字小文字は区別しません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;NK225&lt;/td&gt;           &lt;td&gt;日経平均先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;NK225mini&lt;/td&gt;           &lt;td&gt;日経225mini先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TOPIX&lt;/td&gt;           &lt;td&gt;TOPIX先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;TOPIXmini&lt;/td&gt;           &lt;td&gt;ミニTOPIX先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;MOTHERS&lt;/td&gt;           &lt;td&gt;東証マザーズ先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;JPX400&lt;/td&gt;           &lt;td&gt;JPX日経400先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;DOW&lt;/td&gt;           &lt;td&gt;NYダウ先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;VI&lt;/td&gt;           &lt;td&gt;日経平均VI先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;Core30&lt;/td&gt;           &lt;td&gt;TOPIX Core30先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;REIT&lt;/td&gt;           &lt;td&gt;東証REIT指数先物&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;NK225micro&lt;/td&gt;           &lt;td&gt;日経225マイクロ先物&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | [optional]
 
 ### Return type
 
@@ -560,7 +561,7 @@ No authorization required
 
 <a name="symbolnameOptionGet"></a>
 # **symbolnameOptionGet**
-> SymbolNameSuccess symbolnameOptionGet(X_API_KEY, derivMonth, putOrCall, strikePrice)
+> SymbolNameSuccess symbolnameOptionGet(X_API_KEY, derivMonth, putOrCall, strikePrice, optionCode)
 
 オプション銘柄コード取得
 
@@ -578,8 +579,9 @@ String X_API_KEY = "X_API_KEY_example"; // String | トークン発行メソッ�
 Integer derivMonth = 56; // Integer | 限月<br>※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。<br>※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。
 String putOrCall = "putOrCall_example"; // String | コール or プット<br> ※大文字小文字は区別しません。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>P</td>           <td>PUT</td>       </tr>       <tr>           <td>C</td>           <td>CALL</td>       </tr>   </tbody> </table>
 Integer strikePrice = 56; // Integer | 権利行使価格<br>※0を指定した場合、APIを実行した時点でのATMとなります。
+String optionCode = "optionCode_example"; // String | オプションコード<br> ※指定なしの場合は、日経225オプションを対象とする。<br> <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>NK225op</td>           <td>日経225オプション</td>       </tr>       <tr>           <td>NK225miniop</td>           <td>日経225ミニオプション</td>       </tr>   </tbody> </table>
 try {
-    SymbolNameSuccess result = apiInstance.symbolnameOptionGet(X_API_KEY, derivMonth, putOrCall, strikePrice);
+    SymbolNameSuccess result = apiInstance.symbolnameOptionGet(X_API_KEY, derivMonth, putOrCall, strikePrice, optionCode);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InfoApi#symbolnameOptionGet");
@@ -593,6 +595,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **X_API_KEY** | **String**| トークン発行メソッドで取得した文字列 |
  **derivMonth** | **Integer**| 限月&lt;br&gt;※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。&lt;br&gt;※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。 |
+ **putOrCall** | **String**| コール or プット&lt;br&gt; ※大文字小文字は区別しません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;P&lt;/td&gt;           &lt;td&gt;PUT&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;C&lt;/td&gt;           &lt;td&gt;CALL&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; |
+ **strikePrice** | **Integer**| 権利行使価格&lt;br&gt;※0を指定した場合、APIを実行した時点でのATMとなります。 |
+ **optionCode** | **String**| オプションコード&lt;br&gt; ※指定なしの場合は、日経225オプションを対象とする。&lt;br&gt; &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;NK225op&lt;/td&gt;           &lt;td&gt;日経225オプション&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;NK225miniop&lt;/td&gt;           &lt;td&gt;日経225ミニオプション&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; | [optional]
+
+### Return type
+
+[**SymbolNameSuccess**](SymbolNameSuccess.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="symbolnameOptionMiniGet"></a>
+# **symbolnameOptionMiniGet**
+> SymbolNameSuccess symbolnameOptionMiniGet(X_API_KEY, derivMonth, derivWeekly, putOrCall, strikePrice)
+
+ミニオプション（限週）銘柄コード取得
+
+ミニオプション（限週）銘柄コード取得
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.InfoApi;
+
+
+InfoApi apiInstance = new InfoApi();
+String X_API_KEY = "X_API_KEY_example"; // String | トークン発行メソッドで取得した文字列
+Integer derivMonth = 56; // Integer | 限月<br>※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。<br>※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。
+Integer derivWeekly = 56; // Integer | 限週<br>※限週は0,1,3,4,5のいずれかを指定します。0を指定した場合、指定した限月の直近限週となります。<br>※取引最終日に「0」（直近限週）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限週の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。
+String putOrCall = "putOrCall_example"; // String | コール or プット<br> ※大文字小文字は区別しません。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>P</td>           <td>PUT</td>       </tr>       <tr>           <td>C</td>           <td>CALL</td>       </tr>   </tbody> </table>
+Integer strikePrice = 56; // Integer | 権利行使価格<br>※0を指定した場合、APIを実行した時点でのATMとなります。
+try {
+    SymbolNameSuccess result = apiInstance.symbolnameOptionMiniGet(X_API_KEY, derivMonth, derivWeekly, putOrCall, strikePrice);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling InfoApi#symbolnameOptionMiniGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **X_API_KEY** | **String**| トークン発行メソッドで取得した文字列 |
+ **derivMonth** | **Integer**| 限月&lt;br&gt;※限月はyyyyMM形式で指定します。0を指定した場合、直近限月となります。&lt;br&gt;※取引最終日に「0」（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。 |
+ **derivWeekly** | **Integer**| 限週&lt;br&gt;※限週は0,1,3,4,5のいずれかを指定します。0を指定した場合、指定した限月の直近限週となります。&lt;br&gt;※取引最終日に「0」（直近限週）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限週の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。 |
  **putOrCall** | **String**| コール or プット&lt;br&gt; ※大文字小文字は区別しません。 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;P&lt;/td&gt;           &lt;td&gt;PUT&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;C&lt;/td&gt;           &lt;td&gt;CALL&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; |
  **strikePrice** | **Integer**| 権利行使価格&lt;br&gt;※0を指定した場合、APIを実行した時点でのATMとなります。 |
 

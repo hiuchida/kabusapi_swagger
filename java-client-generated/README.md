@@ -2,7 +2,7 @@
 
 kabuステーションAPI
 - API version: 1.5
-  - Build date: 2023-06-30T15:08:23.587764301Z[GMT]
+  - Build date: 2023-07-23T15:40:58.057448265Z[GMT]
 
 # 定義情報   REST APIのコード一覧、エンドポイントは下記リンク参照     - [REST APIコード一覧](../ptal/error.html)
 
@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
 *InfoApi* | [**symbolGet**](docs/InfoApi.md#symbolGet) | **GET** /symbol/{symbol} | 銘柄情報
 *InfoApi* | [**symbolnameFutureGet**](docs/InfoApi.md#symbolnameFutureGet) | **GET** /symbolname/future | 先物銘柄コード取得
 *InfoApi* | [**symbolnameOptionGet**](docs/InfoApi.md#symbolnameOptionGet) | **GET** /symbolname/option | オプション銘柄コード取得
+*InfoApi* | [**symbolnameOptionMiniGet**](docs/InfoApi.md#symbolnameOptionMiniGet) | **GET** /symbolname/minioptionweekly | ミニオプション（限週）銘柄コード取得
 *OrderApi* | [**cancelorderPut**](docs/OrderApi.md#cancelorderPut) | **PUT** /cancelorder | 注文取消
 *OrderApi* | [**sendoderFuturePost**](docs/OrderApi.md#sendoderFuturePost) | **POST** /sendorder/future | 注文発注（先物）
 *OrderApi* | [**sendorderOptionPost**](docs/OrderApi.md#sendorderOptionPost) | **POST** /sendorder/option | 注文発注（オプション）
