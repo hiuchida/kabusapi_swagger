@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
  * ApiSoftLimitResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-07-23T15:41:03.564729631Z[GMT]")
 
 
 public class ApiSoftLimitResponse   {
@@ -28,8 +28,14 @@ public class ApiSoftLimitResponse   {
   @JsonProperty("FutureMini")
   private Double futureMini = null;
 
+  @JsonProperty("FutureMicro")
+  private Double futureMicro = null;
+
   @JsonProperty("Option")
   private Double option = null;
+
+  @JsonProperty("OptionMini")
+  private Double optionMini = null;
 
   @JsonProperty("KabuSVersion")
   private String kabuSVersion = null;
@@ -97,10 +103,10 @@ public class ApiSoftLimitResponse   {
   }
 
   /**
-   * 先物ミニのワンショット上限<br>※単位は枚
+   * ミニ先物のワンショット上限<br>※単位は枚
    * @return futureMini
    **/
-  @Schema(description = "先物ミニのワンショット上限<br>※単位は枚")
+  @Schema(description = "ミニ先物のワンショット上限<br>※単位は枚")
   
     public Double getFutureMini() {
     return futureMini;
@@ -108,6 +114,25 @@ public class ApiSoftLimitResponse   {
 
   public void setFutureMini(Double futureMini) {
     this.futureMini = futureMini;
+  }
+
+  public ApiSoftLimitResponse futureMicro(Double futureMicro) {
+    this.futureMicro = futureMicro;
+    return this;
+  }
+
+  /**
+   * マイクロ先物のワンショット上限<br>※単位は枚
+   * @return futureMicro
+   **/
+  @Schema(description = "マイクロ先物のワンショット上限<br>※単位は枚")
+  
+    public Double getFutureMicro() {
+    return futureMicro;
+  }
+
+  public void setFutureMicro(Double futureMicro) {
+    this.futureMicro = futureMicro;
   }
 
   public ApiSoftLimitResponse option(Double option) {
@@ -127,6 +152,25 @@ public class ApiSoftLimitResponse   {
 
   public void setOption(Double option) {
     this.option = option;
+  }
+
+  public ApiSoftLimitResponse optionMini(Double optionMini) {
+    this.optionMini = optionMini;
+    return this;
+  }
+
+  /**
+   * ミニオプションのワンショット上限<br>※単位は枚
+   * @return optionMini
+   **/
+  @Schema(description = "ミニオプションのワンショット上限<br>※単位は枚")
+  
+    public Double getOptionMini() {
+    return optionMini;
+  }
+
+  public void setOptionMini(Double optionMini) {
+    this.optionMini = optionMini;
   }
 
   public ApiSoftLimitResponse kabuSVersion(String kabuSVersion) {
@@ -162,13 +206,15 @@ public class ApiSoftLimitResponse   {
         Objects.equals(this.margin, apiSoftLimitResponse.margin) &&
         Objects.equals(this.future, apiSoftLimitResponse.future) &&
         Objects.equals(this.futureMini, apiSoftLimitResponse.futureMini) &&
+        Objects.equals(this.futureMicro, apiSoftLimitResponse.futureMicro) &&
         Objects.equals(this.option, apiSoftLimitResponse.option) &&
+        Objects.equals(this.optionMini, apiSoftLimitResponse.optionMini) &&
         Objects.equals(this.kabuSVersion, apiSoftLimitResponse.kabuSVersion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(stock, margin, future, futureMini, option, kabuSVersion);
+    return Objects.hash(stock, margin, future, futureMini, futureMicro, option, optionMini, kabuSVersion);
   }
 
   @Override
@@ -180,7 +226,9 @@ public class ApiSoftLimitResponse   {
     sb.append("    margin: ").append(toIndentedString(margin)).append("\n");
     sb.append("    future: ").append(toIndentedString(future)).append("\n");
     sb.append("    futureMini: ").append(toIndentedString(futureMini)).append("\n");
+    sb.append("    futureMicro: ").append(toIndentedString(futureMicro)).append("\n");
     sb.append("    option: ").append(toIndentedString(option)).append("\n");
+    sb.append("    optionMini: ").append(toIndentedString(optionMini)).append("\n");
     sb.append("    kabuSVersion: ").append(toIndentedString(kabuSVersion)).append("\n");
     sb.append("}");
     return sb.toString();
