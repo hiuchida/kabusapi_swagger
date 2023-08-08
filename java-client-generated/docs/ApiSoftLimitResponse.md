@@ -9,5 +9,5 @@ Name | Type | Description | Notes
 **futureMini** | **Double** | ミニ先物のワンショット上限&lt;br&gt;※単位は枚 |  [optional]
 **futureMicro** | **Double** | マイクロ先物のワンショット上限&lt;br&gt;※単位は枚 |  [optional]
 **option** | **Double** | オプションのワンショット上限&lt;br&gt;※単位は枚 |  [optional]
-**optionMini** | **Double** | ミニオプションのワンショット上限&lt;br&gt;※単位は枚 |  [optional]
+**miniOption** | **Double** | ミニオプションのワンショット上限&lt;br&gt;※単位は枚 |  [optional]
 **kabuSVersion** | **String** | kabuステーションのバージョン |  [optional]
