@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
  * ApiSoftLimitResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-07-23T15:41:03.564729631Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-08-08T15:53:03.859533907Z[GMT]")
 
 
 public class ApiSoftLimitResponse   {
@@ -34,8 +34,8 @@ public class ApiSoftLimitResponse   {
   @JsonProperty("Option")
   private Double option = null;
 
-  @JsonProperty("OptionMini")
-  private Double optionMini = null;
+  @JsonProperty("MiniOption")
+  private Double miniOption = null;
 
   @JsonProperty("KabuSVersion")
   private String kabuSVersion = null;
@@ -154,23 +154,23 @@ public class ApiSoftLimitResponse   {
     this.option = option;
   }
 
-  public ApiSoftLimitResponse optionMini(Double optionMini) {
-    this.optionMini = optionMini;
+  public ApiSoftLimitResponse miniOption(Double miniOption) {
+    this.miniOption = miniOption;
     return this;
   }
 
   /**
    * ミニオプションのワンショット上限<br>※単位は枚
-   * @return optionMini
+   * @return miniOption
    **/
   @Schema(description = "ミニオプションのワンショット上限<br>※単位は枚")
   
-    public Double getOptionMini() {
-    return optionMini;
+    public Double getMiniOption() {
+    return miniOption;
   }
 
-  public void setOptionMini(Double optionMini) {
-    this.optionMini = optionMini;
+  public void setMiniOption(Double miniOption) {
+    this.miniOption = miniOption;
   }
 
   public ApiSoftLimitResponse kabuSVersion(String kabuSVersion) {
@@ -208,13 +208,13 @@ public class ApiSoftLimitResponse   {
         Objects.equals(this.futureMini, apiSoftLimitResponse.futureMini) &&
         Objects.equals(this.futureMicro, apiSoftLimitResponse.futureMicro) &&
         Objects.equals(this.option, apiSoftLimitResponse.option) &&
-        Objects.equals(this.optionMini, apiSoftLimitResponse.optionMini) &&
+        Objects.equals(this.miniOption, apiSoftLimitResponse.miniOption) &&
         Objects.equals(this.kabuSVersion, apiSoftLimitResponse.kabuSVersion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(stock, margin, future, futureMini, futureMicro, option, optionMini, kabuSVersion);
+    return Objects.hash(stock, margin, future, futureMini, futureMicro, option, miniOption, kabuSVersion);
   }
 
   @Override
@@ -228,7 +228,7 @@ public class ApiSoftLimitResponse   {
     sb.append("    futureMini: ").append(toIndentedString(futureMini)).append("\n");
     sb.append("    futureMicro: ").append(toIndentedString(futureMicro)).append("\n");
     sb.append("    option: ").append(toIndentedString(option)).append("\n");
-    sb.append("    optionMini: ").append(toIndentedString(optionMini)).append("\n");
+    sb.append("    miniOption: ").append(toIndentedString(miniOption)).append("\n");
     sb.append("    kabuSVersion: ").append(toIndentedString(kabuSVersion)).append("\n");
     sb.append("}");
     return sb.toString();
