@@ -34,7 +34,7 @@ import javax.validation.constraints.*;
  */
 @Schema(description = "下記にあるBIDとASKとは、トレーダー目線から見た場合の値であるため、BidPrice=Sell1のPrice、AskPrice=Buy1のPriceという数値となります。")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-12T11:41:23.269770450Z[GMT]")
 
 
 public class BoardSuccess   {
@@ -1439,10 +1439,10 @@ public class BoardSuccess   {
   }
 
   /**
-   * 銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>東証マザーズ指数先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>
+   * 銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>グロース250先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>
    * @return securityType
    **/
-  @Schema(description = "銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>東証マザーズ指数先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>")
+  @Schema(description = "銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>グロース250先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>")
   
     public Integer getSecurityType() {
     return securityType;

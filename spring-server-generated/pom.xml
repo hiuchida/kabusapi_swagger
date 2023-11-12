@@ -9,7 +9,7 @@
         <java.version>1.7</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <springfox-version>3.0.0</springfox-version>
+        <springdoc-version>1.7.0</springdoc-version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -43,15 +43,11 @@
         </dependency>
         
         <!--SpringFox dependencies -->
+        <!-- SpringDoc dependencies -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-oas</artifactId>
-            <version>${springfox-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox-version}</version>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-version}</version>
         </dependency>
 
 
