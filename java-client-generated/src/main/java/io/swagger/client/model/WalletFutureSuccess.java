@@ -25,7 +25,7 @@ import java.io.IOException;
  * WalletFutureSuccess
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-12T11:41:14.871156054Z[GMT]")
 
 public class WalletFutureSuccess {
   @SerializedName("FutureTradeLimit")
@@ -33,6 +33,9 @@ public class WalletFutureSuccess {
 
   @SerializedName("MarginRequirement")
   private Double marginRequirement = null;
+
+  @SerializedName("MarginRequirementSell")
+  private Double marginRequirementSell = null;
 
   public WalletFutureSuccess futureTradeLimit(Double futureTradeLimit) {
     this.futureTradeLimit = futureTradeLimit;
@@ -58,16 +61,34 @@ public class WalletFutureSuccess {
   }
 
    /**
-   * 必要証拠金額&lt;br&gt;※銘柄指定の場合のみ。&lt;br&gt;※銘柄が指定されなかった場合、空を返す。
+   * 買い必要証拠金額&lt;br&gt;※銘柄指定の場合のみ。&lt;br&gt;※銘柄が指定されなかった場合、空を返す。
    * @return marginRequirement
   **/
-  @Schema(description = "必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
+  @Schema(description = "買い必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
   public Double getMarginRequirement() {
     return marginRequirement;
   }
 
   public void setMarginRequirement(Double marginRequirement) {
     this.marginRequirement = marginRequirement;
+  }
+
+  public WalletFutureSuccess marginRequirementSell(Double marginRequirementSell) {
+    this.marginRequirementSell = marginRequirementSell;
+    return this;
+  }
+
+   /**
+   * 売り必要証拠金額&lt;br&gt;※銘柄指定の場合のみ。&lt;br&gt;※銘柄が指定されなかった場合、空を返す。
+   * @return marginRequirementSell
+  **/
+  @Schema(description = "売り必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
+  public Double getMarginRequirementSell() {
+    return marginRequirementSell;
+  }
+
+  public void setMarginRequirementSell(Double marginRequirementSell) {
+    this.marginRequirementSell = marginRequirementSell;
   }
 
 
@@ -81,12 +102,13 @@ public class WalletFutureSuccess {
     }
     WalletFutureSuccess walletFutureSuccess = (WalletFutureSuccess) o;
     return Objects.equals(this.futureTradeLimit, walletFutureSuccess.futureTradeLimit) &&
-        Objects.equals(this.marginRequirement, walletFutureSuccess.marginRequirement);
+        Objects.equals(this.marginRequirement, walletFutureSuccess.marginRequirement) &&
+        Objects.equals(this.marginRequirementSell, walletFutureSuccess.marginRequirementSell);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(futureTradeLimit, marginRequirement);
+    return Objects.hash(futureTradeLimit, marginRequirement, marginRequirementSell);
   }
 
 
@@ -97,6 +119,7 @@ public class WalletFutureSuccess {
     
     sb.append("    futureTradeLimit: ").append(toIndentedString(futureTradeLimit)).append("\n");
     sb.append("    marginRequirement: ").append(toIndentedString(marginRequirement)).append("\n");
+    sb.append("    marginRequirementSell: ").append(toIndentedString(marginRequirementSell)).append("\n");
     sb.append("}");
     return sb.toString();
   }
