@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * RequestSendOrder
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-26T21:56:11.148012911Z[GMT]")
 
 
 public class RequestSendOrder   {
@@ -239,10 +239,10 @@ public class RequestSendOrder   {
   }
 
   /**
-   * 受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>1</td>           <td>自動振替</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>
+   * 受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>
    * @return delivType
    **/
-  @Schema(required = true, description = "受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>1</td>           <td>自動振替</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>")
+  @Schema(required = true, description = "受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>")
       @NotNull
 
     public Integer getDelivType() {

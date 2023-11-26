@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-26T21:56:11.148012911Z[GMT]")
 @RestController
 public class PrimaryexchangeApiController implements PrimaryexchangeApi {
 
@@ -49,7 +49,9 @@ public class PrimaryexchangeApiController implements PrimaryexchangeApi {
         this.request = request;
     }
 
-    public ResponseEntity<PrimaryExchangeResponse> primaryExchangeGet(@Parameter(in = ParameterIn.HEADER, description = "トークン発行メソッドで取得した文字列" ,required=true,schema=@Schema()) @RequestHeader(value="X-API-KEY", required=true) String X_API_KEY,@Parameter(in = ParameterIn.PATH, description = "銘柄コード", required=true, schema=@Schema()) @PathVariable("symbol") String symbol) {
+    public ResponseEntity<PrimaryExchangeResponse> primaryExchangeGet(@Parameter(in = ParameterIn.HEADER, description = "トークン発行メソッドで取得した文字列" ,required=true,schema=@Schema()) @RequestHeader(value="X-API-KEY", required=true) String X_API_KEY
+,@Parameter(in = ParameterIn.PATH, description = "銘柄コード", required=true, schema=@Schema()) @PathVariable("symbol") String symbol
+) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
