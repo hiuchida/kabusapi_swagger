@@ -29,7 +29,7 @@ import java.util.List;
  * RequestSendOrder
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-11-26T21:56:18.378581369Z[GMT]")
 
 public class RequestSendOrder {
   @SerializedName("Password")
@@ -236,10 +236,10 @@ public class RequestSendOrder {
   }
 
    /**
-   * 受渡区分&lt;br&gt;※現物買は指定必須。&lt;br&gt;※現物売は「0(指定なし)」を設定&lt;br&gt;※信用新規は「0(指定なし)」を設定&lt;br&gt;※信用返済は指定必須 &lt;br&gt;※auマネーコネクトが有効の場合にのみ、「3」を設定可能 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;指定なし&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;1&lt;/td&gt;           &lt;td&gt;自動振替&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;お預り金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;auマネーコネクト&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+   * 受渡区分&lt;br&gt;※現物買は指定必須。&lt;br&gt;※現物売は「0(指定なし)」を設定&lt;br&gt;※信用新規は「0(指定なし)」を設定&lt;br&gt;※信用返済は指定必須 &lt;br&gt;※auマネーコネクトが有効の場合にのみ、「3」を設定可能 &lt;table&gt;   &lt;thead&gt;       &lt;tr&gt;           &lt;th&gt;定義値&lt;/th&gt;           &lt;th&gt;説明&lt;/th&gt;       &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;       &lt;tr&gt;           &lt;td&gt;0&lt;/td&gt;           &lt;td&gt;指定なし&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;2&lt;/td&gt;           &lt;td&gt;お預り金&lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;           &lt;td&gt;3&lt;/td&gt;           &lt;td&gt;auマネーコネクト&lt;/td&gt;       &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
    * @return delivType
   **/
-  @Schema(required = true, description = "受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>1</td>           <td>自動振替</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>")
+  @Schema(required = true, description = "受渡区分<br>※現物買は指定必須。<br>※現物売は「0(指定なし)」を設定<br>※信用新規は「0(指定なし)」を設定<br>※信用返済は指定必須 <br>※auマネーコネクトが有効の場合にのみ、「3」を設定可能 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>指定なし</td>       </tr>       <tr>           <td>2</td>           <td>お預り金</td>       </tr>       <tr>           <td>3</td>           <td>auマネーコネクト</td>       </tr>   </tbody> </table>")
   public Integer getDelivType() {
     return delivType;
   }
