@@ -2,7 +2,7 @@
 
 kabuステーションAPI
 - API version: 1.5
-  - Build date: 2026-05-30T09:09:35.441147041Z[GMT]
+  - Build date: 2026-05-28T15:31:43.549181756Z[GMT]
 
 # 定義情報   REST APIのコード一覧、エンドポイントは下記リンク参照     - [REST APIコード一覧](../ptal/error.html)
 
