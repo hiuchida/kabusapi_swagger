@@ -36,7 +36,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:36:05.222772727Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:37:12.073829737Z[GMT]")
 @RestController
 public class WalletApiController implements WalletApi {
 
@@ -119,7 +119,7 @@ public class WalletApiController implements WalletApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<WalletMarginSuccess>(objectMapper.readValue("{\n  \"ConsignmentDepositRate\" : 1.4658129805029452,\n  \"CashOfConsignmentDepositRate\" : 5.962133916683182,\n  \"MarginAccountWallet\" : 0.8008281904610115,\n  \"DepositkeepRate\" : 6.027456183070403\n}", WalletMarginSuccess.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<WalletMarginSuccess>(objectMapper.readValue("{\n  \"MaximumBuyOpenAmountPerSymbol\" : 2.3021358869347655,\n  \"MaximumSellOpenAmountPerSymbol\" : 5.637376656633329,\n  \"ConsignmentDepositRate\" : 1.4658129805029452,\n  \"CashOfConsignmentDepositRate\" : 5.962133916683182,\n  \"MarginAccountWallet\" : 0.8008281904610115,\n  \"DepositkeepRate\" : 6.027456183070403\n}", WalletMarginSuccess.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<WalletMarginSuccess>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -135,7 +135,7 @@ public class WalletApiController implements WalletApi {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<WalletMarginSuccess>(objectMapper.readValue("{\n  \"ConsignmentDepositRate\" : 1.4658129805029452,\n  \"CashOfConsignmentDepositRate\" : 5.962133916683182,\n  \"MarginAccountWallet\" : 0.8008281904610115,\n  \"DepositkeepRate\" : 6.027456183070403\n}", WalletMarginSuccess.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<WalletMarginSuccess>(objectMapper.readValue("{\n  \"MaximumBuyOpenAmountPerSymbol\" : 2.3021358869347655,\n  \"MaximumSellOpenAmountPerSymbol\" : 5.637376656633329,\n  \"ConsignmentDepositRate\" : 1.4658129805029452,\n  \"CashOfConsignmentDepositRate\" : 5.962133916683182,\n  \"MarginAccountWallet\" : 0.8008281904610115,\n  \"DepositkeepRate\" : 6.027456183070403\n}", WalletMarginSuccess.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<WalletMarginSuccess>(HttpStatus.INTERNAL_SERVER_ERROR);

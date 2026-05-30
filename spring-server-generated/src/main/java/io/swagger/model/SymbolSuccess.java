@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  */
 @Validated
 @NotUndefined
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:36:05.222772727Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:37:12.073829737Z[GMT]")
 
 
 public class SymbolSuccess   {
@@ -111,6 +111,12 @@ public class SymbolSuccess   {
   @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
   @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Boolean marginSell = null;
+
+  @JsonProperty("PerSymbolLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
+  private Double perSymbolLimit = null;
 
   @JsonProperty("UpperLimit")
 
@@ -512,6 +518,29 @@ public class SymbolSuccess   {
     this.marginSell = marginSell;
   }
 
+  public SymbolSuccess perSymbolLimit(Double perSymbolLimit) { 
+
+    this.perSymbolLimit = perSymbolLimit;
+    return this;
+  }
+
+  /**
+   * 銘柄あたり建玉上限額<br>※株式銘柄の場合のみ<br>※銘柄あたり建玉対象外銘柄（ETF/REIT）の場合、null
+   * @return perSymbolLimit
+   **/
+  
+  @Schema(description = "銘柄あたり建玉上限額<br>※株式銘柄の場合のみ<br>※銘柄あたり建玉対象外銘柄（ETF/REIT）の場合、null")
+  
+  public Double getPerSymbolLimit() {  
+    return perSymbolLimit;
+  }
+
+
+
+  public void setPerSymbolLimit(Double perSymbolLimit) { 
+    this.perSymbolLimit = perSymbolLimit;
+  }
+
   public SymbolSuccess upperLimit(Double upperLimit) { 
 
     this.upperLimit = upperLimit;
@@ -743,6 +772,7 @@ public class SymbolSuccess   {
         Objects.equals(this.kcMarginSell, symbolSuccess.kcMarginSell) &&
         Objects.equals(this.marginBuy, symbolSuccess.marginBuy) &&
         Objects.equals(this.marginSell, symbolSuccess.marginSell) &&
+        Objects.equals(this.perSymbolLimit, symbolSuccess.perSymbolLimit) &&
         Objects.equals(this.upperLimit, symbolSuccess.upperLimit) &&
         Objects.equals(this.lowerLimit, symbolSuccess.lowerLimit) &&
         Objects.equals(this.underlyer, symbolSuccess.underlyer) &&
@@ -756,7 +786,7 @@ public class SymbolSuccess   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(symbol, symbolName, displayName, exchange, exchangeName, bisCategory, totalMarketValue, totalStocks, tradingUnit, fiscalYearEndBasic, priceRangeGroup, kcMarginBuy, kcMarginSell, marginBuy, marginSell, upperLimit, lowerLimit, underlyer, derivMonth, tradeStart, tradeEnd, strikePrice, putOrCall, clearingPrice);
+    return Objects.hash(symbol, symbolName, displayName, exchange, exchangeName, bisCategory, totalMarketValue, totalStocks, tradingUnit, fiscalYearEndBasic, priceRangeGroup, kcMarginBuy, kcMarginSell, marginBuy, marginSell, perSymbolLimit, upperLimit, lowerLimit, underlyer, derivMonth, tradeStart, tradeEnd, strikePrice, putOrCall, clearingPrice);
   }
 
   @Override
@@ -779,6 +809,7 @@ public class SymbolSuccess   {
     sb.append("    kcMarginSell: ").append(toIndentedString(kcMarginSell)).append("\n");
     sb.append("    marginBuy: ").append(toIndentedString(marginBuy)).append("\n");
     sb.append("    marginSell: ").append(toIndentedString(marginSell)).append("\n");
+    sb.append("    perSymbolLimit: ").append(toIndentedString(perSymbolLimit)).append("\n");
     sb.append("    upperLimit: ").append(toIndentedString(upperLimit)).append("\n");
     sb.append("    lowerLimit: ").append(toIndentedString(lowerLimit)).append("\n");
     sb.append("    underlyer: ").append(toIndentedString(underlyer)).append("\n");
