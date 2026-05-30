@@ -25,7 +25,7 @@ import java.io.IOException;
  * WalletMarginSuccess
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-28T15:37:06.747432777Z[GMT]")
 
 public class WalletMarginSuccess {
   @SerializedName("MarginAccountWallet")
@@ -39,6 +39,12 @@ public class WalletMarginSuccess {
 
   @SerializedName("CashOfConsignmentDepositRate")
   private Double cashOfConsignmentDepositRate = null;
+
+  @SerializedName("MaximumSellOpenAmountPerSymbol")
+  private Double maximumSellOpenAmountPerSymbol = null;
+
+  @SerializedName("MaximumBuyOpenAmountPerSymbol")
+  private Double maximumBuyOpenAmountPerSymbol = null;
 
   public WalletMarginSuccess marginAccountWallet(Double marginAccountWallet) {
     this.marginAccountWallet = marginAccountWallet;
@@ -112,6 +118,42 @@ public class WalletMarginSuccess {
     this.cashOfConsignmentDepositRate = cashOfConsignmentDepositRate;
   }
 
+  public WalletMarginSuccess maximumSellOpenAmountPerSymbol(Double maximumSellOpenAmountPerSymbol) {
+    this.maximumSellOpenAmountPerSymbol = maximumSellOpenAmountPerSymbol;
+    return this;
+  }
+
+   /**
+   * 銘柄あたり建玉可能額（売）&lt;br&gt;※銘柄指定の場合のみ。&lt;br&gt;※銘柄あたり建玉上限対象外の場合、nullを返す。
+   * @return maximumSellOpenAmountPerSymbol
+  **/
+  @Schema(description = "銘柄あたり建玉可能額（売）<br>※銘柄指定の場合のみ。<br>※銘柄あたり建玉上限対象外の場合、nullを返す。")
+  public Double getMaximumSellOpenAmountPerSymbol() {
+    return maximumSellOpenAmountPerSymbol;
+  }
+
+  public void setMaximumSellOpenAmountPerSymbol(Double maximumSellOpenAmountPerSymbol) {
+    this.maximumSellOpenAmountPerSymbol = maximumSellOpenAmountPerSymbol;
+  }
+
+  public WalletMarginSuccess maximumBuyOpenAmountPerSymbol(Double maximumBuyOpenAmountPerSymbol) {
+    this.maximumBuyOpenAmountPerSymbol = maximumBuyOpenAmountPerSymbol;
+    return this;
+  }
+
+   /**
+   * 銘柄あたり建玉可能額（買）&lt;br&gt;※銘柄指定の場合のみ。&lt;br&gt;※銘柄あたり建玉上限対象外の場合、nullを返す。
+   * @return maximumBuyOpenAmountPerSymbol
+  **/
+  @Schema(description = "銘柄あたり建玉可能額（買）<br>※銘柄指定の場合のみ。<br>※銘柄あたり建玉上限対象外の場合、nullを返す。")
+  public Double getMaximumBuyOpenAmountPerSymbol() {
+    return maximumBuyOpenAmountPerSymbol;
+  }
+
+  public void setMaximumBuyOpenAmountPerSymbol(Double maximumBuyOpenAmountPerSymbol) {
+    this.maximumBuyOpenAmountPerSymbol = maximumBuyOpenAmountPerSymbol;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,12 +167,14 @@ public class WalletMarginSuccess {
     return Objects.equals(this.marginAccountWallet, walletMarginSuccess.marginAccountWallet) &&
         Objects.equals(this.depositkeepRate, walletMarginSuccess.depositkeepRate) &&
         Objects.equals(this.consignmentDepositRate, walletMarginSuccess.consignmentDepositRate) &&
-        Objects.equals(this.cashOfConsignmentDepositRate, walletMarginSuccess.cashOfConsignmentDepositRate);
+        Objects.equals(this.cashOfConsignmentDepositRate, walletMarginSuccess.cashOfConsignmentDepositRate) &&
+        Objects.equals(this.maximumSellOpenAmountPerSymbol, walletMarginSuccess.maximumSellOpenAmountPerSymbol) &&
+        Objects.equals(this.maximumBuyOpenAmountPerSymbol, walletMarginSuccess.maximumBuyOpenAmountPerSymbol);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(marginAccountWallet, depositkeepRate, consignmentDepositRate, cashOfConsignmentDepositRate);
+    return Objects.hash(marginAccountWallet, depositkeepRate, consignmentDepositRate, cashOfConsignmentDepositRate, maximumSellOpenAmountPerSymbol, maximumBuyOpenAmountPerSymbol);
   }
 
 
@@ -143,6 +187,8 @@ public class WalletMarginSuccess {
     sb.append("    depositkeepRate: ").append(toIndentedString(depositkeepRate)).append("\n");
     sb.append("    consignmentDepositRate: ").append(toIndentedString(consignmentDepositRate)).append("\n");
     sb.append("    cashOfConsignmentDepositRate: ").append(toIndentedString(cashOfConsignmentDepositRate)).append("\n");
+    sb.append("    maximumSellOpenAmountPerSymbol: ").append(toIndentedString(maximumSellOpenAmountPerSymbol)).append("\n");
+    sb.append("    maximumBuyOpenAmountPerSymbol: ").append(toIndentedString(maximumBuyOpenAmountPerSymbol)).append("\n");
     sb.append("}");
     return sb.toString();
   }
