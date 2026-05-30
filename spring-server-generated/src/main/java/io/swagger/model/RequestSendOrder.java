@@ -22,14 +22,10 @@ import javax.validation.constraints.*;
  */
 @Validated
 @NotUndefined
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:33:32.363733592Z[GMT]")
 
 
 public class RequestSendOrder   {
-  @JsonProperty("Password")
-
-  private String password = null;
-
   @JsonProperty("Symbol")
 
   private String symbol = null;
@@ -107,31 +103,6 @@ public class RequestSendOrder   {
   @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private RequestSendOrderReverseLimitOrder reverseLimitOrder = null;
 
-
-  public RequestSendOrder password(String password) { 
-
-    this.password = password;
-    return this;
-  }
-
-  /**
-   * 注文パスワード
-   * @return password
-   **/
-  
-  @Schema(required = true, description = "注文パスワード")
-  
-  @NotNull
-  public String getPassword() {  
-    return password;
-  }
-
-
-
-  public void setPassword(String password) { 
-
-    this.password = password;
-  }
 
   public RequestSendOrder symbol(String symbol) { 
 
@@ -564,8 +535,7 @@ public class RequestSendOrder   {
       return false;
     }
     RequestSendOrder requestSendOrder = (RequestSendOrder) o;
-    return Objects.equals(this.password, requestSendOrder.password) &&
-        Objects.equals(this.symbol, requestSendOrder.symbol) &&
+    return Objects.equals(this.symbol, requestSendOrder.symbol) &&
         Objects.equals(this.exchange, requestSendOrder.exchange) &&
         Objects.equals(this.securityType, requestSendOrder.securityType) &&
         Objects.equals(this.side, requestSendOrder.side) &&
@@ -586,7 +556,7 @@ public class RequestSendOrder   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(password, symbol, exchange, securityType, side, cashMargin, marginTradeType, marginPremiumUnit, delivType, fundType, accountType, qty, closePositionOrder, closePositions, frontOrderType, price, expireDay, reverseLimitOrder);
+    return Objects.hash(symbol, exchange, securityType, side, cashMargin, marginTradeType, marginPremiumUnit, delivType, fundType, accountType, qty, closePositionOrder, closePositions, frontOrderType, price, expireDay, reverseLimitOrder);
   }
 
   @Override
@@ -594,7 +564,6 @@ public class RequestSendOrder   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestSendOrder {\n");
     
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    symbol: ").append(toIndentedString(symbol)).append("\n");
     sb.append("    exchange: ").append(toIndentedString(exchange)).append("\n");
     sb.append("    securityType: ").append(toIndentedString(securityType)).append("\n");

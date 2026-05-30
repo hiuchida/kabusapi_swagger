@@ -22,14 +22,10 @@ import javax.validation.constraints.*;
  */
 @Validated
 @NotUndefined
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:33:32.363733592Z[GMT]")
 
 
 public class RequestSendOrderDerivOption   {
-  @JsonProperty("Password")
-
-  private String password = null;
-
   @JsonProperty("Symbol")
 
   private String symbol = null;
@@ -81,31 +77,6 @@ public class RequestSendOrderDerivOption   {
   @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder = null;
 
-
-  public RequestSendOrderDerivOption password(String password) { 
-
-    this.password = password;
-    return this;
-  }
-
-  /**
-   * 注文パスワード
-   * @return password
-   **/
-  
-  @Schema(required = true, description = "注文パスワード")
-  
-  @NotNull
-  public String getPassword() {  
-    return password;
-  }
-
-
-
-  public void setPassword(String password) { 
-
-    this.password = password;
-  }
 
   public RequestSendOrderDerivOption symbol(String symbol) { 
 
@@ -419,8 +390,7 @@ public class RequestSendOrderDerivOption   {
       return false;
     }
     RequestSendOrderDerivOption requestSendOrderDerivOption = (RequestSendOrderDerivOption) o;
-    return Objects.equals(this.password, requestSendOrderDerivOption.password) &&
-        Objects.equals(this.symbol, requestSendOrderDerivOption.symbol) &&
+    return Objects.equals(this.symbol, requestSendOrderDerivOption.symbol) &&
         Objects.equals(this.exchange, requestSendOrderDerivOption.exchange) &&
         Objects.equals(this.tradeType, requestSendOrderDerivOption.tradeType) &&
         Objects.equals(this.timeInForce, requestSendOrderDerivOption.timeInForce) &&
@@ -436,7 +406,7 @@ public class RequestSendOrderDerivOption   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(password, symbol, exchange, tradeType, timeInForce, side, qty, closePositionOrder, closePositions, frontOrderType, price, expireDay, reverseLimitOrder);
+    return Objects.hash(symbol, exchange, tradeType, timeInForce, side, qty, closePositionOrder, closePositions, frontOrderType, price, expireDay, reverseLimitOrder);
   }
 
   @Override
@@ -444,7 +414,6 @@ public class RequestSendOrderDerivOption   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestSendOrderDerivOption {\n");
     
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    symbol: ").append(toIndentedString(symbol)).append("\n");
     sb.append("    exchange: ").append(toIndentedString(exchange)).append("\n");
     sb.append("    tradeType: ").append(toIndentedString(tradeType)).append("\n");
