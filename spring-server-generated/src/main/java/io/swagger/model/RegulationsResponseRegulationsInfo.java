@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  */
 @Validated
 @NotUndefined
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-28T15:36:05.222772727Z[GMT]")
 
 
 public class RegulationsResponseRegulationsInfo   {
@@ -72,11 +72,11 @@ public class RegulationsResponseRegulationsInfo   {
   }
 
   /**
-   * 規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>10</td>       <td>CXJ</td>     </tr>     <tr>       <td>21</td>       <td>JNX</td>     </tr>   </tbody> </table>
+   * 規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>21</td>       <td>ジャパンネクスト J-Market</td>     </tr>     <tr>       <td>27</td>       <td>MS東証</td>     </tr>     <tr>       <td>36</td>       <td>大阪デジタルエクスチェンジ</td>     </tr>     <tr>       <td>37</td>       <td>Japan Alternative Market</td>     </tr>     <tr>       <td>38</td>       <td>ジャパンネクスト X-Market</td>     </tr>   </tbody> </table>
    * @return exchange
    **/
   
-  @Schema(description = "規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>10</td>       <td>CXJ</td>     </tr>     <tr>       <td>21</td>       <td>JNX</td>     </tr>   </tbody> </table>")
+  @Schema(description = "規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>21</td>       <td>ジャパンネクスト J-Market</td>     </tr>     <tr>       <td>27</td>       <td>MS東証</td>     </tr>     <tr>       <td>36</td>       <td>大阪デジタルエクスチェンジ</td>     </tr>     <tr>       <td>37</td>       <td>Japan Alternative Market</td>     </tr>     <tr>       <td>38</td>       <td>ジャパンネクスト X-Market</td>     </tr>   </tbody> </table>")
   
   public Integer getExchange() {  
     return exchange;
