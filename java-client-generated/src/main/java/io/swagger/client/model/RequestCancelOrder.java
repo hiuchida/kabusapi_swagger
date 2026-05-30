@@ -25,14 +25,11 @@ import java.io.IOException;
  * RequestCancelOrder
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-28T15:33:26.881687877Z[GMT]")
 
 public class RequestCancelOrder {
   @SerializedName("OrderId")
   private String orderId = null;
-
-  @SerializedName("Password")
-  private String password = null;
 
   public RequestCancelOrder orderId(String orderId) {
     this.orderId = orderId;
@@ -52,24 +49,6 @@ public class RequestCancelOrder {
     this.orderId = orderId;
   }
 
-  public RequestCancelOrder password(String password) {
-    this.password = password;
-    return this;
-  }
-
-   /**
-   * 注文パスワード
-   * @return password
-  **/
-  @Schema(example = "xxxxxx", required = true, description = "注文パスワード")
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -80,13 +59,12 @@ public class RequestCancelOrder {
       return false;
     }
     RequestCancelOrder requestCancelOrder = (RequestCancelOrder) o;
-    return Objects.equals(this.orderId, requestCancelOrder.orderId) &&
-        Objects.equals(this.password, requestCancelOrder.password);
+    return Objects.equals(this.orderId, requestCancelOrder.orderId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, password);
+    return Objects.hash(orderId);
   }
 
 
@@ -96,7 +74,6 @@ public class RequestCancelOrder {
     sb.append("class RequestCancelOrder {\n");
     
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("}");
     return sb.toString();
   }
