@@ -25,7 +25,7 @@ import java.io.IOException;
  * WalletCashSuccess
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-28T15:35:58.412380246Z[GMT]")
 
 public class WalletCashSuccess {
   @SerializedName("StockAccountWallet")
@@ -43,10 +43,10 @@ public class WalletCashSuccess {
   }
 
    /**
-   * 現物買付可能額&lt;br&gt; ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する&lt;br&gt; ※auマネーコネクトが無効の場合、auカブコム証券の可能額のみを表示する
+   * 現物買付可能額&lt;br&gt; ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する&lt;br&gt; ※auマネーコネクトが無効の場合、三菱UFJ eスマート証券の可能額のみを表示する
    * @return stockAccountWallet
   **/
-  @Schema(description = "現物買付可能額<br> ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する<br> ※auマネーコネクトが無効の場合、auカブコム証券の可能額のみを表示する")
+  @Schema(description = "現物買付可能額<br> ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する<br> ※auマネーコネクトが無効の場合、三菱UFJ eスマート証券の可能額のみを表示する")
   public Double getStockAccountWallet() {
     return stockAccountWallet;
   }
@@ -61,10 +61,10 @@ public class WalletCashSuccess {
   }
 
    /**
-   * うち、auカブコム証券可能額
+   * うち、三菱UFJ eスマート証券可能額
    * @return auKCStockAccountWallet
   **/
-  @Schema(description = "うち、auカブコム証券可能額")
+  @Schema(description = "うち、三菱UFJ eスマート証券可能額")
   public Double getAuKCStockAccountWallet() {
     return auKCStockAccountWallet;
   }

@@ -25,7 +25,7 @@ import java.io.IOException;
  * RegulationsResponseRegulationsInfo
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-06-30T15:08:23.587764301Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-28T15:35:58.412380246Z[GMT]")
 
 public class RegulationsResponseRegulationsInfo {
   @SerializedName("Exchange")
@@ -55,10 +55,10 @@ public class RegulationsResponseRegulationsInfo {
   }
 
    /**
-   * 規制市場 &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;内容&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;0&lt;/td&gt;       &lt;td&gt;全対象&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;5&lt;/td&gt;       &lt;td&gt;福証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;6&lt;/td&gt;       &lt;td&gt;札証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;9&lt;/td&gt;       &lt;td&gt;SOR&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;10&lt;/td&gt;       &lt;td&gt;CXJ&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;21&lt;/td&gt;       &lt;td&gt;JNX&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
+   * 規制市場 &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;定義値&lt;/th&gt;       &lt;th&gt;内容&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;0&lt;/td&gt;       &lt;td&gt;全対象&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;1&lt;/td&gt;       &lt;td&gt;東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;3&lt;/td&gt;       &lt;td&gt;名証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;5&lt;/td&gt;       &lt;td&gt;福証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;6&lt;/td&gt;       &lt;td&gt;札証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;9&lt;/td&gt;       &lt;td&gt;SOR&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;21&lt;/td&gt;       &lt;td&gt;ジャパンネクスト J-Market&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;27&lt;/td&gt;       &lt;td&gt;MS東証&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;36&lt;/td&gt;       &lt;td&gt;大阪デジタルエクスチェンジ&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;37&lt;/td&gt;       &lt;td&gt;Japan Alternative Market&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;38&lt;/td&gt;       &lt;td&gt;ジャパンネクスト X-Market&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt;
    * @return exchange
   **/
-  @Schema(description = "規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>10</td>       <td>CXJ</td>     </tr>     <tr>       <td>21</td>       <td>JNX</td>     </tr>   </tbody> </table>")
+  @Schema(description = "規制市場 <table>   <thead>     <tr>       <th>定義値</th>       <th>内容</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>全対象</td>     </tr>     <tr>       <td>1</td>       <td>東証</td>     </tr>     <tr>       <td>3</td>       <td>名証</td>     </tr>     <tr>       <td>5</td>       <td>福証</td>     </tr>     <tr>       <td>6</td>       <td>札証</td>     </tr>     <tr>       <td>9</td>       <td>SOR</td>     </tr>     <tr>       <td>21</td>       <td>ジャパンネクスト J-Market</td>     </tr>     <tr>       <td>27</td>       <td>MS東証</td>     </tr>     <tr>       <td>36</td>       <td>大阪デジタルエクスチェンジ</td>     </tr>     <tr>       <td>37</td>       <td>Japan Alternative Market</td>     </tr>     <tr>       <td>38</td>       <td>ジャパンネクスト X-Market</td>     </tr>   </tbody> </table>")
   public Integer getExchange() {
     return exchange;
   }
