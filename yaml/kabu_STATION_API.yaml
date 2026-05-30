@@ -532,6 +532,7 @@ paths:
     get:
       tags:
         - "wallet"
+      operationId: walletCashSymbolGet
       summary: "取引余力（現物）（銘柄指定）"
       description: "指定した銘柄の取引余力（現物）を取得します"
       parameters:
@@ -575,6 +576,14 @@ paths:
                   <tr>
                       <td>6</td>
                       <td>札証</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>SOR</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>東証+</td>
                   </tr>
               </tbody>
             </table>
@@ -718,6 +727,7 @@ paths:
     get:
       tags:
         - "wallet"
+      operationId: walletMarginSymbolGet
       summary: "取引余力（信用）（銘柄指定）"
       description: "指定した銘柄の取引余力（信用）を取得します"
       parameters:
@@ -753,6 +763,14 @@ paths:
                 <tr>
                   <td>3</td>
                   <td>名証</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>SOR</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td>東証+</td>
                 </tr>
               </tbody>
             </table>
@@ -896,6 +914,7 @@ paths:
     get:
       tags:
         - "wallet"
+      operationId: walletFutureSymbolGet
       summary: "取引余力（先物）（銘柄指定）"
       description: "指定した銘柄の取引余力（先物）を取得します"
       parameters:
@@ -1078,6 +1097,7 @@ paths:
     get:
       tags:
         - "wallet"
+      operationId: walletOptionSymbolGet
       summary: "取引余力（オプション）（銘柄指定）"
       description: "指定した銘柄の取引余力（オプション）を取得します"
       parameters:
@@ -3362,7 +3382,7 @@ components:
               <tbody>
                   <tr>
                       <td>1</td>
-                      <td>東証</td>
+                      <td>東証※</td>
                   </tr>
                   <tr>
                       <td>3</td>
@@ -3376,8 +3396,21 @@ components:
                       <td>6</td>
                       <td>札証</td>
                   </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>SOR</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>東証+</td>
+                  </tr>
               </tbody>
             </table>
+
+            ※SORまたは、東証+がメンテナンス中は現物のみ東証への指定が可能です。<br>
+            通常時に東証を指定しての新規発注はできません。<br>
+            ※信用建玉の返済注文につきましては、返済期限までは東証で返済可能です。<br>
+            東証で保有している建玉をSORまたは東証+では返済できませんのでご注意ください。
           type: "integer"
           format: "int32"
         SecurityType:
@@ -3628,12 +3661,14 @@ components:
         FrontOrderType:
           description: |-
             執行条件
+            ※SOR以外は以下、全て指定可能です。
             <table>
               <thead>
                   <tr>
                       <th>定義値</th>
                       <th>説明</th>
                       <th>”Price"の指定</th>
+                      <th>SORで発注可</th>
                   </tr>
               </thead>
               <tbody>
@@ -3641,76 +3676,91 @@ components:
                       <td>10</td>
                       <td>成行</td>
                       <td>0</td>
+                      <td>〇</td>
                   </tr>
                   <tr>
                       <td>13</td>
                       <td>寄成（前場）</td>
                       <td>0</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>14</td>
                       <td>寄成（後場）</td>
                       <td>0</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>15</td>
                       <td>引成（前場）</td>
                       <td>0</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>16</td>
                       <td>引成（後場）</td>
                       <td>0</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>17</td>
                       <td>IOC成行</td>
                       <td>0</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>20</td>
                       <td>指値</td>
                       <td>発注したい金額</td>
+                      <td>〇</td>
                   </tr>
                   <tr>
                       <td>21</td>
                       <td>寄指（前場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>22</td>
                       <td>寄指（後場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>23</td>
                       <td>引指（前場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>24</td>
                       <td>引指（後場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>25</td>
                       <td>不成（前場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>26</td>
                       <td>不成（後場）</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>27</td>
                       <td>IOC指値</td>
                       <td>発注したい金額</td>
+                      <td>　</td>
                   </tr>
                   <tr>
                       <td>30</td>
                       <td>逆指値</td>
                       <td>指定なし<br>※AfterHitPriceで指定ください</td>
+                      <td>〇</td>
                   </tr>
               </tbody>
             </table>
@@ -3865,7 +3915,7 @@ components:
               format: "double"
       example:
         Symbol: "9433"
-        Exchange: 1 
+        Exchange: 27 
         SecurityType: 1
         Side: "1"
         CashMargin: 3
@@ -5065,12 +5115,12 @@ components:
         StockAccountWallet:
           description: "現物買付可能額<br>
           ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する<br>
-          ※auマネーコネクトが無効の場合、auカブコム証券の可能額のみを表示する"
+          ※auマネーコネクトが無効の場合、三菱UFJ eスマート証券の可能額のみを表示する"
           type: "number"
           format: "double"
           example: null
         AuKCStockAccountWallet:
-          description: "うち、auカブコム証券可能額"
+          description: "うち、三菱UFJ eスマート証券可能額"
           type: "number"
           format: "double"
           example: null
@@ -6068,8 +6118,16 @@ components:
                   <td>日経平均225ミニ先物</td>
                 </tr>
                 <tr>
+                  <td>903</td>
+                  <td>日経225ミニオプション</td>
+                </tr>
+                <tr>
                   <td>907</td>
                   <td>TOPIXミニ先物</td>
+                </tr>
+                <tr>
+                  <td>1001</td>
+                  <td>日経225マイクロ先物</td>
                 </tr>
               </tbody>
             </table>
@@ -6491,11 +6549,13 @@ components:
             ※株式・先物・オプション銘柄の場合のみ<br>
             ※各呼値コードが対応する商品は以下となります。<BR>
             　株式の呼値の単位の詳細は [JPXページ](https://www.jpx.co.jp/equities/trading/domestic/07.html) をご覧ください。<BR>
-            　10000：株式(TOPIX500採用銘柄以外)　<br>
-            　10003：株式(TOPIX500採用銘柄)<br>
+            　10000：株式(通常の呼値単位の銘柄)　<br>
+            　10003：株式(TOPIX500構成銘柄※売買単位が10口以上のETF等含む)<br>
+            　10004：株式(売買単位が1口のETF等)<br>
             　10118 : 日経平均先物<br>
             　10119 : 日経225mini<br>
-            　10318 : 日経平均オプション<br>
+            　10318 : 日経225オプション<br>
+            　10326 : 日経225ミニオプション<br>
             　10706 : ﾐﾆTOPIX先物<br>
             　10718 : TOPIX先物<br>
             　12122 : JPX日経400指数先物<br>
@@ -6624,6 +6684,51 @@ components:
                       <td>10000</td>
                   </tr>
                   <tr>
+                      <td>10004</td>
+                      <td>10000円以下</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>30000円以下</td>
+                      <td>5</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>100000円以下</td>
+                      <td>10</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>300000円以下</td>
+                      <td>50</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>1000000円以下</td>
+                      <td>100</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>3000000円以下</td>
+                      <td>500</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>10000000円以下</td>
+                      <td>1000</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>30000000円以下</td>
+                      <td>5000</td>
+                  </tr>
+                  <tr>
+                      <td>10004</td>
+                      <td>30000000円超</td>
+                      <td>10000</td>
+                  </tr>
+                  <tr>
                       <td>10118</td>
                       <td>-</td>
                       <td>10</td>
@@ -6635,18 +6740,23 @@ components:
                   </tr>
                   <tr>
                       <td>10318</td>
-                      <td>100円以下</td>
+                      <td>300円以下</td>
                       <td>1</td>
                   </tr>
                   <tr>
                       <td>10318</td>
-                      <td>1000円以下</td>
+                      <td>300円超</td>
                       <td>5</td>
                   </tr>
                   <tr>
-                      <td>10318</td>
-                      <td>1000円超</td>
-                      <td>10</td>
+                      <td>10326</td>
+                      <td>300円以下</td>
+                      <td>1</td>
+                  </tr>
+                  <tr>
+                      <td>10326</td>
+                      <td>300円超</td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>10706</td>
@@ -6978,6 +7088,10 @@ components:
                   <tr>
                       <td>9</td>
                       <td>SOR</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>東証+</td>
                   </tr>
                   <tr>
                       <td>2</td>
@@ -7364,8 +7478,8 @@ components:
             RecvTime: "2022-04-04T18:00:51.763683+09:00",
             Symbol: "8306",
             SymbolName: "三菱ＵＦＪフィナンシャル・グループ",
-            Exchange: 1,
-            ExchangeName: "東証プ",
+            Exchange: 27,
+            ExchangeName: "東証＋プ",
             TimeInForce: 1,
             Price: 704.5,
             OrderQty: 1500,
@@ -7484,6 +7598,14 @@ components:
                   <tr>
                       <td>6</td>
                       <td>札証</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>SOR</td>
+                  </tr>
+                  <tr>
+                      <td>27</td>
+                      <td>東証+</td>
                   </tr>
                   <tr>
                       <td>2</td>
@@ -8407,12 +8529,24 @@ components:
                         <td>SOR</td>
                       </tr>
                       <tr>
-                        <td>10</td>
-                        <td>CXJ</td>
+                        <td>21</td>
+                        <td>ジャパンネクスト J-Market</td>
                       </tr>
                       <tr>
-                        <td>21</td>
-                        <td>JNX</td>
+                        <td>27</td>
+                        <td>MS東証</td>
+                      </tr>
+                      <tr>
+                        <td>36</td>
+                        <td>大阪デジタルエクスチェンジ</td>
+                      </tr>
+                      <tr>
+                        <td>37</td>
+                        <td>Japan Alternative Market</td>
+                      </tr>
+                      <tr>
+                        <td>38</td>
+                        <td>ジャパンネクスト X-Market</td>
                       </tr>
                     </tbody>
                   </table>
