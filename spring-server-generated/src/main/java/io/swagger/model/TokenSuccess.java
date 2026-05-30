@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,26 @@ import javax.validation.constraints.*;
  * TokenSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class TokenSuccess   {
   @JsonProperty("ResultCode")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer resultCode = null;
 
   @JsonProperty("Token")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String token = null;
 
-  public TokenSuccess resultCode(Integer resultCode) {
+
+  public TokenSuccess resultCode(Integer resultCode) { 
+
     this.resultCode = resultCode;
     return this;
   }
@@ -31,17 +45,21 @@ public class TokenSuccess   {
    * 結果コード<br>0が成功。それ以外はエラーコード。
    * @return resultCode
    **/
+  
   @Schema(example = "0", description = "結果コード<br>0が成功。それ以外はエラーコード。")
   
-    public Integer getResultCode() {
+  public Integer getResultCode() {  
     return resultCode;
   }
 
-  public void setResultCode(Integer resultCode) {
+
+
+  public void setResultCode(Integer resultCode) { 
     this.resultCode = resultCode;
   }
 
-  public TokenSuccess token(String token) {
+  public TokenSuccess token(String token) { 
+
     this.token = token;
     return this;
   }
@@ -50,16 +68,18 @@ public class TokenSuccess   {
    * APIトークン
    * @return token
    **/
+  
   @Schema(example = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", description = "APIトークン")
   
-    public String getToken() {
+  public String getToken() {  
     return token;
   }
 
-  public void setToken(String token) {
+
+
+  public void setToken(String token) { 
     this.token = token;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

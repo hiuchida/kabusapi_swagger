@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,35 +17,62 @@ import javax.validation.constraints.*;
  * ApiSoftLimitResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-08-08T15:53:03.859533907Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class ApiSoftLimitResponse   {
   @JsonProperty("Stock")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double stock = null;
 
   @JsonProperty("Margin")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double margin = null;
 
   @JsonProperty("Future")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double future = null;
 
   @JsonProperty("FutureMini")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double futureMini = null;
 
   @JsonProperty("FutureMicro")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double futureMicro = null;
 
   @JsonProperty("Option")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double option = null;
 
   @JsonProperty("MiniOption")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double miniOption = null;
 
   @JsonProperty("KabuSVersion")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String kabuSVersion = null;
 
-  public ApiSoftLimitResponse stock(Double stock) {
+
+  public ApiSoftLimitResponse stock(Double stock) { 
+
     this.stock = stock;
     return this;
   }
@@ -49,17 +81,21 @@ public class ApiSoftLimitResponse   {
    * 現物のワンショット上限<br>※単位は万円
    * @return stock
    **/
+  
   @Schema(description = "現物のワンショット上限<br>※単位は万円")
   
-    public Double getStock() {
+  public Double getStock() {  
     return stock;
   }
 
-  public void setStock(Double stock) {
+
+
+  public void setStock(Double stock) { 
     this.stock = stock;
   }
 
-  public ApiSoftLimitResponse margin(Double margin) {
+  public ApiSoftLimitResponse margin(Double margin) { 
+
     this.margin = margin;
     return this;
   }
@@ -68,17 +104,21 @@ public class ApiSoftLimitResponse   {
    * 信用のワンショット上限<br>※単位は万円
    * @return margin
    **/
+  
   @Schema(description = "信用のワンショット上限<br>※単位は万円")
   
-    public Double getMargin() {
+  public Double getMargin() {  
     return margin;
   }
 
-  public void setMargin(Double margin) {
+
+
+  public void setMargin(Double margin) { 
     this.margin = margin;
   }
 
-  public ApiSoftLimitResponse future(Double future) {
+  public ApiSoftLimitResponse future(Double future) { 
+
     this.future = future;
     return this;
   }
@@ -87,17 +127,21 @@ public class ApiSoftLimitResponse   {
    * 先物のワンショット上限<br>※単位は枚
    * @return future
    **/
+  
   @Schema(description = "先物のワンショット上限<br>※単位は枚")
   
-    public Double getFuture() {
+  public Double getFuture() {  
     return future;
   }
 
-  public void setFuture(Double future) {
+
+
+  public void setFuture(Double future) { 
     this.future = future;
   }
 
-  public ApiSoftLimitResponse futureMini(Double futureMini) {
+  public ApiSoftLimitResponse futureMini(Double futureMini) { 
+
     this.futureMini = futureMini;
     return this;
   }
@@ -106,17 +150,21 @@ public class ApiSoftLimitResponse   {
    * ミニ先物のワンショット上限<br>※単位は枚
    * @return futureMini
    **/
+  
   @Schema(description = "ミニ先物のワンショット上限<br>※単位は枚")
   
-    public Double getFutureMini() {
+  public Double getFutureMini() {  
     return futureMini;
   }
 
-  public void setFutureMini(Double futureMini) {
+
+
+  public void setFutureMini(Double futureMini) { 
     this.futureMini = futureMini;
   }
 
-  public ApiSoftLimitResponse futureMicro(Double futureMicro) {
+  public ApiSoftLimitResponse futureMicro(Double futureMicro) { 
+
     this.futureMicro = futureMicro;
     return this;
   }
@@ -125,17 +173,21 @@ public class ApiSoftLimitResponse   {
    * マイクロ先物のワンショット上限<br>※単位は枚
    * @return futureMicro
    **/
+  
   @Schema(description = "マイクロ先物のワンショット上限<br>※単位は枚")
   
-    public Double getFutureMicro() {
+  public Double getFutureMicro() {  
     return futureMicro;
   }
 
-  public void setFutureMicro(Double futureMicro) {
+
+
+  public void setFutureMicro(Double futureMicro) { 
     this.futureMicro = futureMicro;
   }
 
-  public ApiSoftLimitResponse option(Double option) {
+  public ApiSoftLimitResponse option(Double option) { 
+
     this.option = option;
     return this;
   }
@@ -144,17 +196,21 @@ public class ApiSoftLimitResponse   {
    * オプションのワンショット上限<br>※単位は枚
    * @return option
    **/
+  
   @Schema(description = "オプションのワンショット上限<br>※単位は枚")
   
-    public Double getOption() {
+  public Double getOption() {  
     return option;
   }
 
-  public void setOption(Double option) {
+
+
+  public void setOption(Double option) { 
     this.option = option;
   }
 
-  public ApiSoftLimitResponse miniOption(Double miniOption) {
+  public ApiSoftLimitResponse miniOption(Double miniOption) { 
+
     this.miniOption = miniOption;
     return this;
   }
@@ -163,17 +219,21 @@ public class ApiSoftLimitResponse   {
    * ミニオプションのワンショット上限<br>※単位は枚
    * @return miniOption
    **/
+  
   @Schema(description = "ミニオプションのワンショット上限<br>※単位は枚")
   
-    public Double getMiniOption() {
+  public Double getMiniOption() {  
     return miniOption;
   }
 
-  public void setMiniOption(Double miniOption) {
+
+
+  public void setMiniOption(Double miniOption) { 
     this.miniOption = miniOption;
   }
 
-  public ApiSoftLimitResponse kabuSVersion(String kabuSVersion) {
+  public ApiSoftLimitResponse kabuSVersion(String kabuSVersion) { 
+
     this.kabuSVersion = kabuSVersion;
     return this;
   }
@@ -182,16 +242,18 @@ public class ApiSoftLimitResponse   {
    * kabuステーションのバージョン
    * @return kabuSVersion
    **/
+  
   @Schema(description = "kabuステーションのバージョン")
   
-    public String getKabuSVersion() {
+  public String getKabuSVersion() {  
     return kabuSVersion;
   }
 
-  public void setKabuSVersion(String kabuSVersion) {
+
+
+  public void setKabuSVersion(String kabuSVersion) { 
     this.kabuSVersion = kabuSVersion;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

@@ -6,6 +6,11 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,53 +18,98 @@ import javax.validation.constraints.*;
  * OrdersSuccessDetails
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class OrdersSuccessDetails   {
   @JsonProperty("SeqNum")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer seqNum = null;
 
   @JsonProperty("ID")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String ID = null;
 
   @JsonProperty("RecType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer recType = null;
 
   @JsonProperty("ExchangeID")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeID = null;
 
   @JsonProperty("State")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer state = null;
 
   @JsonProperty("TransactTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String transactTime = null;
 
   @JsonProperty("OrdType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer ordType = null;
 
   @JsonProperty("Price")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double price = null;
 
   @JsonProperty("Qty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double qty = null;
 
   @JsonProperty("ExecutionID")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String executionID = null;
 
   @JsonProperty("ExecutionDay")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime executionDay = null;
 
   @JsonProperty("DelivDay")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer delivDay = null;
 
   @JsonProperty("Commission")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double commission = null;
 
   @JsonProperty("CommissionTax")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double commissionTax = null;
 
-  public OrdersSuccessDetails seqNum(Integer seqNum) {
+
+  public OrdersSuccessDetails seqNum(Integer seqNum) { 
+
     this.seqNum = seqNum;
     return this;
   }
@@ -68,17 +118,21 @@ public class OrdersSuccessDetails   {
    * ※注文明細レコードの生成順序です。<br>※通番であるとは限りませんが、大小による順序は保たれています。
    * @return seqNum
    **/
+  
   @Schema(description = "※注文明細レコードの生成順序です。<br>※通番であるとは限りませんが、大小による順序は保たれています。")
   
-    public Integer getSeqNum() {
+  public Integer getSeqNum() {  
     return seqNum;
   }
 
-  public void setSeqNum(Integer seqNum) {
+
+
+  public void setSeqNum(Integer seqNum) { 
     this.seqNum = seqNum;
   }
 
-  public OrdersSuccessDetails ID(String ID) {
+  public OrdersSuccessDetails ID(String ID) { 
+
     this.ID = ID;
     return this;
   }
@@ -87,17 +141,21 @@ public class OrdersSuccessDetails   {
    * 注文詳細番号
    * @return ID
    **/
+  
   @Schema(description = "注文詳細番号")
   
-    public String getID() {
+  public String getID() {  
     return ID;
   }
 
-  public void setID(String ID) {
+
+
+  public void setID(String ID) { 
     this.ID = ID;
   }
 
-  public OrdersSuccessDetails recType(Integer recType) {
+  public OrdersSuccessDetails recType(Integer recType) { 
+
     this.recType = recType;
     return this;
   }
@@ -106,17 +164,21 @@ public class OrdersSuccessDetails   {
    * 明細種別 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>受付</td>       </tr>       <tr>           <td>2</td>           <td>繰越</td>       </tr>       <tr>           <td>3</td>           <td>期限切れ</td>       </tr>       <tr>           <td>4</td>           <td>発注</td>       </tr>       <tr>           <td>5</td>           <td>訂正</td>       </tr>       <tr>           <td>6</td>           <td>取消</td>       </tr>       <tr>           <td>7</td>           <td>失効</td>       </tr>       <tr>           <td>8</td>           <td>約定</td>       </tr>   </tbody> </table>
    * @return recType
    **/
+  
   @Schema(example = "1", description = "明細種別 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>受付</td>       </tr>       <tr>           <td>2</td>           <td>繰越</td>       </tr>       <tr>           <td>3</td>           <td>期限切れ</td>       </tr>       <tr>           <td>4</td>           <td>発注</td>       </tr>       <tr>           <td>5</td>           <td>訂正</td>       </tr>       <tr>           <td>6</td>           <td>取消</td>       </tr>       <tr>           <td>7</td>           <td>失効</td>       </tr>       <tr>           <td>8</td>           <td>約定</td>       </tr>   </tbody> </table>")
   
-    public Integer getRecType() {
+  public Integer getRecType() {  
     return recType;
   }
 
-  public void setRecType(Integer recType) {
+
+
+  public void setRecType(Integer recType) { 
     this.recType = recType;
   }
 
-  public OrdersSuccessDetails exchangeID(String exchangeID) {
+  public OrdersSuccessDetails exchangeID(String exchangeID) { 
+
     this.exchangeID = exchangeID;
     return this;
   }
@@ -125,17 +187,21 @@ public class OrdersSuccessDetails   {
    * 取引所番号
    * @return exchangeID
    **/
+  
   @Schema(description = "取引所番号")
   
-    public String getExchangeID() {
+  public String getExchangeID() {  
     return exchangeID;
   }
 
-  public void setExchangeID(String exchangeID) {
+
+
+  public void setExchangeID(String exchangeID) { 
     this.exchangeID = exchangeID;
   }
 
-  public OrdersSuccessDetails state(Integer state) {
+  public OrdersSuccessDetails state(Integer state) { 
+
     this.state = state;
     return this;
   }
@@ -144,17 +210,21 @@ public class OrdersSuccessDetails   {
    * 状態 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>待機（発注待機）</td>       </tr>       <tr>           <td>2</td>           <td>処理中（発注送信中・訂正送信中・取消送信中）</td>       </tr>       <tr>           <td>3</td>           <td>処理済（発注済・訂正済・取消済・全約定・期限切れ）</td>       </tr>       <tr>           <td>4</td>           <td>エラー</td>       </tr>       <tr>           <td>5</td>           <td>削除済み</td>       </tr>   </tbody> </table>
    * @return state
    **/
+  
   @Schema(description = "状態 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>待機（発注待機）</td>       </tr>       <tr>           <td>2</td>           <td>処理中（発注送信中・訂正送信中・取消送信中）</td>       </tr>       <tr>           <td>3</td>           <td>処理済（発注済・訂正済・取消済・全約定・期限切れ）</td>       </tr>       <tr>           <td>4</td>           <td>エラー</td>       </tr>       <tr>           <td>5</td>           <td>削除済み</td>       </tr>   </tbody> </table>")
   
-    public Integer getState() {
+  public Integer getState() {  
     return state;
   }
 
-  public void setState(Integer state) {
+
+
+  public void setState(Integer state) { 
     this.state = state;
   }
 
-  public OrdersSuccessDetails transactTime(String transactTime) {
+  public OrdersSuccessDetails transactTime(String transactTime) { 
+
     this.transactTime = transactTime;
     return this;
   }
@@ -163,17 +233,21 @@ public class OrdersSuccessDetails   {
    * 処理時刻
    * @return transactTime
    **/
+  
   @Schema(description = "処理時刻")
   
-    public String getTransactTime() {
+  public String getTransactTime() {  
     return transactTime;
   }
 
-  public void setTransactTime(String transactTime) {
+
+
+  public void setTransactTime(String transactTime) { 
     this.transactTime = transactTime;
   }
 
-  public OrdersSuccessDetails ordType(Integer ordType) {
+  public OrdersSuccessDetails ordType(Integer ordType) { 
+
     this.ordType = ordType;
     return this;
   }
@@ -182,17 +256,21 @@ public class OrdersSuccessDetails   {
    * 執行条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>null</td>           <td>RecType=[6] 取消 の場合</td>       </tr>       <tr>           <td>0</td>           <td>RecType=[3] 期限切れ, [7] 失効, [8] 約定 の場合</td>       </tr>       <tr>           <td>1</td>           <td>ザラバ</td>       </tr>       <tr>           <td>2</td>           <td>寄り</td>       </tr>       <tr>           <td>3</td>           <td>引け</td>       </tr>       <tr>           <td>4</td>           <td>不成</td>       </tr>       <tr>           <td>5</td>           <td>対当指値</td>       </tr>       <tr>           <td>6</td>           <td>IOC</td>       </tr>   </tbody> </table>
    * @return ordType
    **/
+  
   @Schema(description = "執行条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>null</td>           <td>RecType=[6] 取消 の場合</td>       </tr>       <tr>           <td>0</td>           <td>RecType=[3] 期限切れ, [7] 失効, [8] 約定 の場合</td>       </tr>       <tr>           <td>1</td>           <td>ザラバ</td>       </tr>       <tr>           <td>2</td>           <td>寄り</td>       </tr>       <tr>           <td>3</td>           <td>引け</td>       </tr>       <tr>           <td>4</td>           <td>不成</td>       </tr>       <tr>           <td>5</td>           <td>対当指値</td>       </tr>       <tr>           <td>6</td>           <td>IOC</td>       </tr>   </tbody> </table>")
   
-    public Integer getOrdType() {
+  public Integer getOrdType() {  
     return ordType;
   }
 
-  public void setOrdType(Integer ordType) {
+
+
+  public void setOrdType(Integer ordType) { 
     this.ordType = ordType;
   }
 
-  public OrdersSuccessDetails price(Double price) {
+  public OrdersSuccessDetails price(Double price) { 
+
     this.price = price;
     return this;
   }
@@ -201,17 +279,21 @@ public class OrdersSuccessDetails   {
    * 値段
    * @return price
    **/
+  
   @Schema(description = "値段")
   
-    public Double getPrice() {
+  public Double getPrice() {  
     return price;
   }
 
-  public void setPrice(Double price) {
+
+
+  public void setPrice(Double price) { 
     this.price = price;
   }
 
-  public OrdersSuccessDetails qty(Double qty) {
+  public OrdersSuccessDetails qty(Double qty) { 
+
     this.qty = qty;
     return this;
   }
@@ -220,17 +302,21 @@ public class OrdersSuccessDetails   {
    * 数量
    * @return qty
    **/
+  
   @Schema(description = "数量")
   
-    public Double getQty() {
+  public Double getQty() {  
     return qty;
   }
 
-  public void setQty(Double qty) {
+
+
+  public void setQty(Double qty) { 
     this.qty = qty;
   }
 
-  public OrdersSuccessDetails executionID(String executionID) {
+  public OrdersSuccessDetails executionID(String executionID) { 
+
     this.executionID = executionID;
     return this;
   }
@@ -239,17 +325,21 @@ public class OrdersSuccessDetails   {
    * 約定番号
    * @return executionID
    **/
+  
   @Schema(description = "約定番号")
   
-    public String getExecutionID() {
+  public String getExecutionID() {  
     return executionID;
   }
 
-  public void setExecutionID(String executionID) {
+
+
+  public void setExecutionID(String executionID) { 
     this.executionID = executionID;
   }
 
-  public OrdersSuccessDetails executionDay(OffsetDateTime executionDay) {
+  public OrdersSuccessDetails executionDay(OffsetDateTime executionDay) { 
+
     this.executionDay = executionDay;
     return this;
   }
@@ -258,18 +348,22 @@ public class OrdersSuccessDetails   {
    * 約定日時
    * @return executionDay
    **/
+  
   @Schema(description = "約定日時")
   
-    @Valid
-    public OffsetDateTime getExecutionDay() {
+@Valid
+  public OffsetDateTime getExecutionDay() {  
     return executionDay;
   }
 
-  public void setExecutionDay(OffsetDateTime executionDay) {
+
+
+  public void setExecutionDay(OffsetDateTime executionDay) { 
     this.executionDay = executionDay;
   }
 
-  public OrdersSuccessDetails delivDay(Integer delivDay) {
+  public OrdersSuccessDetails delivDay(Integer delivDay) { 
+
     this.delivDay = delivDay;
     return this;
   }
@@ -278,17 +372,21 @@ public class OrdersSuccessDetails   {
    * 受渡日
    * @return delivDay
    **/
+  
   @Schema(description = "受渡日")
   
-    public Integer getDelivDay() {
+  public Integer getDelivDay() {  
     return delivDay;
   }
 
-  public void setDelivDay(Integer delivDay) {
+
+
+  public void setDelivDay(Integer delivDay) { 
     this.delivDay = delivDay;
   }
 
-  public OrdersSuccessDetails commission(Double commission) {
+  public OrdersSuccessDetails commission(Double commission) { 
+
     this.commission = commission;
     return this;
   }
@@ -297,17 +395,21 @@ public class OrdersSuccessDetails   {
    * 手数料<br>※注文詳細の明細種別が約定（RecType=8)の場合に設定。
    * @return commission
    **/
+  
   @Schema(description = "手数料<br>※注文詳細の明細種別が約定（RecType=8)の場合に設定。")
   
-    public Double getCommission() {
+  public Double getCommission() {  
     return commission;
   }
 
-  public void setCommission(Double commission) {
+
+
+  public void setCommission(Double commission) { 
     this.commission = commission;
   }
 
-  public OrdersSuccessDetails commissionTax(Double commissionTax) {
+  public OrdersSuccessDetails commissionTax(Double commissionTax) { 
+
     this.commissionTax = commissionTax;
     return this;
   }
@@ -316,16 +418,18 @@ public class OrdersSuccessDetails   {
    * 手数料消費税<br>※明細種別は約定（RecType=8）の場合にのみ表示されます。
    * @return commissionTax
    **/
+  
   @Schema(description = "手数料消費税<br>※明細種別は約定（RecType=8）の場合にのみ表示されます。")
   
-    public Double getCommissionTax() {
+  public Double getCommissionTax() {  
     return commissionTax;
   }
 
-  public void setCommissionTax(Double commissionTax) {
+
+
+  public void setCommissionTax(Double commissionTax) { 
     this.commissionTax = commissionTax;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

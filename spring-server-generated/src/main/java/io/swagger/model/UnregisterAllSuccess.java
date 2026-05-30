@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,14 +17,20 @@ import javax.validation.constraints.*;
  * UnregisterAllSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class UnregisterAllSuccess   {
   @JsonProperty("RegistList")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Object registList = null;
 
-  public UnregisterAllSuccess registList(Object registList) {
+
+  public UnregisterAllSuccess registList(Object registList) { 
+
     this.registList = registList;
     return this;
   }
@@ -28,16 +39,18 @@ public class UnregisterAllSuccess   {
    * 現在登録されている銘柄のリスト<br>※銘柄登録解除が正常に行われれば、空リストを返します。<br>　登録解除でエラー等が発生した場合、現在登録されている銘柄のリストを返します
    * @return registList
    **/
+  
   @Schema(example = "[]", description = "現在登録されている銘柄のリスト<br>※銘柄登録解除が正常に行われれば、空リストを返します。<br>　登録解除でエラー等が発生した場合、現在登録されている銘柄のリストを返します")
   
-    public Object getRegistList() {
+  public Object getRegistList() {  
     return registList;
   }
 
-  public void setRegistList(Object registList) {
+
+
+  public void setRegistList(Object registList) { 
     this.registList = registList;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

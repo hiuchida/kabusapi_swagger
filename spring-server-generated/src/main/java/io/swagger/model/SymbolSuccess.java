@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,83 +17,158 @@ import javax.validation.constraints.*;
  * SymbolSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-12T11:41:23.269770450Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class SymbolSuccess   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("SymbolName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbolName = null;
 
   @JsonProperty("DisplayName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String displayName = null;
 
   @JsonProperty("Exchange")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer exchange = null;
 
   @JsonProperty("ExchangeName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeName = null;
 
   @JsonProperty("BisCategory")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String bisCategory = null;
 
   @JsonProperty("TotalMarketValue")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double totalMarketValue = null;
 
   @JsonProperty("TotalStocks")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double totalStocks = null;
 
   @JsonProperty("TradingUnit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double tradingUnit = null;
 
   @JsonProperty("FiscalYearEndBasic")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer fiscalYearEndBasic = null;
 
   @JsonProperty("PriceRangeGroup")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String priceRangeGroup = null;
 
   @JsonProperty("KCMarginBuy")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Boolean kcMarginBuy = null;
 
   @JsonProperty("KCMarginSell")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Boolean kcMarginSell = null;
 
   @JsonProperty("MarginBuy")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Boolean marginBuy = null;
 
   @JsonProperty("MarginSell")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Boolean marginSell = null;
 
   @JsonProperty("UpperLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double upperLimit = null;
 
   @JsonProperty("LowerLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double lowerLimit = null;
 
   @JsonProperty("Underlyer")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String underlyer = null;
 
   @JsonProperty("DerivMonth")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String derivMonth = null;
 
   @JsonProperty("TradeStart")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer tradeStart = null;
 
   @JsonProperty("TradeEnd")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer tradeEnd = null;
 
   @JsonProperty("StrikePrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double strikePrice = null;
 
   @JsonProperty("PutOrCall")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer putOrCall = null;
 
   @JsonProperty("ClearingPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double clearingPrice = null;
 
-  public SymbolSuccess symbol(String symbol) {
+
+  public SymbolSuccess symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -97,17 +177,21 @@ public class SymbolSuccess   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public SymbolSuccess symbolName(String symbolName) {
+  public SymbolSuccess symbolName(String symbolName) { 
+
     this.symbolName = symbolName;
     return this;
   }
@@ -116,17 +200,21 @@ public class SymbolSuccess   {
    * 銘柄名
    * @return symbolName
    **/
+  
   @Schema(description = "銘柄名")
   
-    public String getSymbolName() {
+  public String getSymbolName() {  
     return symbolName;
   }
 
-  public void setSymbolName(String symbolName) {
+
+
+  public void setSymbolName(String symbolName) { 
     this.symbolName = symbolName;
   }
 
-  public SymbolSuccess displayName(String displayName) {
+  public SymbolSuccess displayName(String displayName) { 
+
     this.displayName = displayName;
     return this;
   }
@@ -135,17 +223,21 @@ public class SymbolSuccess   {
    * 銘柄略称<br>※株式・先物・オプション銘柄の場合のみ
    * @return displayName
    **/
+  
   @Schema(description = "銘柄略称<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public String getDisplayName() {
+  public String getDisplayName() {  
     return displayName;
   }
 
-  public void setDisplayName(String displayName) {
+
+
+  public void setDisplayName(String displayName) { 
     this.displayName = displayName;
   }
 
-  public SymbolSuccess exchange(Integer exchange) {
+  public SymbolSuccess exchange(Integer exchange) { 
+
     this.exchange = exchange;
     return this;
   }
@@ -154,17 +246,21 @@ public class SymbolSuccess   {
    * 市場コード<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
    * @return exchange
    **/
+  
   @Schema(description = "市場コード<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>")
   
-    public Integer getExchange() {
+  public Integer getExchange() {  
     return exchange;
   }
 
-  public void setExchange(Integer exchange) {
+
+
+  public void setExchange(Integer exchange) { 
     this.exchange = exchange;
   }
 
-  public SymbolSuccess exchangeName(String exchangeName) {
+  public SymbolSuccess exchangeName(String exchangeName) { 
+
     this.exchangeName = exchangeName;
     return this;
   }
@@ -173,17 +269,21 @@ public class SymbolSuccess   {
    * 市場名称<br>※株式・先物・オプション銘柄の場合のみ
    * @return exchangeName
    **/
+  
   @Schema(description = "市場名称<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public String getExchangeName() {
+  public String getExchangeName() {  
     return exchangeName;
   }
 
-  public void setExchangeName(String exchangeName) {
+
+
+  public void setExchangeName(String exchangeName) { 
     this.exchangeName = exchangeName;
   }
 
-  public SymbolSuccess bisCategory(String bisCategory) {
+  public SymbolSuccess bisCategory(String bisCategory) { 
+
     this.bisCategory = bisCategory;
     return this;
   }
@@ -192,17 +292,21 @@ public class SymbolSuccess   {
    * 業種コード名<br>※株式銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0050</td>           <td>水産・農林業</td>       </tr>       <tr>           <td>1050</td>           <td>鉱業</td>       </tr>       <tr>           <td>2050</td>           <td>建設業</td>       </tr>       <tr>           <td>3050</td>           <td>食料品</td>       </tr>       <tr>           <td>3100</td>           <td>繊維製品</td>       </tr>       <tr>           <td>3150</td>           <td>パルプ・紙</td>       </tr>       <tr>           <td>3200</td>           <td>化学</td>       </tr>       <tr>           <td>3250</td>           <td>医薬品</td>       </tr>       <tr>           <td>3300</td>           <td>石油・石炭製品</td>       </tr>       <tr>           <td>3350</td>           <td>ゴム製品</td>       </tr>       <tr>           <td>3400</td>           <td>ガラス・土石製品</td>       </tr>       <tr>           <td>3450</td>           <td>鉄鋼</td>       </tr>       <tr>           <td>3500</td>           <td>非鉄金属</td>       </tr>       <tr>           <td>3550</td>           <td>金属製品</td>       </tr>       <tr>           <td>3600</td>           <td>機械</td>       </tr>       <tr>           <td>3650</td>           <td>電気機器</td>       </tr>       <tr>           <td>3700</td>           <td>輸送用機器</td>       </tr>       <tr>           <td>3750</td>           <td>精密機器</td>       </tr>       <tr>           <td>3800</td>           <td>その他製品</td>       </tr>       <tr>           <td>4050</td>           <td>電気・ガス業</td>       </tr>       <tr>           <td>5050</td>           <td>陸運業</td>       </tr>       <tr>           <td>5100</td>           <td>海運業</td>       </tr>       <tr>           <td>5150</td>           <td>空運業</td>       </tr>       <tr>           <td>5200</td>           <td>倉庫・運輸関連業</td>       </tr>       <tr>           <td>5250</td>           <td>情報・通信業</td>       </tr>       <tr>           <td>6050</td>           <td>卸売業</td>       </tr>       <tr>           <td>6100</td>           <td>小売業</td>       </tr>       <tr>           <td>7050</td>           <td>銀行業</td>       </tr>       <tr>           <td>7100</td>           <td>証券、商品先物取引業</td>       </tr>       <tr>           <td>7150</td>           <td>保険業</td>       </tr>       <tr>           <td>7200</td>           <td>その他金融業</td>       </tr>       <tr>           <td>8050</td>           <td>不動産業</td>       </tr>       <tr>           <td>9050</td>           <td>サービス業</td>       </tr>       <tr>           <td>9999</td>           <td>その他</td>       </tr>   </tbody> </table>
    * @return bisCategory
    **/
+  
   @Schema(description = "業種コード名<br>※株式銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0050</td>           <td>水産・農林業</td>       </tr>       <tr>           <td>1050</td>           <td>鉱業</td>       </tr>       <tr>           <td>2050</td>           <td>建設業</td>       </tr>       <tr>           <td>3050</td>           <td>食料品</td>       </tr>       <tr>           <td>3100</td>           <td>繊維製品</td>       </tr>       <tr>           <td>3150</td>           <td>パルプ・紙</td>       </tr>       <tr>           <td>3200</td>           <td>化学</td>       </tr>       <tr>           <td>3250</td>           <td>医薬品</td>       </tr>       <tr>           <td>3300</td>           <td>石油・石炭製品</td>       </tr>       <tr>           <td>3350</td>           <td>ゴム製品</td>       </tr>       <tr>           <td>3400</td>           <td>ガラス・土石製品</td>       </tr>       <tr>           <td>3450</td>           <td>鉄鋼</td>       </tr>       <tr>           <td>3500</td>           <td>非鉄金属</td>       </tr>       <tr>           <td>3550</td>           <td>金属製品</td>       </tr>       <tr>           <td>3600</td>           <td>機械</td>       </tr>       <tr>           <td>3650</td>           <td>電気機器</td>       </tr>       <tr>           <td>3700</td>           <td>輸送用機器</td>       </tr>       <tr>           <td>3750</td>           <td>精密機器</td>       </tr>       <tr>           <td>3800</td>           <td>その他製品</td>       </tr>       <tr>           <td>4050</td>           <td>電気・ガス業</td>       </tr>       <tr>           <td>5050</td>           <td>陸運業</td>       </tr>       <tr>           <td>5100</td>           <td>海運業</td>       </tr>       <tr>           <td>5150</td>           <td>空運業</td>       </tr>       <tr>           <td>5200</td>           <td>倉庫・運輸関連業</td>       </tr>       <tr>           <td>5250</td>           <td>情報・通信業</td>       </tr>       <tr>           <td>6050</td>           <td>卸売業</td>       </tr>       <tr>           <td>6100</td>           <td>小売業</td>       </tr>       <tr>           <td>7050</td>           <td>銀行業</td>       </tr>       <tr>           <td>7100</td>           <td>証券、商品先物取引業</td>       </tr>       <tr>           <td>7150</td>           <td>保険業</td>       </tr>       <tr>           <td>7200</td>           <td>その他金融業</td>       </tr>       <tr>           <td>8050</td>           <td>不動産業</td>       </tr>       <tr>           <td>9050</td>           <td>サービス業</td>       </tr>       <tr>           <td>9999</td>           <td>その他</td>       </tr>   </tbody> </table>")
   
-    public String getBisCategory() {
+  public String getBisCategory() {  
     return bisCategory;
   }
 
-  public void setBisCategory(String bisCategory) {
+
+
+  public void setBisCategory(String bisCategory) { 
     this.bisCategory = bisCategory;
   }
 
-  public SymbolSuccess totalMarketValue(Double totalMarketValue) {
+  public SymbolSuccess totalMarketValue(Double totalMarketValue) { 
+
     this.totalMarketValue = totalMarketValue;
     return this;
   }
@@ -211,17 +315,21 @@ public class SymbolSuccess   {
    * 時価総額<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null
    * @return totalMarketValue
    **/
+  
   @Schema(description = "時価総額<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getTotalMarketValue() {
+  public Double getTotalMarketValue() {  
     return totalMarketValue;
   }
 
-  public void setTotalMarketValue(Double totalMarketValue) {
+
+
+  public void setTotalMarketValue(Double totalMarketValue) { 
     this.totalMarketValue = totalMarketValue;
   }
 
-  public SymbolSuccess totalStocks(Double totalStocks) {
+  public SymbolSuccess totalStocks(Double totalStocks) { 
+
     this.totalStocks = totalStocks;
     return this;
   }
@@ -230,17 +338,21 @@ public class SymbolSuccess   {
    * 発行済み株式数（千株）<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null
    * @return totalStocks
    **/
+  
   @Schema(description = "発行済み株式数（千株）<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getTotalStocks() {
+  public Double getTotalStocks() {  
     return totalStocks;
   }
 
-  public void setTotalStocks(Double totalStocks) {
+
+
+  public void setTotalStocks(Double totalStocks) { 
     this.totalStocks = totalStocks;
   }
 
-  public SymbolSuccess tradingUnit(Double tradingUnit) {
+  public SymbolSuccess tradingUnit(Double tradingUnit) { 
+
     this.tradingUnit = tradingUnit;
     return this;
   }
@@ -249,17 +361,21 @@ public class SymbolSuccess   {
    * 売買単位<br>※株式・先物・オプション銘柄の場合のみ
    * @return tradingUnit
    **/
+  
   @Schema(description = "売買単位<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getTradingUnit() {
+  public Double getTradingUnit() {  
     return tradingUnit;
   }
 
-  public void setTradingUnit(Double tradingUnit) {
+
+
+  public void setTradingUnit(Double tradingUnit) { 
     this.tradingUnit = tradingUnit;
   }
 
-  public SymbolSuccess fiscalYearEndBasic(Integer fiscalYearEndBasic) {
+  public SymbolSuccess fiscalYearEndBasic(Integer fiscalYearEndBasic) { 
+
     this.fiscalYearEndBasic = fiscalYearEndBasic;
     return this;
   }
@@ -268,17 +384,21 @@ public class SymbolSuccess   {
    * 決算期日<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null
    * @return fiscalYearEndBasic
    **/
+  
   @Schema(description = "決算期日<br>※株式銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null")
   
-    public Integer getFiscalYearEndBasic() {
+  public Integer getFiscalYearEndBasic() {  
     return fiscalYearEndBasic;
   }
 
-  public void setFiscalYearEndBasic(Integer fiscalYearEndBasic) {
+
+
+  public void setFiscalYearEndBasic(Integer fiscalYearEndBasic) { 
     this.fiscalYearEndBasic = fiscalYearEndBasic;
   }
 
-  public SymbolSuccess priceRangeGroup(String priceRangeGroup) {
+  public SymbolSuccess priceRangeGroup(String priceRangeGroup) { 
+
     this.priceRangeGroup = priceRangeGroup;
     return this;
   }
@@ -287,17 +407,21 @@ public class SymbolSuccess   {
    * 呼値グループ<br> ※株式・先物・オプション銘柄の場合のみ<br> ※各呼値コードが対応する商品は以下となります。<BR> 　株式の呼値の単位の詳細は [JPXページ](https://www.jpx.co.jp/equities/trading/domestic/07.html) をご覧ください。<BR> 　10000：株式(TOPIX500採用銘柄以外)　<br> 　10003：株式(TOPIX500採用銘柄)<br> 　10118 : 日経平均先物<br> 　10119 : 日経225mini<br> 　10318 : 日経平均オプション<br> 　10706 : ﾐﾆTOPIX先物<br> 　10718 : TOPIX先物<br> 　12122 : JPX日経400指数先物<br> 　14473 : NYダウ先物<br> 　14515 : 日経平均VI先物<br> 　15411 : グロース250先物<br> 　15569 : 東証REIT指数先物<br> 　17163 : TOPIXCore30指数先物<br> <table>   <thead>       <tr>           <th>呼値コード</th>           <th>値段の水準</th>           <th>呼値単位</th>       </tr>   </thead>   <tbody>       <tr>           <td>10000</td>           <td>3000円以下</td>           <td>1</td>       </tr>       <tr>           <td>10000</td>           <td>5000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10000</td>           <td>30000円以下</td>           <td>10</td>       </tr>       <tr>           <td>10000</td>           <td>50000円以下</td>           <td>50</td>       </tr>       <tr>           <td>10000</td>           <td>300000円以下</td>           <td>100</td>       </tr>       <tr>           <td>10000</td>           <td>500000円以下</td>           <td>500</td>       </tr>       <tr>           <td>10000</td>           <td>3000000円以下</td>           <td>1000</td>       </tr>       <tr>           <td>10000</td>           <td>5000000円以下</td>           <td>5000</td>       </tr>       <tr>           <td>10000</td>           <td>30000000円以下</td>           <td>10000</td>       </tr>       <tr>           <td>10000</td>           <td>50000000円以下</td>           <td>50000</td>       </tr>       <tr>           <td>10000</td>           <td>50000000円超</td>           <td>100000</td>       </tr>       <tr>           <td>10003</td>           <td>1000円以下</td>           <td>0.1</td>       </tr>       <tr>           <td>10003</td>           <td>3000円以下</td>           <td>0.5</td>       </tr>       <tr>           <td>10003</td>           <td>10000円以下</td>           <td>1</td>       </tr>       <tr>           <td>10003</td>           <td>30000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10003</td>           <td>100000円以下</td>           <td>10</td>       </tr>       <tr>           <td>10003</td>           <td>300000円以下</td>           <td>50</td>       </tr>       <tr>           <td>10003</td>           <td>1000000円以下</td>           <td>100</td>       </tr>       <tr>           <td>10003</td>           <td>3000000円以下</td>           <td>500</td>       </tr>       <tr>           <td>10003</td>           <td>10000000円以下</td>           <td>1000</td>       </tr>       <tr>           <td>10003</td>           <td>30000000円以下</td>           <td>5000</td>       </tr>       <tr>           <td>10003</td>           <td>30000000円超</td>           <td>10000</td>       </tr>       <tr>           <td>10118</td>           <td>-</td>           <td>10</td>       </tr>       <tr>           <td>10119</td>           <td>-</td>           <td>5</td>       </tr>       <tr>           <td>10318</td>           <td>100円以下</td>           <td>1</td>       </tr>       <tr>           <td>10318</td>           <td>1000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10318</td>           <td>1000円超</td>           <td>10</td>       </tr>       <tr>           <td>10706</td>           <td>-</td>           <td>0.25</td>       </tr>       <tr>           <td>10718</td>           <td>-</td>           <td>0.5</td>       </tr>       <tr>           <td>12122</td>           <td>-</td>           <td>5</td>       </tr>       <tr>           <td>14473</td>           <td>-</td>           <td>1</td>       </tr>       <tr>           <td>14515</td>           <td>-</td>           <td>0.05</td>       </tr>       <tr>           <td>15411</td>           <td>-</td>           <td>1</td>       </tr>       <tr>           <td>15569</td>           <td>-</td>           <td>0.5</td>       </tr>       <tr>           <td>17163</td>           <td>-</td>           <td>0.5</td>       </tr>   </tbody> </table>
    * @return priceRangeGroup
    **/
+  
   @Schema(description = "呼値グループ<br> ※株式・先物・オプション銘柄の場合のみ<br> ※各呼値コードが対応する商品は以下となります。<BR> 　株式の呼値の単位の詳細は [JPXページ](https://www.jpx.co.jp/equities/trading/domestic/07.html) をご覧ください。<BR> 　10000：株式(TOPIX500採用銘柄以外)　<br> 　10003：株式(TOPIX500採用銘柄)<br> 　10118 : 日経平均先物<br> 　10119 : 日経225mini<br> 　10318 : 日経平均オプション<br> 　10706 : ﾐﾆTOPIX先物<br> 　10718 : TOPIX先物<br> 　12122 : JPX日経400指数先物<br> 　14473 : NYダウ先物<br> 　14515 : 日経平均VI先物<br> 　15411 : グロース250先物<br> 　15569 : 東証REIT指数先物<br> 　17163 : TOPIXCore30指数先物<br> <table>   <thead>       <tr>           <th>呼値コード</th>           <th>値段の水準</th>           <th>呼値単位</th>       </tr>   </thead>   <tbody>       <tr>           <td>10000</td>           <td>3000円以下</td>           <td>1</td>       </tr>       <tr>           <td>10000</td>           <td>5000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10000</td>           <td>30000円以下</td>           <td>10</td>       </tr>       <tr>           <td>10000</td>           <td>50000円以下</td>           <td>50</td>       </tr>       <tr>           <td>10000</td>           <td>300000円以下</td>           <td>100</td>       </tr>       <tr>           <td>10000</td>           <td>500000円以下</td>           <td>500</td>       </tr>       <tr>           <td>10000</td>           <td>3000000円以下</td>           <td>1000</td>       </tr>       <tr>           <td>10000</td>           <td>5000000円以下</td>           <td>5000</td>       </tr>       <tr>           <td>10000</td>           <td>30000000円以下</td>           <td>10000</td>       </tr>       <tr>           <td>10000</td>           <td>50000000円以下</td>           <td>50000</td>       </tr>       <tr>           <td>10000</td>           <td>50000000円超</td>           <td>100000</td>       </tr>       <tr>           <td>10003</td>           <td>1000円以下</td>           <td>0.1</td>       </tr>       <tr>           <td>10003</td>           <td>3000円以下</td>           <td>0.5</td>       </tr>       <tr>           <td>10003</td>           <td>10000円以下</td>           <td>1</td>       </tr>       <tr>           <td>10003</td>           <td>30000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10003</td>           <td>100000円以下</td>           <td>10</td>       </tr>       <tr>           <td>10003</td>           <td>300000円以下</td>           <td>50</td>       </tr>       <tr>           <td>10003</td>           <td>1000000円以下</td>           <td>100</td>       </tr>       <tr>           <td>10003</td>           <td>3000000円以下</td>           <td>500</td>       </tr>       <tr>           <td>10003</td>           <td>10000000円以下</td>           <td>1000</td>       </tr>       <tr>           <td>10003</td>           <td>30000000円以下</td>           <td>5000</td>       </tr>       <tr>           <td>10003</td>           <td>30000000円超</td>           <td>10000</td>       </tr>       <tr>           <td>10118</td>           <td>-</td>           <td>10</td>       </tr>       <tr>           <td>10119</td>           <td>-</td>           <td>5</td>       </tr>       <tr>           <td>10318</td>           <td>100円以下</td>           <td>1</td>       </tr>       <tr>           <td>10318</td>           <td>1000円以下</td>           <td>5</td>       </tr>       <tr>           <td>10318</td>           <td>1000円超</td>           <td>10</td>       </tr>       <tr>           <td>10706</td>           <td>-</td>           <td>0.25</td>       </tr>       <tr>           <td>10718</td>           <td>-</td>           <td>0.5</td>       </tr>       <tr>           <td>12122</td>           <td>-</td>           <td>5</td>       </tr>       <tr>           <td>14473</td>           <td>-</td>           <td>1</td>       </tr>       <tr>           <td>14515</td>           <td>-</td>           <td>0.05</td>       </tr>       <tr>           <td>15411</td>           <td>-</td>           <td>1</td>       </tr>       <tr>           <td>15569</td>           <td>-</td>           <td>0.5</td>       </tr>       <tr>           <td>17163</td>           <td>-</td>           <td>0.5</td>       </tr>   </tbody> </table>")
   
-    public String getPriceRangeGroup() {
+  public String getPriceRangeGroup() {  
     return priceRangeGroup;
   }
 
-  public void setPriceRangeGroup(String priceRangeGroup) {
+
+
+  public void setPriceRangeGroup(String priceRangeGroup) { 
     this.priceRangeGroup = priceRangeGroup;
   }
 
-  public SymbolSuccess kcMarginBuy(Boolean kcMarginBuy) {
+  public SymbolSuccess kcMarginBuy(Boolean kcMarginBuy) { 
+
     this.kcMarginBuy = kcMarginBuy;
     return this;
   }
@@ -306,17 +430,21 @@ public class SymbolSuccess   {
    * 一般信用買建フラグ<br>※trueのとき、一般信用(長期)または一般信用(デイトレ)が買建可能<br>※株式銘柄の場合のみ
    * @return kcMarginBuy
    **/
+  
   @Schema(description = "一般信用買建フラグ<br>※trueのとき、一般信用(長期)または一般信用(デイトレ)が買建可能<br>※株式銘柄の場合のみ")
   
-    public Boolean isKcMarginBuy() {
+  public Boolean isKcMarginBuy() {  
     return kcMarginBuy;
   }
 
-  public void setKcMarginBuy(Boolean kcMarginBuy) {
+
+
+  public void setKcMarginBuy(Boolean kcMarginBuy) { 
     this.kcMarginBuy = kcMarginBuy;
   }
 
-  public SymbolSuccess kcMarginSell(Boolean kcMarginSell) {
+  public SymbolSuccess kcMarginSell(Boolean kcMarginSell) { 
+
     this.kcMarginSell = kcMarginSell;
     return this;
   }
@@ -325,17 +453,21 @@ public class SymbolSuccess   {
    * 一般信用売建フラグ<br>※trueのとき、一般信用(長期)または一般信用(デイトレ)が売建可能<br>※株式銘柄の場合のみ
    * @return kcMarginSell
    **/
+  
   @Schema(description = "一般信用売建フラグ<br>※trueのとき、一般信用(長期)または一般信用(デイトレ)が売建可能<br>※株式銘柄の場合のみ")
   
-    public Boolean isKcMarginSell() {
+  public Boolean isKcMarginSell() {  
     return kcMarginSell;
   }
 
-  public void setKcMarginSell(Boolean kcMarginSell) {
+
+
+  public void setKcMarginSell(Boolean kcMarginSell) { 
     this.kcMarginSell = kcMarginSell;
   }
 
-  public SymbolSuccess marginBuy(Boolean marginBuy) {
+  public SymbolSuccess marginBuy(Boolean marginBuy) { 
+
     this.marginBuy = marginBuy;
     return this;
   }
@@ -344,17 +476,21 @@ public class SymbolSuccess   {
    * 制度信用買建フラグ<br>※trueのとき制度信用買建可能<br>※株式銘柄の場合のみ
    * @return marginBuy
    **/
+  
   @Schema(description = "制度信用買建フラグ<br>※trueのとき制度信用買建可能<br>※株式銘柄の場合のみ")
   
-    public Boolean isMarginBuy() {
+  public Boolean isMarginBuy() {  
     return marginBuy;
   }
 
-  public void setMarginBuy(Boolean marginBuy) {
+
+
+  public void setMarginBuy(Boolean marginBuy) { 
     this.marginBuy = marginBuy;
   }
 
-  public SymbolSuccess marginSell(Boolean marginSell) {
+  public SymbolSuccess marginSell(Boolean marginSell) { 
+
     this.marginSell = marginSell;
     return this;
   }
@@ -363,17 +499,21 @@ public class SymbolSuccess   {
    * 制度信用売建フラグ<br>※trueのとき制度信用売建可能<br>※株式銘柄の場合のみ
    * @return marginSell
    **/
+  
   @Schema(description = "制度信用売建フラグ<br>※trueのとき制度信用売建可能<br>※株式銘柄の場合のみ")
   
-    public Boolean isMarginSell() {
+  public Boolean isMarginSell() {  
     return marginSell;
   }
 
-  public void setMarginSell(Boolean marginSell) {
+
+
+  public void setMarginSell(Boolean marginSell) { 
     this.marginSell = marginSell;
   }
 
-  public SymbolSuccess upperLimit(Double upperLimit) {
+  public SymbolSuccess upperLimit(Double upperLimit) { 
+
     this.upperLimit = upperLimit;
     return this;
   }
@@ -382,17 +522,21 @@ public class SymbolSuccess   {
    * 値幅上限<br>※株式・先物・オプション銘柄の場合のみ
    * @return upperLimit
    **/
+  
   @Schema(description = "値幅上限<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getUpperLimit() {
+  public Double getUpperLimit() {  
     return upperLimit;
   }
 
-  public void setUpperLimit(Double upperLimit) {
+
+
+  public void setUpperLimit(Double upperLimit) { 
     this.upperLimit = upperLimit;
   }
 
-  public SymbolSuccess lowerLimit(Double lowerLimit) {
+  public SymbolSuccess lowerLimit(Double lowerLimit) { 
+
     this.lowerLimit = lowerLimit;
     return this;
   }
@@ -401,17 +545,21 @@ public class SymbolSuccess   {
    * 値幅下限<br>※株式・先物・オプション銘柄の場合のみ
    * @return lowerLimit
    **/
+  
   @Schema(description = "値幅下限<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getLowerLimit() {
+  public Double getLowerLimit() {  
     return lowerLimit;
   }
 
-  public void setLowerLimit(Double lowerLimit) {
+
+
+  public void setLowerLimit(Double lowerLimit) { 
     this.lowerLimit = lowerLimit;
   }
 
-  public SymbolSuccess underlyer(String underlyer) {
+  public SymbolSuccess underlyer(String underlyer) { 
+
     this.underlyer = underlyer;
     return this;
   }
@@ -420,17 +568,21 @@ public class SymbolSuccess   {
    * 原資産コード<br>※先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>NK225</td>           <td>日経225</td>       </tr>       <tr>           <td>NK300</td>           <td>日経300</td>       </tr>       <tr>           <td>GROWTH</td>           <td>グロース250先物</td>       </tr>       <tr>           <td>JPX400</td>           <td>JPX日経400</td>       </tr>       <tr>           <td>TOPIX</td>           <td>TOPIX</td>       </tr>       <tr>           <td>NKVI</td>           <td>日経平均VI</td>       </tr>       <tr>           <td>DJIA</td>           <td>NYダウ</td>       </tr>       <tr>           <td>TSEREITINDEX</td>           <td>東証REIT指数</td>       </tr>       <tr>           <td>TOPIXCORE30</td>           <td>TOPIX Core30</td>       </tr>   </tbody> </table>
    * @return underlyer
    **/
+  
   @Schema(description = "原資産コード<br>※先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>NK225</td>           <td>日経225</td>       </tr>       <tr>           <td>NK300</td>           <td>日経300</td>       </tr>       <tr>           <td>GROWTH</td>           <td>グロース250先物</td>       </tr>       <tr>           <td>JPX400</td>           <td>JPX日経400</td>       </tr>       <tr>           <td>TOPIX</td>           <td>TOPIX</td>       </tr>       <tr>           <td>NKVI</td>           <td>日経平均VI</td>       </tr>       <tr>           <td>DJIA</td>           <td>NYダウ</td>       </tr>       <tr>           <td>TSEREITINDEX</td>           <td>東証REIT指数</td>       </tr>       <tr>           <td>TOPIXCORE30</td>           <td>TOPIX Core30</td>       </tr>   </tbody> </table>")
   
-    public String getUnderlyer() {
+  public String getUnderlyer() {  
     return underlyer;
   }
 
-  public void setUnderlyer(String underlyer) {
+
+
+  public void setUnderlyer(String underlyer) { 
     this.underlyer = underlyer;
   }
 
-  public SymbolSuccess derivMonth(String derivMonth) {
+  public SymbolSuccess derivMonth(String derivMonth) { 
+
     this.derivMonth = derivMonth;
     return this;
   }
@@ -439,17 +591,21 @@ public class SymbolSuccess   {
    * 限月-年月<br>※「限月-年月」は「年(yyyy)/月(MM)」で表示します。<br>※先物・オプション銘柄の場合のみ
    * @return derivMonth
    **/
+  
   @Schema(description = "限月-年月<br>※「限月-年月」は「年(yyyy)/月(MM)」で表示します。<br>※先物・オプション銘柄の場合のみ")
   
-    public String getDerivMonth() {
+  public String getDerivMonth() {  
     return derivMonth;
   }
 
-  public void setDerivMonth(String derivMonth) {
+
+
+  public void setDerivMonth(String derivMonth) { 
     this.derivMonth = derivMonth;
   }
 
-  public SymbolSuccess tradeStart(Integer tradeStart) {
+  public SymbolSuccess tradeStart(Integer tradeStart) { 
+
     this.tradeStart = tradeStart;
     return this;
   }
@@ -458,17 +614,21 @@ public class SymbolSuccess   {
    * 取引開始日<br>※先物・オプション銘柄の場合のみ
    * @return tradeStart
    **/
+  
   @Schema(description = "取引開始日<br>※先物・オプション銘柄の場合のみ")
   
-    public Integer getTradeStart() {
+  public Integer getTradeStart() {  
     return tradeStart;
   }
 
-  public void setTradeStart(Integer tradeStart) {
+
+
+  public void setTradeStart(Integer tradeStart) { 
     this.tradeStart = tradeStart;
   }
 
-  public SymbolSuccess tradeEnd(Integer tradeEnd) {
+  public SymbolSuccess tradeEnd(Integer tradeEnd) { 
+
     this.tradeEnd = tradeEnd;
     return this;
   }
@@ -477,17 +637,21 @@ public class SymbolSuccess   {
    * 取引終了日<br>※先物・オプション銘柄の場合のみ
    * @return tradeEnd
    **/
+  
   @Schema(description = "取引終了日<br>※先物・オプション銘柄の場合のみ")
   
-    public Integer getTradeEnd() {
+  public Integer getTradeEnd() {  
     return tradeEnd;
   }
 
-  public void setTradeEnd(Integer tradeEnd) {
+
+
+  public void setTradeEnd(Integer tradeEnd) { 
     this.tradeEnd = tradeEnd;
   }
 
-  public SymbolSuccess strikePrice(Double strikePrice) {
+  public SymbolSuccess strikePrice(Double strikePrice) { 
+
     this.strikePrice = strikePrice;
     return this;
   }
@@ -496,17 +660,21 @@ public class SymbolSuccess   {
    * 権利行使価格<br>※オプション銘柄の場合のみ
    * @return strikePrice
    **/
+  
   @Schema(description = "権利行使価格<br>※オプション銘柄の場合のみ")
   
-    public Double getStrikePrice() {
+  public Double getStrikePrice() {  
     return strikePrice;
   }
 
-  public void setStrikePrice(Double strikePrice) {
+
+
+  public void setStrikePrice(Double strikePrice) { 
     this.strikePrice = strikePrice;
   }
 
-  public SymbolSuccess putOrCall(Integer putOrCall) {
+  public SymbolSuccess putOrCall(Integer putOrCall) { 
+
     this.putOrCall = putOrCall;
     return this;
   }
@@ -515,17 +683,21 @@ public class SymbolSuccess   {
    * プット/コール区分<br>※オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>プット</td>       </tr>       <tr>           <td>2</td>           <td>コール</td>       </tr>   </tbody> </table>
    * @return putOrCall
    **/
+  
   @Schema(description = "プット/コール区分<br>※オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>プット</td>       </tr>       <tr>           <td>2</td>           <td>コール</td>       </tr>   </tbody> </table>")
   
-    public Integer getPutOrCall() {
+  public Integer getPutOrCall() {  
     return putOrCall;
   }
 
-  public void setPutOrCall(Integer putOrCall) {
+
+
+  public void setPutOrCall(Integer putOrCall) { 
     this.putOrCall = putOrCall;
   }
 
-  public SymbolSuccess clearingPrice(Double clearingPrice) {
+  public SymbolSuccess clearingPrice(Double clearingPrice) { 
+
     this.clearingPrice = clearingPrice;
     return this;
   }
@@ -534,16 +706,18 @@ public class SymbolSuccess   {
    * 清算値<br>※先物銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null
    * @return clearingPrice
    **/
+  
   @Schema(description = "清算値<br>※先物銘柄の場合のみ<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getClearingPrice() {
+  public Double getClearingPrice() {  
     return clearingPrice;
   }
 
-  public void setClearingPrice(Double clearingPrice) {
+
+
+  public void setClearingPrice(Double clearingPrice) { 
     this.clearingPrice = clearingPrice;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

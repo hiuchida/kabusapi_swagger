@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,26 @@ import javax.validation.constraints.*;
  * ErrorResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class ErrorResponse   {
   @JsonProperty("Code")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer code = null;
 
   @JsonProperty("Message")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String message = null;
 
-  public ErrorResponse code(Integer code) {
+
+  public ErrorResponse code(Integer code) { 
+
     this.code = code;
     return this;
   }
@@ -31,17 +45,21 @@ public class ErrorResponse   {
    * エラーコード
    * @return code
    **/
+  
   @Schema(example = "4001001", description = "エラーコード")
   
-    public Integer getCode() {
+  public Integer getCode() {  
     return code;
   }
 
-  public void setCode(Integer code) {
+
+
+  public void setCode(Integer code) { 
     this.code = code;
   }
 
-  public ErrorResponse message(String message) {
+  public ErrorResponse message(String message) { 
+
     this.message = message;
     return this;
   }
@@ -50,16 +68,18 @@ public class ErrorResponse   {
    * [エラーメッセージ](../ptal/error.html#message)
    * @return message
    **/
+  
   @Schema(example = "内部エラー", description = "[エラーメッセージ](../ptal/error.html#message)")
   
-    public String getMessage() {
+  public String getMessage() {  
     return message;
   }
 
-  public void setMessage(String message) {
+
+
+  public void setMessage(String message) { 
     this.message = message;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

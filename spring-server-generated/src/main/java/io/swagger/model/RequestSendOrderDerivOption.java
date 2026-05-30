@@ -9,6 +9,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,51 +21,69 @@ import javax.validation.constraints.*;
  * RequestSendOrderDerivOption
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-07-23T15:41:03.564729631Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RequestSendOrderDerivOption   {
   @JsonProperty("Password")
+
   private String password = null;
 
   @JsonProperty("Symbol")
+
   private String symbol = null;
 
   @JsonProperty("Exchange")
+
   private Integer exchange = null;
 
   @JsonProperty("TradeType")
+
   private Integer tradeType = null;
 
   @JsonProperty("TimeInForce")
+
   private Integer timeInForce = null;
 
   @JsonProperty("Side")
+
   private String side = null;
 
   @JsonProperty("Qty")
+
   private Integer qty = null;
 
   @JsonProperty("ClosePositionOrder")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer closePositionOrder = null;
 
   @JsonProperty("ClosePositions")
   @Valid
   private List<PositionsDeriv> closePositions = null;
-
   @JsonProperty("FrontOrderType")
+
   private Integer frontOrderType = null;
 
   @JsonProperty("Price")
+
   private Double price = null;
 
   @JsonProperty("ExpireDay")
+
   private Integer expireDay = null;
 
   @JsonProperty("ReverseLimitOrder")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder = null;
 
-  public RequestSendOrderDerivOption password(String password) {
+
+  public RequestSendOrderDerivOption password(String password) { 
+
     this.password = password;
     return this;
   }
@@ -69,18 +92,23 @@ public class RequestSendOrderDerivOption   {
    * 注文パスワード
    * @return password
    **/
+  
   @Schema(required = true, description = "注文パスワード")
-      @NotNull
-
-    public String getPassword() {
+  
+  @NotNull
+  public String getPassword() {  
     return password;
   }
 
-  public void setPassword(String password) {
+
+
+  public void setPassword(String password) { 
+
     this.password = password;
   }
 
-  public RequestSendOrderDerivOption symbol(String symbol) {
+  public RequestSendOrderDerivOption symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -89,18 +117,23 @@ public class RequestSendOrderDerivOption   {
    * 銘柄コード<br>※取引最終日に「オプション銘柄コード取得」でDerivMonthに0（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。
    * @return symbol
    **/
+  
   @Schema(required = true, description = "銘柄コード<br>※取引最終日に「オプション銘柄コード取得」でDerivMonthに0（直近限月）を指定した場合、日中・夜間の時間帯に関わらず、取引最終日を迎える限月の銘柄コードを返します。取引最終日を迎える銘柄の取引は日中取引をもって終了となりますので、ご注意ください。")
-      @NotNull
-
-    public String getSymbol() {
+  
+  @NotNull
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
+
     this.symbol = symbol;
   }
 
-  public RequestSendOrderDerivOption exchange(Integer exchange) {
+  public RequestSendOrderDerivOption exchange(Integer exchange) { 
+
     this.exchange = exchange;
     return this;
   }
@@ -109,18 +142,23 @@ public class RequestSendOrderDerivOption   {
    * 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
    * @return exchange
    **/
+  
   @Schema(required = true, description = "市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>")
-      @NotNull
-
-    public Integer getExchange() {
+  
+  @NotNull
+  public Integer getExchange() {  
     return exchange;
   }
 
-  public void setExchange(Integer exchange) {
+
+
+  public void setExchange(Integer exchange) { 
+
     this.exchange = exchange;
   }
 
-  public RequestSendOrderDerivOption tradeType(Integer tradeType) {
+  public RequestSendOrderDerivOption tradeType(Integer tradeType) { 
+
     this.tradeType = tradeType;
     return this;
   }
@@ -129,18 +167,23 @@ public class RequestSendOrderDerivOption   {
    * 取引区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>新規</td>       </tr>       <tr>           <td>2</td>           <td>返済</td>       </tr>   </tbody> </table>
    * @return tradeType
    **/
+  
   @Schema(required = true, description = "取引区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>新規</td>       </tr>       <tr>           <td>2</td>           <td>返済</td>       </tr>   </tbody> </table>")
-      @NotNull
-
-    public Integer getTradeType() {
+  
+  @NotNull
+  public Integer getTradeType() {  
     return tradeType;
   }
 
-  public void setTradeType(Integer tradeType) {
+
+
+  public void setTradeType(Integer tradeType) { 
+
     this.tradeType = tradeType;
   }
 
-  public RequestSendOrderDerivOption timeInForce(Integer timeInForce) {
+  public RequestSendOrderDerivOption timeInForce(Integer timeInForce) { 
+
     this.timeInForce = timeInForce;
     return this;
   }
@@ -149,18 +192,23 @@ public class RequestSendOrderDerivOption   {
    * 有効期間条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>FAS</td>       </tr>       <tr>           <td>2</td>           <td>FAK</td>       </tr>       <tr>           <td>3</td>           <td>FOK</td>       </tr>   </tbody> </table>  ※執行条件(FrontOrderType)、有効期限条件(TimeInForce)、市場コード(Exchange)で選択できる組み合わせは下表のようになります。               <table>   <thead>     <tr>       <th rowspan=\"2\">執行条件</th>       <th rowspan=\"2\">有効期間条件</th>       <th colspan=\"3\">市場コード</th>     </tr>     <tr>       <th>日中</th>       <th>夜間</th>       <th>日通し</th>     </tr>   </thead>      <tbody>     <tr>       <td>指値</td>       <td>FAS</td>       <td>●</td>       <td>●</td>       <td>●</td>     </tr>     <tr>       <td>指値</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>指値</td>       <td>FOK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>成行</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>成行</td>       <td>FOK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>逆指値（指値）</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>●</td>     </tr>     <tr>       <td>逆指値（成行）</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>引成</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>引指</td>       <td>FAS</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>   </tbody> </table>
    * @return timeInForce
    **/
+  
   @Schema(required = true, description = "有効期間条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>FAS</td>       </tr>       <tr>           <td>2</td>           <td>FAK</td>       </tr>       <tr>           <td>3</td>           <td>FOK</td>       </tr>   </tbody> </table>  ※執行条件(FrontOrderType)、有効期限条件(TimeInForce)、市場コード(Exchange)で選択できる組み合わせは下表のようになります。               <table>   <thead>     <tr>       <th rowspan=\"2\">執行条件</th>       <th rowspan=\"2\">有効期間条件</th>       <th colspan=\"3\">市場コード</th>     </tr>     <tr>       <th>日中</th>       <th>夜間</th>       <th>日通し</th>     </tr>   </thead>      <tbody>     <tr>       <td>指値</td>       <td>FAS</td>       <td>●</td>       <td>●</td>       <td>●</td>     </tr>     <tr>       <td>指値</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>指値</td>       <td>FOK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>成行</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>成行</td>       <td>FOK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>逆指値（指値）</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>●</td>     </tr>     <tr>       <td>逆指値（成行）</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>引成</td>       <td>FAK</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>     <tr>       <td>引指</td>       <td>FAS</td>       <td>●</td>       <td>●</td>       <td>-</td>     </tr>   </tbody> </table>")
-      @NotNull
-
-    public Integer getTimeInForce() {
+  
+  @NotNull
+  public Integer getTimeInForce() {  
     return timeInForce;
   }
 
-  public void setTimeInForce(Integer timeInForce) {
+
+
+  public void setTimeInForce(Integer timeInForce) { 
+
     this.timeInForce = timeInForce;
   }
 
-  public RequestSendOrderDerivOption side(String side) {
+  public RequestSendOrderDerivOption side(String side) { 
+
     this.side = side;
     return this;
   }
@@ -169,18 +217,23 @@ public class RequestSendOrderDerivOption   {
    * 売買区分 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>1</td>       <td>売</td>     </tr>     <tr>       <td>2</td>       <td>買</td>     </tr>   </tbody> </table>
    * @return side
    **/
+  
   @Schema(required = true, description = "売買区分 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>1</td>       <td>売</td>     </tr>     <tr>       <td>2</td>       <td>買</td>     </tr>   </tbody> </table>")
-      @NotNull
-
-    public String getSide() {
+  
+  @NotNull
+  public String getSide() {  
     return side;
   }
 
-  public void setSide(String side) {
+
+
+  public void setSide(String side) { 
+
     this.side = side;
   }
 
-  public RequestSendOrderDerivOption qty(Integer qty) {
+  public RequestSendOrderDerivOption qty(Integer qty) { 
+
     this.qty = qty;
     return this;
   }
@@ -189,18 +242,23 @@ public class RequestSendOrderDerivOption   {
    * 注文数量
    * @return qty
    **/
+  
   @Schema(required = true, description = "注文数量")
-      @NotNull
-
-    public Integer getQty() {
+  
+  @NotNull
+  public Integer getQty() {  
     return qty;
   }
 
-  public void setQty(Integer qty) {
+
+
+  public void setQty(Integer qty) { 
+
     this.qty = qty;
   }
 
-  public RequestSendOrderDerivOption closePositionOrder(Integer closePositionOrder) {
+  public RequestSendOrderDerivOption closePositionOrder(Integer closePositionOrder) { 
+
     this.closePositionOrder = closePositionOrder;
     return this;
   }
@@ -209,17 +267,21 @@ public class RequestSendOrderDerivOption   {
    * 決済順序<br>※ClosePositionOrderとClosePositionsはどちらか一方のみ指定可能。<br>※ClosePositionOrderとClosePositionsを両方指定した場合、エラー。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>日付（古い順）、損益（高い順）</td>       </tr>       <tr>           <td>1</td>           <td>日付（古い順）、損益（低い順）</td>       </tr>       <tr>           <td>2</td>           <td>日付（新しい順）、損益（高い順）</td>       </tr>       <tr>           <td>3</td>           <td>日付（新しい順）、損益（低い順）</td>       </tr>       <tr>           <td>4</td>           <td>損益（高い順）、日付（古い順）</td>       </tr>       <tr>           <td>5</td>           <td>損益（高い順）、日付（新しい順）</td>       </tr>       <tr>           <td>6</td>           <td>損益（低い順）、日付（古い順）</td>       </tr>       <tr>           <td>7</td>           <td>損益（低い順）、日付（新しい順）</td>       </tr>   </tbody> </table>
    * @return closePositionOrder
    **/
+  
   @Schema(description = "決済順序<br>※ClosePositionOrderとClosePositionsはどちらか一方のみ指定可能。<br>※ClosePositionOrderとClosePositionsを両方指定した場合、エラー。 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>日付（古い順）、損益（高い順）</td>       </tr>       <tr>           <td>1</td>           <td>日付（古い順）、損益（低い順）</td>       </tr>       <tr>           <td>2</td>           <td>日付（新しい順）、損益（高い順）</td>       </tr>       <tr>           <td>3</td>           <td>日付（新しい順）、損益（低い順）</td>       </tr>       <tr>           <td>4</td>           <td>損益（高い順）、日付（古い順）</td>       </tr>       <tr>           <td>5</td>           <td>損益（高い順）、日付（新しい順）</td>       </tr>       <tr>           <td>6</td>           <td>損益（低い順）、日付（古い順）</td>       </tr>       <tr>           <td>7</td>           <td>損益（低い順）、日付（新しい順）</td>       </tr>   </tbody> </table>")
   
-    public Integer getClosePositionOrder() {
+  public Integer getClosePositionOrder() {  
     return closePositionOrder;
   }
 
-  public void setClosePositionOrder(Integer closePositionOrder) {
+
+
+  public void setClosePositionOrder(Integer closePositionOrder) { 
     this.closePositionOrder = closePositionOrder;
   }
 
-  public RequestSendOrderDerivOption closePositions(List<PositionsDeriv> closePositions) {
+  public RequestSendOrderDerivOption closePositions(List<PositionsDeriv> closePositions) { 
+
     this.closePositions = closePositions;
     return this;
   }
@@ -236,17 +298,21 @@ public class RequestSendOrderDerivOption   {
    * 返済建玉指定<br>※ClosePositionOrderとClosePositionsはどちらか一方のみ指定可能。<br>※ClosePositionOrderとClosePositionsを両方指定した場合、エラー。
    * @return closePositions
    **/
+  
   @Schema(description = "返済建玉指定<br>※ClosePositionOrderとClosePositionsはどちらか一方のみ指定可能。<br>※ClosePositionOrderとClosePositionsを両方指定した場合、エラー。")
-      @Valid
-    public List<PositionsDeriv> getClosePositions() {
+  @Valid
+  public List<PositionsDeriv> getClosePositions() {  
     return closePositions;
   }
 
-  public void setClosePositions(List<PositionsDeriv> closePositions) {
+
+
+  public void setClosePositions(List<PositionsDeriv> closePositions) { 
     this.closePositions = closePositions;
   }
 
-  public RequestSendOrderDerivOption frontOrderType(Integer frontOrderType) {
+  public RequestSendOrderDerivOption frontOrderType(Integer frontOrderType) { 
+
     this.frontOrderType = frontOrderType;
     return this;
   }
@@ -255,18 +321,23 @@ public class RequestSendOrderDerivOption   {
    * 執行条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>           <th>”Price”の指定</th>       </tr>   </thead>   <tbody>       <tr>           <td>18</td>           <td>引成（派生）<br>※TimeInForceは、「FAK」のみ有効</td>           <td>0</td>       </tr>       <tr>           <td>20</td>           <td>指値</td>           <td>発注したい金額</td>       </tr>       <tr>           <td>28</td>           <td>引指（派生）<br>※TimeInForceは、「FAS」のみ有効</td>           <td>発注したい金額</td>       </tr>       <tr>           <td>30</td>           <td>逆指値</td>           <td>指定なし<br>※AfterHitPriceで指定ください</td>       </tr>       <tr>           <td>120</td>           <td>成行（マーケットオーダー）</td>           <td>0</td>       </tr>   </tbody> </table>
    * @return frontOrderType
    **/
+  
   @Schema(required = true, description = "執行条件 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>           <th>”Price”の指定</th>       </tr>   </thead>   <tbody>       <tr>           <td>18</td>           <td>引成（派生）<br>※TimeInForceは、「FAK」のみ有効</td>           <td>0</td>       </tr>       <tr>           <td>20</td>           <td>指値</td>           <td>発注したい金額</td>       </tr>       <tr>           <td>28</td>           <td>引指（派生）<br>※TimeInForceは、「FAS」のみ有効</td>           <td>発注したい金額</td>       </tr>       <tr>           <td>30</td>           <td>逆指値</td>           <td>指定なし<br>※AfterHitPriceで指定ください</td>       </tr>       <tr>           <td>120</td>           <td>成行（マーケットオーダー）</td>           <td>0</td>       </tr>   </tbody> </table>")
-      @NotNull
-
-    public Integer getFrontOrderType() {
+  
+  @NotNull
+  public Integer getFrontOrderType() {  
     return frontOrderType;
   }
 
-  public void setFrontOrderType(Integer frontOrderType) {
+
+
+  public void setFrontOrderType(Integer frontOrderType) { 
+
     this.frontOrderType = frontOrderType;
   }
 
-  public RequestSendOrderDerivOption price(Double price) {
+  public RequestSendOrderDerivOption price(Double price) { 
+
     this.price = price;
     return this;
   }
@@ -275,18 +346,23 @@ public class RequestSendOrderDerivOption   {
    * 注文価格<br>※FrontOrderTypeで成行を指定した場合、0を指定する。<br>※詳細について、”FrontOrderType”をご確認ください。
    * @return price
    **/
+  
   @Schema(required = true, description = "注文価格<br>※FrontOrderTypeで成行を指定した場合、0を指定する。<br>※詳細について、”FrontOrderType”をご確認ください。")
-      @NotNull
-
-    public Double getPrice() {
+  
+  @NotNull
+  public Double getPrice() {  
     return price;
   }
 
-  public void setPrice(Double price) {
+
+
+  public void setPrice(Double price) { 
+
     this.price = price;
   }
 
-  public RequestSendOrderDerivOption expireDay(Integer expireDay) {
+  public RequestSendOrderDerivOption expireDay(Integer expireDay) { 
+
     this.expireDay = expireDay;
     return this;
   }
@@ -295,18 +371,23 @@ public class RequestSendOrderDerivOption   {
    * 注文有効期限<br> yyyyMMdd形式。<br> 「0」を指定すると、kabuステーション上の発注画面の「本日」に対応する日付として扱います。<br> 「本日」は直近の注文可能日となり、以下のように設定されます。<br> その市場の引けまでの間 : 当日<br> その市場の引け後       : 翌取引所営業日<br> その市場の休前日       : 休日明けの取引所営業日<br> ※ 日替わりはkabuステーションが日付変更通知を受信したタイミングです。<br> ※ 日通しの場合、夜間取引の引け後に日付が更新されます。
    * @return expireDay
    **/
+  
   @Schema(required = true, description = "注文有効期限<br> yyyyMMdd形式。<br> 「0」を指定すると、kabuステーション上の発注画面の「本日」に対応する日付として扱います。<br> 「本日」は直近の注文可能日となり、以下のように設定されます。<br> その市場の引けまでの間 : 当日<br> その市場の引け後       : 翌取引所営業日<br> その市場の休前日       : 休日明けの取引所営業日<br> ※ 日替わりはkabuステーションが日付変更通知を受信したタイミングです。<br> ※ 日通しの場合、夜間取引の引け後に日付が更新されます。")
-      @NotNull
-
-    public Integer getExpireDay() {
+  
+  @NotNull
+  public Integer getExpireDay() {  
     return expireDay;
   }
 
-  public void setExpireDay(Integer expireDay) {
+
+
+  public void setExpireDay(Integer expireDay) { 
+
     this.expireDay = expireDay;
   }
 
-  public RequestSendOrderDerivOption reverseLimitOrder(RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder) {
+  public RequestSendOrderDerivOption reverseLimitOrder(RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder) { 
+
     this.reverseLimitOrder = reverseLimitOrder;
     return this;
   }
@@ -315,17 +396,19 @@ public class RequestSendOrderDerivOption   {
    * Get reverseLimitOrder
    * @return reverseLimitOrder
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public RequestSendOrderDerivFutureReverseLimitOrder getReverseLimitOrder() {
+@Valid
+  public RequestSendOrderDerivFutureReverseLimitOrder getReverseLimitOrder() {  
     return reverseLimitOrder;
   }
 
-  public void setReverseLimitOrder(RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder) {
+
+
+  public void setReverseLimitOrder(RequestSendOrderDerivFutureReverseLimitOrder reverseLimitOrder) { 
     this.reverseLimitOrder = reverseLimitOrder;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

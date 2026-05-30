@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,22 @@ import javax.validation.constraints.*;
  * RequestCancelOrder
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RequestCancelOrder   {
   @JsonProperty("OrderId")
+
   private String orderId = null;
 
   @JsonProperty("Password")
+
   private String password = null;
 
-  public RequestCancelOrder orderId(String orderId) {
+
+  public RequestCancelOrder orderId(String orderId) { 
+
     this.orderId = orderId;
     return this;
   }
@@ -31,18 +41,23 @@ public class RequestCancelOrder   {
    * 注文番号<br>sendorderのレスポンスで受け取るOrderID。
    * @return orderId
    **/
+  
   @Schema(example = "20200529A01N06848002", required = true, description = "注文番号<br>sendorderのレスポンスで受け取るOrderID。")
-      @NotNull
-
-    public String getOrderId() {
+  
+  @NotNull
+  public String getOrderId() {  
     return orderId;
   }
 
-  public void setOrderId(String orderId) {
+
+
+  public void setOrderId(String orderId) { 
+
     this.orderId = orderId;
   }
 
-  public RequestCancelOrder password(String password) {
+  public RequestCancelOrder password(String password) { 
+
     this.password = password;
     return this;
   }
@@ -51,17 +66,20 @@ public class RequestCancelOrder   {
    * 注文パスワード
    * @return password
    **/
+  
   @Schema(example = "xxxxxx", required = true, description = "注文パスワード")
-      @NotNull
-
-    public String getPassword() {
+  
+  @NotNull
+  public String getPassword() {  
     return password;
   }
 
-  public void setPassword(String password) {
+
+
+  public void setPassword(String password) { 
+
     this.password = password;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

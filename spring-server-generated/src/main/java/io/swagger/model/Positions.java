@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,26 @@ import javax.validation.constraints.*;
  * Positions
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class Positions   {
   @JsonProperty("HoldID")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String holdID = null;
 
   @JsonProperty("Qty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer qty = null;
 
-  public Positions holdID(String holdID) {
+
+  public Positions holdID(String holdID) { 
+
     this.holdID = holdID;
     return this;
   }
@@ -31,17 +45,21 @@ public class Positions   {
    * 返済建玉ID
    * @return holdID
    **/
+  
   @Schema(description = "返済建玉ID")
   
-    public String getHoldID() {
+  public String getHoldID() {  
     return holdID;
   }
 
-  public void setHoldID(String holdID) {
+
+
+  public void setHoldID(String holdID) { 
     this.holdID = holdID;
   }
 
-  public Positions qty(Integer qty) {
+  public Positions qty(Integer qty) { 
+
     this.qty = qty;
     return this;
   }
@@ -50,16 +68,18 @@ public class Positions   {
    * 返済建玉数量
    * @return qty
    **/
+  
   @Schema(description = "返済建玉数量")
   
-    public Integer getQty() {
+  public Integer getQty() {  
     return qty;
   }
 
-  public void setQty(Integer qty) {
+
+
+  public void setQty(Integer qty) { 
     this.qty = qty;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

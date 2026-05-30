@@ -26,6 +26,11 @@ import io.swagger.model.BoardSuccessSell9;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -34,200 +39,392 @@ import javax.validation.constraints.*;
  */
 @Schema(description = "下記にあるBIDとASKとは、トレーダー目線から見た場合の値であるため、BidPrice=Sell1のPrice、AskPrice=Buy1のPriceという数値となります。")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-12T11:41:23.269770450Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class BoardSuccess   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("SymbolName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbolName = null;
 
   @JsonProperty("Exchange")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer exchange = null;
 
   @JsonProperty("ExchangeName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeName = null;
 
   @JsonProperty("CurrentPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double currentPrice = null;
 
   @JsonProperty("CurrentPriceTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime currentPriceTime = null;
 
   @JsonProperty("CurrentPriceChangeStatus")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String currentPriceChangeStatus = null;
 
   @JsonProperty("CurrentPriceStatus")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer currentPriceStatus = null;
 
   @JsonProperty("CalcPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double calcPrice = null;
 
   @JsonProperty("PreviousClose")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double previousClose = null;
 
   @JsonProperty("PreviousCloseTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime previousCloseTime = null;
 
   @JsonProperty("ChangePreviousClose")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changePreviousClose = null;
 
   @JsonProperty("ChangePreviousClosePer")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changePreviousClosePer = null;
 
   @JsonProperty("OpeningPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double openingPrice = null;
 
   @JsonProperty("OpeningPriceTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime openingPriceTime = null;
 
   @JsonProperty("HighPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double highPrice = null;
 
   @JsonProperty("HighPriceTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime highPriceTime = null;
 
   @JsonProperty("LowPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double lowPrice = null;
 
   @JsonProperty("LowPriceTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime lowPriceTime = null;
 
   @JsonProperty("TradingVolume")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double tradingVolume = null;
 
   @JsonProperty("TradingVolumeTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime tradingVolumeTime = null;
 
   @JsonProperty("VWAP")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double VWAP = null;
 
   @JsonProperty("TradingValue")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double tradingValue = null;
 
   @JsonProperty("BidQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double bidQty = null;
 
   @JsonProperty("BidPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double bidPrice = null;
 
   @JsonProperty("BidTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime bidTime = null;
 
   @JsonProperty("BidSign")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String bidSign = null;
 
   @JsonProperty("MarketOrderSellQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marketOrderSellQty = null;
 
   @JsonProperty("Sell1")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell1 sell1 = null;
 
   @JsonProperty("Sell2")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell2 sell2 = null;
 
   @JsonProperty("Sell3")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell3 sell3 = null;
 
   @JsonProperty("Sell4")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell4 sell4 = null;
 
   @JsonProperty("Sell5")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell5 sell5 = null;
 
   @JsonProperty("Sell6")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell6 sell6 = null;
 
   @JsonProperty("Sell7")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell7 sell7 = null;
 
   @JsonProperty("Sell8")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell8 sell8 = null;
 
   @JsonProperty("Sell9")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell9 sell9 = null;
 
   @JsonProperty("Sell10")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessSell10 sell10 = null;
 
   @JsonProperty("AskQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double askQty = null;
 
   @JsonProperty("AskPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double askPrice = null;
 
   @JsonProperty("AskTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime askTime = null;
 
   @JsonProperty("AskSign")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String askSign = null;
 
   @JsonProperty("MarketOrderBuyQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marketOrderBuyQty = null;
 
   @JsonProperty("Buy1")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy1 buy1 = null;
 
   @JsonProperty("Buy2")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy2 buy2 = null;
 
   @JsonProperty("Buy3")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy3 buy3 = null;
 
   @JsonProperty("Buy4")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy4 buy4 = null;
 
   @JsonProperty("Buy5")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy5 buy5 = null;
 
   @JsonProperty("Buy6")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy6 buy6 = null;
 
   @JsonProperty("Buy7")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy7 buy7 = null;
 
   @JsonProperty("Buy8")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy8 buy8 = null;
 
   @JsonProperty("Buy9")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy9 buy9 = null;
 
   @JsonProperty("Buy10")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private BoardSuccessBuy10 buy10 = null;
 
   @JsonProperty("OverSellQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double overSellQty = null;
 
   @JsonProperty("UnderBuyQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double underBuyQty = null;
 
   @JsonProperty("TotalMarketValue")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double totalMarketValue = null;
 
   @JsonProperty("ClearingPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double clearingPrice = null;
 
   @JsonProperty("IV")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double IV = null;
 
   @JsonProperty("Gamma")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double gamma = null;
 
   @JsonProperty("Theta")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double theta = null;
 
   @JsonProperty("Vega")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double vega = null;
 
   @JsonProperty("Delta")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double delta = null;
 
   @JsonProperty("SecurityType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer securityType = null;
 
-  public BoardSuccess symbol(String symbol) {
+
+  public BoardSuccess symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -236,17 +433,21 @@ public class BoardSuccess   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public BoardSuccess symbolName(String symbolName) {
+  public BoardSuccess symbolName(String symbolName) { 
+
     this.symbolName = symbolName;
     return this;
   }
@@ -255,17 +456,21 @@ public class BoardSuccess   {
    * 銘柄名
    * @return symbolName
    **/
+  
   @Schema(description = "銘柄名")
   
-    public String getSymbolName() {
+  public String getSymbolName() {  
     return symbolName;
   }
 
-  public void setSymbolName(String symbolName) {
+
+
+  public void setSymbolName(String symbolName) { 
     this.symbolName = symbolName;
   }
 
-  public BoardSuccess exchange(Integer exchange) {
+  public BoardSuccess exchange(Integer exchange) { 
+
     this.exchange = exchange;
     return this;
   }
@@ -274,17 +479,21 @@ public class BoardSuccess   {
    * 市場コード<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
    * @return exchange
    **/
+  
   @Schema(example = "1", description = "市場コード<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>")
   
-    public Integer getExchange() {
+  public Integer getExchange() {  
     return exchange;
   }
 
-  public void setExchange(Integer exchange) {
+
+
+  public void setExchange(Integer exchange) { 
     this.exchange = exchange;
   }
 
-  public BoardSuccess exchangeName(String exchangeName) {
+  public BoardSuccess exchangeName(String exchangeName) { 
+
     this.exchangeName = exchangeName;
     return this;
   }
@@ -293,17 +502,21 @@ public class BoardSuccess   {
    * 市場名称<br>※株式・先物・オプション銘柄の場合のみ
    * @return exchangeName
    **/
+  
   @Schema(description = "市場名称<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public String getExchangeName() {
+  public String getExchangeName() {  
     return exchangeName;
   }
 
-  public void setExchangeName(String exchangeName) {
+
+
+  public void setExchangeName(String exchangeName) { 
     this.exchangeName = exchangeName;
   }
 
-  public BoardSuccess currentPrice(Double currentPrice) {
+  public BoardSuccess currentPrice(Double currentPrice) { 
+
     this.currentPrice = currentPrice;
     return this;
   }
@@ -312,17 +525,21 @@ public class BoardSuccess   {
    * 現値
    * @return currentPrice
    **/
+  
   @Schema(description = "現値")
   
-    public Double getCurrentPrice() {
+  public Double getCurrentPrice() {  
     return currentPrice;
   }
 
-  public void setCurrentPrice(Double currentPrice) {
+
+
+  public void setCurrentPrice(Double currentPrice) { 
     this.currentPrice = currentPrice;
   }
 
-  public BoardSuccess currentPriceTime(OffsetDateTime currentPriceTime) {
+  public BoardSuccess currentPriceTime(OffsetDateTime currentPriceTime) { 
+
     this.currentPriceTime = currentPriceTime;
     return this;
   }
@@ -331,18 +548,22 @@ public class BoardSuccess   {
    * 現値時刻
    * @return currentPriceTime
    **/
+  
   @Schema(description = "現値時刻")
   
-    @Valid
-    public OffsetDateTime getCurrentPriceTime() {
+@Valid
+  public OffsetDateTime getCurrentPriceTime() {  
     return currentPriceTime;
   }
 
-  public void setCurrentPriceTime(OffsetDateTime currentPriceTime) {
+
+
+  public void setCurrentPriceTime(OffsetDateTime currentPriceTime) { 
     this.currentPriceTime = currentPriceTime;
   }
 
-  public BoardSuccess currentPriceChangeStatus(String currentPriceChangeStatus) {
+  public BoardSuccess currentPriceChangeStatus(String currentPriceChangeStatus) { 
+
     this.currentPriceChangeStatus = currentPriceChangeStatus;
     return this;
   }
@@ -351,17 +572,21 @@ public class BoardSuccess   {
    * 現値前値比較 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0056</td>           <td>変わらず</td>       </tr>       <tr>           <td>0057</td>           <td>UP</td>       </tr>       <tr>           <td>0058</td>           <td>DOWN</td>       </tr>       <tr>           <td>0059</td>           <td>中断板寄り後の初値</td>       </tr>       <tr>           <td>0060</td>           <td>ザラバ引け</td>       </tr>       <tr>           <td>0061</td>           <td>板寄り引け</td>       </tr>       <tr>           <td>0062</td>           <td>中断引け</td>       </tr>       <tr>           <td>0063</td>           <td>ダウン引け</td>       </tr>       <tr>           <td>0064</td>           <td>逆転終値</td>       </tr>       <tr>           <td>0066</td>           <td>特別気配引け</td>       </tr>       <tr>           <td>0067</td>           <td>一時留保引け</td>       </tr>       <tr>           <td>0068</td>           <td>売買停止引け</td>       </tr>       <tr>           <td>0069</td>           <td>サーキットブレーカ引け</td>       </tr>       <tr>           <td>0431</td>           <td>ダイナミックサーキットブレーカ引け</td>       </tr>   </tbody> </table>
    * @return currentPriceChangeStatus
    **/
+  
   @Schema(description = "現値前値比較 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0056</td>           <td>変わらず</td>       </tr>       <tr>           <td>0057</td>           <td>UP</td>       </tr>       <tr>           <td>0058</td>           <td>DOWN</td>       </tr>       <tr>           <td>0059</td>           <td>中断板寄り後の初値</td>       </tr>       <tr>           <td>0060</td>           <td>ザラバ引け</td>       </tr>       <tr>           <td>0061</td>           <td>板寄り引け</td>       </tr>       <tr>           <td>0062</td>           <td>中断引け</td>       </tr>       <tr>           <td>0063</td>           <td>ダウン引け</td>       </tr>       <tr>           <td>0064</td>           <td>逆転終値</td>       </tr>       <tr>           <td>0066</td>           <td>特別気配引け</td>       </tr>       <tr>           <td>0067</td>           <td>一時留保引け</td>       </tr>       <tr>           <td>0068</td>           <td>売買停止引け</td>       </tr>       <tr>           <td>0069</td>           <td>サーキットブレーカ引け</td>       </tr>       <tr>           <td>0431</td>           <td>ダイナミックサーキットブレーカ引け</td>       </tr>   </tbody> </table>")
   
-    public String getCurrentPriceChangeStatus() {
+  public String getCurrentPriceChangeStatus() {  
     return currentPriceChangeStatus;
   }
 
-  public void setCurrentPriceChangeStatus(String currentPriceChangeStatus) {
+
+
+  public void setCurrentPriceChangeStatus(String currentPriceChangeStatus) { 
     this.currentPriceChangeStatus = currentPriceChangeStatus;
   }
 
-  public BoardSuccess currentPriceStatus(Integer currentPriceStatus) {
+  public BoardSuccess currentPriceStatus(Integer currentPriceStatus) { 
+
     this.currentPriceStatus = currentPriceStatus;
     return this;
   }
@@ -370,17 +595,21 @@ public class BoardSuccess   {
    * 現値ステータス <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>現値</td>       </tr>       <tr>           <td>2</td>           <td>不連続歩み</td>       </tr>       <tr>           <td>3</td>           <td>板寄せ</td>       </tr>       <tr>           <td>4</td>           <td>システム障害</td>       </tr>       <tr>           <td>5</td>           <td>中断</td>       </tr>       <tr>           <td>6</td>           <td>売買停止</td>       </tr>       <tr>           <td>7</td>           <td>売買停止・システム停止解除</td>       </tr>       <tr>           <td>8</td>           <td>終値</td>       </tr>       <tr>           <td>9</td>           <td>システム停止</td>       </tr>       <tr>           <td>10</td>           <td>概算値</td>       </tr>       <tr>           <td>11</td>           <td>参考値</td>       </tr>       <tr>           <td>12</td>           <td>サーキットブレイク実施中</td>       </tr>       <tr>           <td>13</td>           <td>システム障害解除</td>       </tr>       <tr>           <td>14</td>           <td>サーキットブレイク解除</td>       </tr>       <tr>           <td>15</td>           <td>中断解除</td>       </tr>       <tr>           <td>16</td>           <td>一時留保中</td>       </tr>       <tr>           <td>17</td>           <td>一時留保解除</td>       </tr>       <tr>           <td>18</td>           <td>ファイル障害</td>       </tr>       <tr>           <td>19</td>           <td>ファイル障害解除</td>       </tr>       <tr>           <td>20</td>           <td>Spread/Strategy</td>       </tr>       <tr>           <td>21</td>           <td>ダイナミックサーキットブレイク発動</td>       </tr>       <tr>           <td>22</td>           <td>ダイナミックサーキットブレイク解除</td>       </tr>       <tr>           <td>23</td>           <td>板寄せ約定</td>       </tr>   </tbody> </table>
    * @return currentPriceStatus
    **/
+  
   @Schema(description = "現値ステータス <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>現値</td>       </tr>       <tr>           <td>2</td>           <td>不連続歩み</td>       </tr>       <tr>           <td>3</td>           <td>板寄せ</td>       </tr>       <tr>           <td>4</td>           <td>システム障害</td>       </tr>       <tr>           <td>5</td>           <td>中断</td>       </tr>       <tr>           <td>6</td>           <td>売買停止</td>       </tr>       <tr>           <td>7</td>           <td>売買停止・システム停止解除</td>       </tr>       <tr>           <td>8</td>           <td>終値</td>       </tr>       <tr>           <td>9</td>           <td>システム停止</td>       </tr>       <tr>           <td>10</td>           <td>概算値</td>       </tr>       <tr>           <td>11</td>           <td>参考値</td>       </tr>       <tr>           <td>12</td>           <td>サーキットブレイク実施中</td>       </tr>       <tr>           <td>13</td>           <td>システム障害解除</td>       </tr>       <tr>           <td>14</td>           <td>サーキットブレイク解除</td>       </tr>       <tr>           <td>15</td>           <td>中断解除</td>       </tr>       <tr>           <td>16</td>           <td>一時留保中</td>       </tr>       <tr>           <td>17</td>           <td>一時留保解除</td>       </tr>       <tr>           <td>18</td>           <td>ファイル障害</td>       </tr>       <tr>           <td>19</td>           <td>ファイル障害解除</td>       </tr>       <tr>           <td>20</td>           <td>Spread/Strategy</td>       </tr>       <tr>           <td>21</td>           <td>ダイナミックサーキットブレイク発動</td>       </tr>       <tr>           <td>22</td>           <td>ダイナミックサーキットブレイク解除</td>       </tr>       <tr>           <td>23</td>           <td>板寄せ約定</td>       </tr>   </tbody> </table>")
   
-    public Integer getCurrentPriceStatus() {
+  public Integer getCurrentPriceStatus() {  
     return currentPriceStatus;
   }
 
-  public void setCurrentPriceStatus(Integer currentPriceStatus) {
+
+
+  public void setCurrentPriceStatus(Integer currentPriceStatus) { 
     this.currentPriceStatus = currentPriceStatus;
   }
 
-  public BoardSuccess calcPrice(Double calcPrice) {
+  public BoardSuccess calcPrice(Double calcPrice) { 
+
     this.calcPrice = calcPrice;
     return this;
   }
@@ -389,17 +618,21 @@ public class BoardSuccess   {
    * 計算用現値
    * @return calcPrice
    **/
+  
   @Schema(description = "計算用現値")
   
-    public Double getCalcPrice() {
+  public Double getCalcPrice() {  
     return calcPrice;
   }
 
-  public void setCalcPrice(Double calcPrice) {
+
+
+  public void setCalcPrice(Double calcPrice) { 
     this.calcPrice = calcPrice;
   }
 
-  public BoardSuccess previousClose(Double previousClose) {
+  public BoardSuccess previousClose(Double previousClose) { 
+
     this.previousClose = previousClose;
     return this;
   }
@@ -408,17 +641,21 @@ public class BoardSuccess   {
    * 前日終値
    * @return previousClose
    **/
+  
   @Schema(description = "前日終値")
   
-    public Double getPreviousClose() {
+  public Double getPreviousClose() {  
     return previousClose;
   }
 
-  public void setPreviousClose(Double previousClose) {
+
+
+  public void setPreviousClose(Double previousClose) { 
     this.previousClose = previousClose;
   }
 
-  public BoardSuccess previousCloseTime(OffsetDateTime previousCloseTime) {
+  public BoardSuccess previousCloseTime(OffsetDateTime previousCloseTime) { 
+
     this.previousCloseTime = previousCloseTime;
     return this;
   }
@@ -427,18 +664,22 @@ public class BoardSuccess   {
    * 前日終値日付
    * @return previousCloseTime
    **/
+  
   @Schema(description = "前日終値日付")
   
-    @Valid
-    public OffsetDateTime getPreviousCloseTime() {
+@Valid
+  public OffsetDateTime getPreviousCloseTime() {  
     return previousCloseTime;
   }
 
-  public void setPreviousCloseTime(OffsetDateTime previousCloseTime) {
+
+
+  public void setPreviousCloseTime(OffsetDateTime previousCloseTime) { 
     this.previousCloseTime = previousCloseTime;
   }
 
-  public BoardSuccess changePreviousClose(Double changePreviousClose) {
+  public BoardSuccess changePreviousClose(Double changePreviousClose) { 
+
     this.changePreviousClose = changePreviousClose;
     return this;
   }
@@ -447,17 +688,21 @@ public class BoardSuccess   {
    * 前日比
    * @return changePreviousClose
    **/
+  
   @Schema(description = "前日比")
   
-    public Double getChangePreviousClose() {
+  public Double getChangePreviousClose() {  
     return changePreviousClose;
   }
 
-  public void setChangePreviousClose(Double changePreviousClose) {
+
+
+  public void setChangePreviousClose(Double changePreviousClose) { 
     this.changePreviousClose = changePreviousClose;
   }
 
-  public BoardSuccess changePreviousClosePer(Double changePreviousClosePer) {
+  public BoardSuccess changePreviousClosePer(Double changePreviousClosePer) { 
+
     this.changePreviousClosePer = changePreviousClosePer;
     return this;
   }
@@ -466,17 +711,21 @@ public class BoardSuccess   {
    * 騰落率
    * @return changePreviousClosePer
    **/
+  
   @Schema(description = "騰落率")
   
-    public Double getChangePreviousClosePer() {
+  public Double getChangePreviousClosePer() {  
     return changePreviousClosePer;
   }
 
-  public void setChangePreviousClosePer(Double changePreviousClosePer) {
+
+
+  public void setChangePreviousClosePer(Double changePreviousClosePer) { 
     this.changePreviousClosePer = changePreviousClosePer;
   }
 
-  public BoardSuccess openingPrice(Double openingPrice) {
+  public BoardSuccess openingPrice(Double openingPrice) { 
+
     this.openingPrice = openingPrice;
     return this;
   }
@@ -485,17 +734,21 @@ public class BoardSuccess   {
    * 始値
    * @return openingPrice
    **/
+  
   @Schema(description = "始値")
   
-    public Double getOpeningPrice() {
+  public Double getOpeningPrice() {  
     return openingPrice;
   }
 
-  public void setOpeningPrice(Double openingPrice) {
+
+
+  public void setOpeningPrice(Double openingPrice) { 
     this.openingPrice = openingPrice;
   }
 
-  public BoardSuccess openingPriceTime(OffsetDateTime openingPriceTime) {
+  public BoardSuccess openingPriceTime(OffsetDateTime openingPriceTime) { 
+
     this.openingPriceTime = openingPriceTime;
     return this;
   }
@@ -504,18 +757,22 @@ public class BoardSuccess   {
    * 始値時刻
    * @return openingPriceTime
    **/
+  
   @Schema(description = "始値時刻")
   
-    @Valid
-    public OffsetDateTime getOpeningPriceTime() {
+@Valid
+  public OffsetDateTime getOpeningPriceTime() {  
     return openingPriceTime;
   }
 
-  public void setOpeningPriceTime(OffsetDateTime openingPriceTime) {
+
+
+  public void setOpeningPriceTime(OffsetDateTime openingPriceTime) { 
     this.openingPriceTime = openingPriceTime;
   }
 
-  public BoardSuccess highPrice(Double highPrice) {
+  public BoardSuccess highPrice(Double highPrice) { 
+
     this.highPrice = highPrice;
     return this;
   }
@@ -524,17 +781,21 @@ public class BoardSuccess   {
    * 高値
    * @return highPrice
    **/
+  
   @Schema(description = "高値")
   
-    public Double getHighPrice() {
+  public Double getHighPrice() {  
     return highPrice;
   }
 
-  public void setHighPrice(Double highPrice) {
+
+
+  public void setHighPrice(Double highPrice) { 
     this.highPrice = highPrice;
   }
 
-  public BoardSuccess highPriceTime(OffsetDateTime highPriceTime) {
+  public BoardSuccess highPriceTime(OffsetDateTime highPriceTime) { 
+
     this.highPriceTime = highPriceTime;
     return this;
   }
@@ -543,18 +804,22 @@ public class BoardSuccess   {
    * 高値時刻
    * @return highPriceTime
    **/
+  
   @Schema(description = "高値時刻")
   
-    @Valid
-    public OffsetDateTime getHighPriceTime() {
+@Valid
+  public OffsetDateTime getHighPriceTime() {  
     return highPriceTime;
   }
 
-  public void setHighPriceTime(OffsetDateTime highPriceTime) {
+
+
+  public void setHighPriceTime(OffsetDateTime highPriceTime) { 
     this.highPriceTime = highPriceTime;
   }
 
-  public BoardSuccess lowPrice(Double lowPrice) {
+  public BoardSuccess lowPrice(Double lowPrice) { 
+
     this.lowPrice = lowPrice;
     return this;
   }
@@ -563,17 +828,21 @@ public class BoardSuccess   {
    * 安値
    * @return lowPrice
    **/
+  
   @Schema(description = "安値")
   
-    public Double getLowPrice() {
+  public Double getLowPrice() {  
     return lowPrice;
   }
 
-  public void setLowPrice(Double lowPrice) {
+
+
+  public void setLowPrice(Double lowPrice) { 
     this.lowPrice = lowPrice;
   }
 
-  public BoardSuccess lowPriceTime(OffsetDateTime lowPriceTime) {
+  public BoardSuccess lowPriceTime(OffsetDateTime lowPriceTime) { 
+
     this.lowPriceTime = lowPriceTime;
     return this;
   }
@@ -582,18 +851,22 @@ public class BoardSuccess   {
    * 安値時刻
    * @return lowPriceTime
    **/
+  
   @Schema(description = "安値時刻")
   
-    @Valid
-    public OffsetDateTime getLowPriceTime() {
+@Valid
+  public OffsetDateTime getLowPriceTime() {  
     return lowPriceTime;
   }
 
-  public void setLowPriceTime(OffsetDateTime lowPriceTime) {
+
+
+  public void setLowPriceTime(OffsetDateTime lowPriceTime) { 
     this.lowPriceTime = lowPriceTime;
   }
 
-  public BoardSuccess tradingVolume(Double tradingVolume) {
+  public BoardSuccess tradingVolume(Double tradingVolume) { 
+
     this.tradingVolume = tradingVolume;
     return this;
   }
@@ -602,17 +875,21 @@ public class BoardSuccess   {
    * 売買高<br>※株式・先物・オプション銘柄の場合のみ
    * @return tradingVolume
    **/
+  
   @Schema(description = "売買高<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getTradingVolume() {
+  public Double getTradingVolume() {  
     return tradingVolume;
   }
 
-  public void setTradingVolume(Double tradingVolume) {
+
+
+  public void setTradingVolume(Double tradingVolume) { 
     this.tradingVolume = tradingVolume;
   }
 
-  public BoardSuccess tradingVolumeTime(OffsetDateTime tradingVolumeTime) {
+  public BoardSuccess tradingVolumeTime(OffsetDateTime tradingVolumeTime) { 
+
     this.tradingVolumeTime = tradingVolumeTime;
     return this;
   }
@@ -621,18 +898,22 @@ public class BoardSuccess   {
    * 売買高時刻<br>※株式・先物・オプション銘柄の場合のみ
    * @return tradingVolumeTime
    **/
+  
   @Schema(description = "売買高時刻<br>※株式・先物・オプション銘柄の場合のみ")
   
-    @Valid
-    public OffsetDateTime getTradingVolumeTime() {
+@Valid
+  public OffsetDateTime getTradingVolumeTime() {  
     return tradingVolumeTime;
   }
 
-  public void setTradingVolumeTime(OffsetDateTime tradingVolumeTime) {
+
+
+  public void setTradingVolumeTime(OffsetDateTime tradingVolumeTime) { 
     this.tradingVolumeTime = tradingVolumeTime;
   }
 
-  public BoardSuccess VWAP(Double VWAP) {
+  public BoardSuccess VWAP(Double VWAP) { 
+
     this.VWAP = VWAP;
     return this;
   }
@@ -641,17 +922,21 @@ public class BoardSuccess   {
    * 売買高加重平均価格（VWAP）<br>※株式・先物・オプション銘柄の場合のみ
    * @return VWAP
    **/
+  
   @Schema(description = "売買高加重平均価格（VWAP）<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getVWAP() {
+  public Double getVWAP() {  
     return VWAP;
   }
 
-  public void setVWAP(Double VWAP) {
+
+
+  public void setVWAP(Double VWAP) { 
     this.VWAP = VWAP;
   }
 
-  public BoardSuccess tradingValue(Double tradingValue) {
+  public BoardSuccess tradingValue(Double tradingValue) { 
+
     this.tradingValue = tradingValue;
     return this;
   }
@@ -660,17 +945,21 @@ public class BoardSuccess   {
    * 売買代金<br>※株式・先物・オプション銘柄の場合のみ
    * @return tradingValue
    **/
+  
   @Schema(description = "売買代金<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getTradingValue() {
+  public Double getTradingValue() {  
     return tradingValue;
   }
 
-  public void setTradingValue(Double tradingValue) {
+
+
+  public void setTradingValue(Double tradingValue) { 
     this.tradingValue = tradingValue;
   }
 
-  public BoardSuccess bidQty(Double bidQty) {
+  public BoardSuccess bidQty(Double bidQty) { 
+
     this.bidQty = bidQty;
     return this;
   }
@@ -679,17 +968,21 @@ public class BoardSuccess   {
    * 最良売気配数量 ※①<br>※株式・先物・オプション銘柄の場合のみ
    * @return bidQty
    **/
+  
   @Schema(description = "最良売気配数量 ※①<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getBidQty() {
+  public Double getBidQty() {  
     return bidQty;
   }
 
-  public void setBidQty(Double bidQty) {
+
+
+  public void setBidQty(Double bidQty) { 
     this.bidQty = bidQty;
   }
 
-  public BoardSuccess bidPrice(Double bidPrice) {
+  public BoardSuccess bidPrice(Double bidPrice) { 
+
     this.bidPrice = bidPrice;
     return this;
   }
@@ -698,17 +991,21 @@ public class BoardSuccess   {
    * 最良売気配値段 ※①<br>※株式・先物・オプション銘柄の場合のみ
    * @return bidPrice
    **/
+  
   @Schema(description = "最良売気配値段 ※①<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getBidPrice() {
+  public Double getBidPrice() {  
     return bidPrice;
   }
 
-  public void setBidPrice(Double bidPrice) {
+
+
+  public void setBidPrice(Double bidPrice) { 
     this.bidPrice = bidPrice;
   }
 
-  public BoardSuccess bidTime(OffsetDateTime bidTime) {
+  public BoardSuccess bidTime(OffsetDateTime bidTime) { 
+
     this.bidTime = bidTime;
     return this;
   }
@@ -717,18 +1014,22 @@ public class BoardSuccess   {
    * 最良売気配時刻 ※①<br>※株式銘柄の場合のみ
    * @return bidTime
    **/
+  
   @Schema(description = "最良売気配時刻 ※①<br>※株式銘柄の場合のみ")
   
-    @Valid
-    public OffsetDateTime getBidTime() {
+@Valid
+  public OffsetDateTime getBidTime() {  
     return bidTime;
   }
 
-  public void setBidTime(OffsetDateTime bidTime) {
+
+
+  public void setBidTime(OffsetDateTime bidTime) { 
     this.bidTime = bidTime;
   }
 
-  public BoardSuccess bidSign(String bidSign) {
+  public BoardSuccess bidSign(String bidSign) { 
+
     this.bidSign = bidSign;
     return this;
   }
@@ -737,17 +1038,21 @@ public class BoardSuccess   {
    * 最良売気配フラグ ※①<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>
    * @return bidSign
    **/
+  
   @Schema(description = "最良売気配フラグ ※①<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>")
   
-    public String getBidSign() {
+  public String getBidSign() {  
     return bidSign;
   }
 
-  public void setBidSign(String bidSign) {
+
+
+  public void setBidSign(String bidSign) { 
     this.bidSign = bidSign;
   }
 
-  public BoardSuccess marketOrderSellQty(Double marketOrderSellQty) {
+  public BoardSuccess marketOrderSellQty(Double marketOrderSellQty) { 
+
     this.marketOrderSellQty = marketOrderSellQty;
     return this;
   }
@@ -756,17 +1061,21 @@ public class BoardSuccess   {
    * 売成行数量<br>※株式銘柄の場合のみ
    * @return marketOrderSellQty
    **/
+  
   @Schema(description = "売成行数量<br>※株式銘柄の場合のみ")
   
-    public Double getMarketOrderSellQty() {
+  public Double getMarketOrderSellQty() {  
     return marketOrderSellQty;
   }
 
-  public void setMarketOrderSellQty(Double marketOrderSellQty) {
+
+
+  public void setMarketOrderSellQty(Double marketOrderSellQty) { 
     this.marketOrderSellQty = marketOrderSellQty;
   }
 
-  public BoardSuccess sell1(BoardSuccessSell1 sell1) {
+  public BoardSuccess sell1(BoardSuccessSell1 sell1) { 
+
     this.sell1 = sell1;
     return this;
   }
@@ -775,18 +1084,22 @@ public class BoardSuccess   {
    * Get sell1
    * @return sell1
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell1 getSell1() {
+@Valid
+  public BoardSuccessSell1 getSell1() {  
     return sell1;
   }
 
-  public void setSell1(BoardSuccessSell1 sell1) {
+
+
+  public void setSell1(BoardSuccessSell1 sell1) { 
     this.sell1 = sell1;
   }
 
-  public BoardSuccess sell2(BoardSuccessSell2 sell2) {
+  public BoardSuccess sell2(BoardSuccessSell2 sell2) { 
+
     this.sell2 = sell2;
     return this;
   }
@@ -795,18 +1108,22 @@ public class BoardSuccess   {
    * Get sell2
    * @return sell2
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell2 getSell2() {
+@Valid
+  public BoardSuccessSell2 getSell2() {  
     return sell2;
   }
 
-  public void setSell2(BoardSuccessSell2 sell2) {
+
+
+  public void setSell2(BoardSuccessSell2 sell2) { 
     this.sell2 = sell2;
   }
 
-  public BoardSuccess sell3(BoardSuccessSell3 sell3) {
+  public BoardSuccess sell3(BoardSuccessSell3 sell3) { 
+
     this.sell3 = sell3;
     return this;
   }
@@ -815,18 +1132,22 @@ public class BoardSuccess   {
    * Get sell3
    * @return sell3
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell3 getSell3() {
+@Valid
+  public BoardSuccessSell3 getSell3() {  
     return sell3;
   }
 
-  public void setSell3(BoardSuccessSell3 sell3) {
+
+
+  public void setSell3(BoardSuccessSell3 sell3) { 
     this.sell3 = sell3;
   }
 
-  public BoardSuccess sell4(BoardSuccessSell4 sell4) {
+  public BoardSuccess sell4(BoardSuccessSell4 sell4) { 
+
     this.sell4 = sell4;
     return this;
   }
@@ -835,18 +1156,22 @@ public class BoardSuccess   {
    * Get sell4
    * @return sell4
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell4 getSell4() {
+@Valid
+  public BoardSuccessSell4 getSell4() {  
     return sell4;
   }
 
-  public void setSell4(BoardSuccessSell4 sell4) {
+
+
+  public void setSell4(BoardSuccessSell4 sell4) { 
     this.sell4 = sell4;
   }
 
-  public BoardSuccess sell5(BoardSuccessSell5 sell5) {
+  public BoardSuccess sell5(BoardSuccessSell5 sell5) { 
+
     this.sell5 = sell5;
     return this;
   }
@@ -855,18 +1180,22 @@ public class BoardSuccess   {
    * Get sell5
    * @return sell5
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell5 getSell5() {
+@Valid
+  public BoardSuccessSell5 getSell5() {  
     return sell5;
   }
 
-  public void setSell5(BoardSuccessSell5 sell5) {
+
+
+  public void setSell5(BoardSuccessSell5 sell5) { 
     this.sell5 = sell5;
   }
 
-  public BoardSuccess sell6(BoardSuccessSell6 sell6) {
+  public BoardSuccess sell6(BoardSuccessSell6 sell6) { 
+
     this.sell6 = sell6;
     return this;
   }
@@ -875,18 +1204,22 @@ public class BoardSuccess   {
    * Get sell6
    * @return sell6
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell6 getSell6() {
+@Valid
+  public BoardSuccessSell6 getSell6() {  
     return sell6;
   }
 
-  public void setSell6(BoardSuccessSell6 sell6) {
+
+
+  public void setSell6(BoardSuccessSell6 sell6) { 
     this.sell6 = sell6;
   }
 
-  public BoardSuccess sell7(BoardSuccessSell7 sell7) {
+  public BoardSuccess sell7(BoardSuccessSell7 sell7) { 
+
     this.sell7 = sell7;
     return this;
   }
@@ -895,18 +1228,22 @@ public class BoardSuccess   {
    * Get sell7
    * @return sell7
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell7 getSell7() {
+@Valid
+  public BoardSuccessSell7 getSell7() {  
     return sell7;
   }
 
-  public void setSell7(BoardSuccessSell7 sell7) {
+
+
+  public void setSell7(BoardSuccessSell7 sell7) { 
     this.sell7 = sell7;
   }
 
-  public BoardSuccess sell8(BoardSuccessSell8 sell8) {
+  public BoardSuccess sell8(BoardSuccessSell8 sell8) { 
+
     this.sell8 = sell8;
     return this;
   }
@@ -915,18 +1252,22 @@ public class BoardSuccess   {
    * Get sell8
    * @return sell8
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell8 getSell8() {
+@Valid
+  public BoardSuccessSell8 getSell8() {  
     return sell8;
   }
 
-  public void setSell8(BoardSuccessSell8 sell8) {
+
+
+  public void setSell8(BoardSuccessSell8 sell8) { 
     this.sell8 = sell8;
   }
 
-  public BoardSuccess sell9(BoardSuccessSell9 sell9) {
+  public BoardSuccess sell9(BoardSuccessSell9 sell9) { 
+
     this.sell9 = sell9;
     return this;
   }
@@ -935,18 +1276,22 @@ public class BoardSuccess   {
    * Get sell9
    * @return sell9
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell9 getSell9() {
+@Valid
+  public BoardSuccessSell9 getSell9() {  
     return sell9;
   }
 
-  public void setSell9(BoardSuccessSell9 sell9) {
+
+
+  public void setSell9(BoardSuccessSell9 sell9) { 
     this.sell9 = sell9;
   }
 
-  public BoardSuccess sell10(BoardSuccessSell10 sell10) {
+  public BoardSuccess sell10(BoardSuccessSell10 sell10) { 
+
     this.sell10 = sell10;
     return this;
   }
@@ -955,18 +1300,22 @@ public class BoardSuccess   {
    * Get sell10
    * @return sell10
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessSell10 getSell10() {
+@Valid
+  public BoardSuccessSell10 getSell10() {  
     return sell10;
   }
 
-  public void setSell10(BoardSuccessSell10 sell10) {
+
+
+  public void setSell10(BoardSuccessSell10 sell10) { 
     this.sell10 = sell10;
   }
 
-  public BoardSuccess askQty(Double askQty) {
+  public BoardSuccess askQty(Double askQty) { 
+
     this.askQty = askQty;
     return this;
   }
@@ -975,17 +1324,21 @@ public class BoardSuccess   {
    * 最良買気配数量 ※①<br>※株式・先物・オプション銘柄の場合のみ
    * @return askQty
    **/
+  
   @Schema(description = "最良買気配数量 ※①<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getAskQty() {
+  public Double getAskQty() {  
     return askQty;
   }
 
-  public void setAskQty(Double askQty) {
+
+
+  public void setAskQty(Double askQty) { 
     this.askQty = askQty;
   }
 
-  public BoardSuccess askPrice(Double askPrice) {
+  public BoardSuccess askPrice(Double askPrice) { 
+
     this.askPrice = askPrice;
     return this;
   }
@@ -994,17 +1347,21 @@ public class BoardSuccess   {
    * 最良買気配値段 ※①<br>※株式・先物・オプション銘柄の場合のみ
    * @return askPrice
    **/
+  
   @Schema(description = "最良買気配値段 ※①<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getAskPrice() {
+  public Double getAskPrice() {  
     return askPrice;
   }
 
-  public void setAskPrice(Double askPrice) {
+
+
+  public void setAskPrice(Double askPrice) { 
     this.askPrice = askPrice;
   }
 
-  public BoardSuccess askTime(OffsetDateTime askTime) {
+  public BoardSuccess askTime(OffsetDateTime askTime) { 
+
     this.askTime = askTime;
     return this;
   }
@@ -1013,18 +1370,22 @@ public class BoardSuccess   {
    * 最良買気配時刻 ※①<br>※株式銘柄の場合のみ
    * @return askTime
    **/
+  
   @Schema(description = "最良買気配時刻 ※①<br>※株式銘柄の場合のみ")
   
-    @Valid
-    public OffsetDateTime getAskTime() {
+@Valid
+  public OffsetDateTime getAskTime() {  
     return askTime;
   }
 
-  public void setAskTime(OffsetDateTime askTime) {
+
+
+  public void setAskTime(OffsetDateTime askTime) { 
     this.askTime = askTime;
   }
 
-  public BoardSuccess askSign(String askSign) {
+  public BoardSuccess askSign(String askSign) { 
+
     this.askSign = askSign;
     return this;
   }
@@ -1033,17 +1394,21 @@ public class BoardSuccess   {
    * 最良買気配フラグ ※①<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>
    * @return askSign
    **/
+  
   @Schema(description = "最良買気配フラグ ※①<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>")
   
-    public String getAskSign() {
+  public String getAskSign() {  
     return askSign;
   }
 
-  public void setAskSign(String askSign) {
+
+
+  public void setAskSign(String askSign) { 
     this.askSign = askSign;
   }
 
-  public BoardSuccess marketOrderBuyQty(Double marketOrderBuyQty) {
+  public BoardSuccess marketOrderBuyQty(Double marketOrderBuyQty) { 
+
     this.marketOrderBuyQty = marketOrderBuyQty;
     return this;
   }
@@ -1052,17 +1417,21 @@ public class BoardSuccess   {
    * 買成行数量<br>※株式銘柄の場合のみ
    * @return marketOrderBuyQty
    **/
+  
   @Schema(description = "買成行数量<br>※株式銘柄の場合のみ")
   
-    public Double getMarketOrderBuyQty() {
+  public Double getMarketOrderBuyQty() {  
     return marketOrderBuyQty;
   }
 
-  public void setMarketOrderBuyQty(Double marketOrderBuyQty) {
+
+
+  public void setMarketOrderBuyQty(Double marketOrderBuyQty) { 
     this.marketOrderBuyQty = marketOrderBuyQty;
   }
 
-  public BoardSuccess buy1(BoardSuccessBuy1 buy1) {
+  public BoardSuccess buy1(BoardSuccessBuy1 buy1) { 
+
     this.buy1 = buy1;
     return this;
   }
@@ -1071,18 +1440,22 @@ public class BoardSuccess   {
    * Get buy1
    * @return buy1
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy1 getBuy1() {
+@Valid
+  public BoardSuccessBuy1 getBuy1() {  
     return buy1;
   }
 
-  public void setBuy1(BoardSuccessBuy1 buy1) {
+
+
+  public void setBuy1(BoardSuccessBuy1 buy1) { 
     this.buy1 = buy1;
   }
 
-  public BoardSuccess buy2(BoardSuccessBuy2 buy2) {
+  public BoardSuccess buy2(BoardSuccessBuy2 buy2) { 
+
     this.buy2 = buy2;
     return this;
   }
@@ -1091,18 +1464,22 @@ public class BoardSuccess   {
    * Get buy2
    * @return buy2
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy2 getBuy2() {
+@Valid
+  public BoardSuccessBuy2 getBuy2() {  
     return buy2;
   }
 
-  public void setBuy2(BoardSuccessBuy2 buy2) {
+
+
+  public void setBuy2(BoardSuccessBuy2 buy2) { 
     this.buy2 = buy2;
   }
 
-  public BoardSuccess buy3(BoardSuccessBuy3 buy3) {
+  public BoardSuccess buy3(BoardSuccessBuy3 buy3) { 
+
     this.buy3 = buy3;
     return this;
   }
@@ -1111,18 +1488,22 @@ public class BoardSuccess   {
    * Get buy3
    * @return buy3
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy3 getBuy3() {
+@Valid
+  public BoardSuccessBuy3 getBuy3() {  
     return buy3;
   }
 
-  public void setBuy3(BoardSuccessBuy3 buy3) {
+
+
+  public void setBuy3(BoardSuccessBuy3 buy3) { 
     this.buy3 = buy3;
   }
 
-  public BoardSuccess buy4(BoardSuccessBuy4 buy4) {
+  public BoardSuccess buy4(BoardSuccessBuy4 buy4) { 
+
     this.buy4 = buy4;
     return this;
   }
@@ -1131,18 +1512,22 @@ public class BoardSuccess   {
    * Get buy4
    * @return buy4
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy4 getBuy4() {
+@Valid
+  public BoardSuccessBuy4 getBuy4() {  
     return buy4;
   }
 
-  public void setBuy4(BoardSuccessBuy4 buy4) {
+
+
+  public void setBuy4(BoardSuccessBuy4 buy4) { 
     this.buy4 = buy4;
   }
 
-  public BoardSuccess buy5(BoardSuccessBuy5 buy5) {
+  public BoardSuccess buy5(BoardSuccessBuy5 buy5) { 
+
     this.buy5 = buy5;
     return this;
   }
@@ -1151,18 +1536,22 @@ public class BoardSuccess   {
    * Get buy5
    * @return buy5
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy5 getBuy5() {
+@Valid
+  public BoardSuccessBuy5 getBuy5() {  
     return buy5;
   }
 
-  public void setBuy5(BoardSuccessBuy5 buy5) {
+
+
+  public void setBuy5(BoardSuccessBuy5 buy5) { 
     this.buy5 = buy5;
   }
 
-  public BoardSuccess buy6(BoardSuccessBuy6 buy6) {
+  public BoardSuccess buy6(BoardSuccessBuy6 buy6) { 
+
     this.buy6 = buy6;
     return this;
   }
@@ -1171,18 +1560,22 @@ public class BoardSuccess   {
    * Get buy6
    * @return buy6
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy6 getBuy6() {
+@Valid
+  public BoardSuccessBuy6 getBuy6() {  
     return buy6;
   }
 
-  public void setBuy6(BoardSuccessBuy6 buy6) {
+
+
+  public void setBuy6(BoardSuccessBuy6 buy6) { 
     this.buy6 = buy6;
   }
 
-  public BoardSuccess buy7(BoardSuccessBuy7 buy7) {
+  public BoardSuccess buy7(BoardSuccessBuy7 buy7) { 
+
     this.buy7 = buy7;
     return this;
   }
@@ -1191,18 +1584,22 @@ public class BoardSuccess   {
    * Get buy7
    * @return buy7
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy7 getBuy7() {
+@Valid
+  public BoardSuccessBuy7 getBuy7() {  
     return buy7;
   }
 
-  public void setBuy7(BoardSuccessBuy7 buy7) {
+
+
+  public void setBuy7(BoardSuccessBuy7 buy7) { 
     this.buy7 = buy7;
   }
 
-  public BoardSuccess buy8(BoardSuccessBuy8 buy8) {
+  public BoardSuccess buy8(BoardSuccessBuy8 buy8) { 
+
     this.buy8 = buy8;
     return this;
   }
@@ -1211,18 +1608,22 @@ public class BoardSuccess   {
    * Get buy8
    * @return buy8
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy8 getBuy8() {
+@Valid
+  public BoardSuccessBuy8 getBuy8() {  
     return buy8;
   }
 
-  public void setBuy8(BoardSuccessBuy8 buy8) {
+
+
+  public void setBuy8(BoardSuccessBuy8 buy8) { 
     this.buy8 = buy8;
   }
 
-  public BoardSuccess buy9(BoardSuccessBuy9 buy9) {
+  public BoardSuccess buy9(BoardSuccessBuy9 buy9) { 
+
     this.buy9 = buy9;
     return this;
   }
@@ -1231,18 +1632,22 @@ public class BoardSuccess   {
    * Get buy9
    * @return buy9
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy9 getBuy9() {
+@Valid
+  public BoardSuccessBuy9 getBuy9() {  
     return buy9;
   }
 
-  public void setBuy9(BoardSuccessBuy9 buy9) {
+
+
+  public void setBuy9(BoardSuccessBuy9 buy9) { 
     this.buy9 = buy9;
   }
 
-  public BoardSuccess buy10(BoardSuccessBuy10 buy10) {
+  public BoardSuccess buy10(BoardSuccessBuy10 buy10) { 
+
     this.buy10 = buy10;
     return this;
   }
@@ -1251,18 +1656,22 @@ public class BoardSuccess   {
    * Get buy10
    * @return buy10
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public BoardSuccessBuy10 getBuy10() {
+@Valid
+  public BoardSuccessBuy10 getBuy10() {  
     return buy10;
   }
 
-  public void setBuy10(BoardSuccessBuy10 buy10) {
+
+
+  public void setBuy10(BoardSuccessBuy10 buy10) { 
     this.buy10 = buy10;
   }
 
-  public BoardSuccess overSellQty(Double overSellQty) {
+  public BoardSuccess overSellQty(Double overSellQty) { 
+
     this.overSellQty = overSellQty;
     return this;
   }
@@ -1271,17 +1680,21 @@ public class BoardSuccess   {
    * OVER気配数量<br>※株式銘柄の場合のみ
    * @return overSellQty
    **/
+  
   @Schema(description = "OVER気配数量<br>※株式銘柄の場合のみ")
   
-    public Double getOverSellQty() {
+  public Double getOverSellQty() {  
     return overSellQty;
   }
 
-  public void setOverSellQty(Double overSellQty) {
+
+
+  public void setOverSellQty(Double overSellQty) { 
     this.overSellQty = overSellQty;
   }
 
-  public BoardSuccess underBuyQty(Double underBuyQty) {
+  public BoardSuccess underBuyQty(Double underBuyQty) { 
+
     this.underBuyQty = underBuyQty;
     return this;
   }
@@ -1290,17 +1703,21 @@ public class BoardSuccess   {
    * UNDER気配数量<br>※株式銘柄の場合のみ
    * @return underBuyQty
    **/
+  
   @Schema(description = "UNDER気配数量<br>※株式銘柄の場合のみ")
   
-    public Double getUnderBuyQty() {
+  public Double getUnderBuyQty() {  
     return underBuyQty;
   }
 
-  public void setUnderBuyQty(Double underBuyQty) {
+
+
+  public void setUnderBuyQty(Double underBuyQty) { 
     this.underBuyQty = underBuyQty;
   }
 
-  public BoardSuccess totalMarketValue(Double totalMarketValue) {
+  public BoardSuccess totalMarketValue(Double totalMarketValue) { 
+
     this.totalMarketValue = totalMarketValue;
     return this;
   }
@@ -1309,17 +1726,21 @@ public class BoardSuccess   {
    * 時価総額<br>※株式銘柄の場合のみ
    * @return totalMarketValue
    **/
+  
   @Schema(description = "時価総額<br>※株式銘柄の場合のみ")
   
-    public Double getTotalMarketValue() {
+  public Double getTotalMarketValue() {  
     return totalMarketValue;
   }
 
-  public void setTotalMarketValue(Double totalMarketValue) {
+
+
+  public void setTotalMarketValue(Double totalMarketValue) { 
     this.totalMarketValue = totalMarketValue;
   }
 
-  public BoardSuccess clearingPrice(Double clearingPrice) {
+  public BoardSuccess clearingPrice(Double clearingPrice) { 
+
     this.clearingPrice = clearingPrice;
     return this;
   }
@@ -1328,17 +1749,21 @@ public class BoardSuccess   {
    * 清算値<br>※先物銘柄の場合のみ
    * @return clearingPrice
    **/
+  
   @Schema(description = "清算値<br>※先物銘柄の場合のみ")
   
-    public Double getClearingPrice() {
+  public Double getClearingPrice() {  
     return clearingPrice;
   }
 
-  public void setClearingPrice(Double clearingPrice) {
+
+
+  public void setClearingPrice(Double clearingPrice) { 
     this.clearingPrice = clearingPrice;
   }
 
-  public BoardSuccess IV(Double IV) {
+  public BoardSuccess IV(Double IV) { 
+
     this.IV = IV;
     return this;
   }
@@ -1347,17 +1772,21 @@ public class BoardSuccess   {
    * インプライド・ボラティリティ<br>※オプション銘柄かつ日通しの場合のみ
    * @return IV
    **/
+  
   @Schema(description = "インプライド・ボラティリティ<br>※オプション銘柄かつ日通しの場合のみ")
   
-    public Double getIV() {
+  public Double getIV() {  
     return IV;
   }
 
-  public void setIV(Double IV) {
+
+
+  public void setIV(Double IV) { 
     this.IV = IV;
   }
 
-  public BoardSuccess gamma(Double gamma) {
+  public BoardSuccess gamma(Double gamma) { 
+
     this.gamma = gamma;
     return this;
   }
@@ -1366,17 +1795,21 @@ public class BoardSuccess   {
    * ガンマ<br>※オプション銘柄かつ日通しの場合のみ
    * @return gamma
    **/
+  
   @Schema(description = "ガンマ<br>※オプション銘柄かつ日通しの場合のみ")
   
-    public Double getGamma() {
+  public Double getGamma() {  
     return gamma;
   }
 
-  public void setGamma(Double gamma) {
+
+
+  public void setGamma(Double gamma) { 
     this.gamma = gamma;
   }
 
-  public BoardSuccess theta(Double theta) {
+  public BoardSuccess theta(Double theta) { 
+
     this.theta = theta;
     return this;
   }
@@ -1385,17 +1818,21 @@ public class BoardSuccess   {
    * セータ<br>※オプション銘柄かつ日通しの場合のみ
    * @return theta
    **/
+  
   @Schema(description = "セータ<br>※オプション銘柄かつ日通しの場合のみ")
   
-    public Double getTheta() {
+  public Double getTheta() {  
     return theta;
   }
 
-  public void setTheta(Double theta) {
+
+
+  public void setTheta(Double theta) { 
     this.theta = theta;
   }
 
-  public BoardSuccess vega(Double vega) {
+  public BoardSuccess vega(Double vega) { 
+
     this.vega = vega;
     return this;
   }
@@ -1404,17 +1841,21 @@ public class BoardSuccess   {
    * ベガ<br>※オプション銘柄かつ日通しの場合のみ
    * @return vega
    **/
+  
   @Schema(description = "ベガ<br>※オプション銘柄かつ日通しの場合のみ")
   
-    public Double getVega() {
+  public Double getVega() {  
     return vega;
   }
 
-  public void setVega(Double vega) {
+
+
+  public void setVega(Double vega) { 
     this.vega = vega;
   }
 
-  public BoardSuccess delta(Double delta) {
+  public BoardSuccess delta(Double delta) { 
+
     this.delta = delta;
     return this;
   }
@@ -1423,17 +1864,21 @@ public class BoardSuccess   {
    * デルタ<br>※オプション銘柄かつ日通しの場合のみ
    * @return delta
    **/
+  
   @Schema(description = "デルタ<br>※オプション銘柄かつ日通しの場合のみ")
   
-    public Double getDelta() {
+  public Double getDelta() {  
     return delta;
   }
 
-  public void setDelta(Double delta) {
+
+
+  public void setDelta(Double delta) { 
     this.delta = delta;
   }
 
-  public BoardSuccess securityType(Integer securityType) {
+  public BoardSuccess securityType(Integer securityType) { 
+
     this.securityType = securityType;
     return this;
   }
@@ -1442,16 +1887,18 @@ public class BoardSuccess   {
    * 銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>グロース250先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>
    * @return securityType
    **/
+  
   @Schema(description = "銘柄種別 <table>   <thead>     <tr>       <th>定義値</th>       <th>説明</th>     </tr>   </thead>   <tbody>     <tr>       <td>0</td>       <td>指数</td>     </tr>     <tr>       <td>1</td>       <td>現物</td>     </tr>     <tr>       <td>101</td>       <td>日経225先物</td>     </tr>     <tr>       <td>103</td>       <td>日経225OP</td>     </tr>     <tr>       <td>107</td>       <td>TOPIX先物</td>     </tr>     <tr>       <td>121</td>       <td>JPX400先物</td>     </tr>     <tr>       <td>144</td>       <td>NYダウ</td>     </tr>     <tr>       <td>145</td>       <td>日経平均VI</td>     </tr>     <tr>       <td>154</td>       <td>グロース250先物</td>     </tr>     <tr>       <td>155</td>       <td>TOPIX_REIT</td>     </tr>     <tr>       <td>171</td>       <td>TOPIX CORE30</td>     </tr>     <tr>       <td>901</td>       <td>日経平均225ミニ先物</td>     </tr>     <tr>       <td>907</td>       <td>TOPIXミニ先物</td>     </tr>   </tbody> </table>")
   
-    public Integer getSecurityType() {
+  public Integer getSecurityType() {  
     return securityType;
   }
 
-  public void setSecurityType(Integer securityType) {
+
+
+  public void setSecurityType(Integer securityType) { 
     this.securityType = securityType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

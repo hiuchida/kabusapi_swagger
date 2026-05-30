@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,29 +17,50 @@ import javax.validation.constraints.*;
  * ExchangeResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class ExchangeResponse   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("BidPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double bidPrice = null;
 
   @JsonProperty("Spread")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double spread = null;
 
   @JsonProperty("AskPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double askPrice = null;
 
   @JsonProperty("Change")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double change = null;
 
   @JsonProperty("Time")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String time = null;
 
-  public ExchangeResponse symbol(String symbol) {
+
+  public ExchangeResponse symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -43,17 +69,21 @@ public class ExchangeResponse   {
    * 通貨
    * @return symbol
    **/
+  
   @Schema(description = "通貨")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public ExchangeResponse bidPrice(Double bidPrice) {
+  public ExchangeResponse bidPrice(Double bidPrice) { 
+
     this.bidPrice = bidPrice;
     return this;
   }
@@ -62,17 +92,21 @@ public class ExchangeResponse   {
    * BID
    * @return bidPrice
    **/
+  
   @Schema(description = "BID")
   
-    public Double getBidPrice() {
+  public Double getBidPrice() {  
     return bidPrice;
   }
 
-  public void setBidPrice(Double bidPrice) {
+
+
+  public void setBidPrice(Double bidPrice) { 
     this.bidPrice = bidPrice;
   }
 
-  public ExchangeResponse spread(Double spread) {
+  public ExchangeResponse spread(Double spread) { 
+
     this.spread = spread;
     return this;
   }
@@ -81,17 +115,21 @@ public class ExchangeResponse   {
    * SP
    * @return spread
    **/
+  
   @Schema(description = "SP")
   
-    public Double getSpread() {
+  public Double getSpread() {  
     return spread;
   }
 
-  public void setSpread(Double spread) {
+
+
+  public void setSpread(Double spread) { 
     this.spread = spread;
   }
 
-  public ExchangeResponse askPrice(Double askPrice) {
+  public ExchangeResponse askPrice(Double askPrice) { 
+
     this.askPrice = askPrice;
     return this;
   }
@@ -100,17 +138,21 @@ public class ExchangeResponse   {
    * ASK
    * @return askPrice
    **/
+  
   @Schema(description = "ASK")
   
-    public Double getAskPrice() {
+  public Double getAskPrice() {  
     return askPrice;
   }
 
-  public void setAskPrice(Double askPrice) {
+
+
+  public void setAskPrice(Double askPrice) { 
     this.askPrice = askPrice;
   }
 
-  public ExchangeResponse change(Double change) {
+  public ExchangeResponse change(Double change) { 
+
     this.change = change;
     return this;
   }
@@ -119,17 +161,21 @@ public class ExchangeResponse   {
    * 前日比
    * @return change
    **/
+  
   @Schema(description = "前日比")
   
-    public Double getChange() {
+  public Double getChange() {  
     return change;
   }
 
-  public void setChange(Double change) {
+
+
+  public void setChange(Double change) { 
     this.change = change;
   }
 
-  public ExchangeResponse time(String time) {
+  public ExchangeResponse time(String time) { 
+
     this.time = time;
     return this;
   }
@@ -138,16 +184,18 @@ public class ExchangeResponse   {
    * 時刻 <br>※HH:mm:ss形式
    * @return time
    **/
+  
   @Schema(description = "時刻 <br>※HH:mm:ss形式")
   
-    public String getTime() {
+  public String getTime() {  
     return time;
   }
 
-  public void setTime(String time) {
+
+
+  public void setTime(String time) { 
     this.time = time;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

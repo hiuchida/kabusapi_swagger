@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,26 +18,44 @@ import javax.validation.constraints.*;
  */
 @Schema(description = "一般信用（デイトレ）")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class MarginPremiumResponseDayTrade   {
   @JsonProperty("MarginPremiumType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer marginPremiumType = null;
 
   @JsonProperty("MarginPremium")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marginPremium = null;
 
   @JsonProperty("UpperMarginPremium")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double upperMarginPremium = null;
 
   @JsonProperty("LowerMarginPremium")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double lowerMarginPremium = null;
 
   @JsonProperty("TickMarginPremium")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double tickMarginPremium = null;
 
-  public MarginPremiumResponseDayTrade marginPremiumType(Integer marginPremiumType) {
+
+  public MarginPremiumResponseDayTrade marginPremiumType(Integer marginPremiumType) { 
+
     this.marginPremiumType = marginPremiumType;
     return this;
   }
@@ -41,17 +64,21 @@ public class MarginPremiumResponseDayTrade   {
    * プレミアム料入力区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>null</td>           <td>一般信用（デイトレ）非対応銘柄</td>       </tr>       <tr>           <td>0</td>           <td>プレミアム料がない銘柄</td>       </tr>       <tr>           <td>1</td>           <td>プレミアム料が固定の銘柄</td>       </tr>       <tr>           <td>2</td>           <td>プレミアム料が入札で決定する銘柄</td>       </tr>   </tbody> </table>
    * @return marginPremiumType
    **/
+  
   @Schema(description = "プレミアム料入力区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>null</td>           <td>一般信用（デイトレ）非対応銘柄</td>       </tr>       <tr>           <td>0</td>           <td>プレミアム料がない銘柄</td>       </tr>       <tr>           <td>1</td>           <td>プレミアム料が固定の銘柄</td>       </tr>       <tr>           <td>2</td>           <td>プレミアム料が入札で決定する銘柄</td>       </tr>   </tbody> </table>")
   
-    public Integer getMarginPremiumType() {
+  public Integer getMarginPremiumType() {  
     return marginPremiumType;
   }
 
-  public void setMarginPremiumType(Integer marginPremiumType) {
+
+
+  public void setMarginPremiumType(Integer marginPremiumType) { 
     this.marginPremiumType = marginPremiumType;
   }
 
-  public MarginPremiumResponseDayTrade marginPremium(Double marginPremium) {
+  public MarginPremiumResponseDayTrade marginPremium(Double marginPremium) { 
+
     this.marginPremium = marginPremium;
     return this;
   }
@@ -60,17 +87,21 @@ public class MarginPremiumResponseDayTrade   {
    * 確定プレミアム料<br> ※入札銘柄の場合、入札受付中は随時更新します。受付時間外は、確定したプレミアム料を返します。<br> ※非入札銘柄の場合、常に固定値を返します。<br> ※信用取引不可の場合、nullを返します。<br> ※19:30~翌営業日のプレミアム料になります。
    * @return marginPremium
    **/
+  
   @Schema(description = "確定プレミアム料<br> ※入札銘柄の場合、入札受付中は随時更新します。受付時間外は、確定したプレミアム料を返します。<br> ※非入札銘柄の場合、常に固定値を返します。<br> ※信用取引不可の場合、nullを返します。<br> ※19:30~翌営業日のプレミアム料になります。")
   
-    public Double getMarginPremium() {
+  public Double getMarginPremium() {  
     return marginPremium;
   }
 
-  public void setMarginPremium(Double marginPremium) {
+
+
+  public void setMarginPremium(Double marginPremium) { 
     this.marginPremium = marginPremium;
   }
 
-  public MarginPremiumResponseDayTrade upperMarginPremium(Double upperMarginPremium) {
+  public MarginPremiumResponseDayTrade upperMarginPremium(Double upperMarginPremium) { 
+
     this.upperMarginPremium = upperMarginPremium;
     return this;
   }
@@ -79,17 +110,21 @@ public class MarginPremiumResponseDayTrade   {
    * 上限プレミアム料<br> ※プレミアム料がない場合は、nullを返します。
    * @return upperMarginPremium
    **/
+  
   @Schema(description = "上限プレミアム料<br> ※プレミアム料がない場合は、nullを返します。")
   
-    public Double getUpperMarginPremium() {
+  public Double getUpperMarginPremium() {  
     return upperMarginPremium;
   }
 
-  public void setUpperMarginPremium(Double upperMarginPremium) {
+
+
+  public void setUpperMarginPremium(Double upperMarginPremium) { 
     this.upperMarginPremium = upperMarginPremium;
   }
 
-  public MarginPremiumResponseDayTrade lowerMarginPremium(Double lowerMarginPremium) {
+  public MarginPremiumResponseDayTrade lowerMarginPremium(Double lowerMarginPremium) { 
+
     this.lowerMarginPremium = lowerMarginPremium;
     return this;
   }
@@ -98,17 +133,21 @@ public class MarginPremiumResponseDayTrade   {
    * 下限プレミアム料<br> ※プレミアム料がない場合は、nullを返します。
    * @return lowerMarginPremium
    **/
+  
   @Schema(description = "下限プレミアム料<br> ※プレミアム料がない場合は、nullを返します。")
   
-    public Double getLowerMarginPremium() {
+  public Double getLowerMarginPremium() {  
     return lowerMarginPremium;
   }
 
-  public void setLowerMarginPremium(Double lowerMarginPremium) {
+
+
+  public void setLowerMarginPremium(Double lowerMarginPremium) { 
     this.lowerMarginPremium = lowerMarginPremium;
   }
 
-  public MarginPremiumResponseDayTrade tickMarginPremium(Double tickMarginPremium) {
+  public MarginPremiumResponseDayTrade tickMarginPremium(Double tickMarginPremium) { 
+
     this.tickMarginPremium = tickMarginPremium;
     return this;
   }
@@ -117,16 +156,18 @@ public class MarginPremiumResponseDayTrade   {
    * プレミアム料刻値<br> ※入札可能銘柄以外は、nullを返します。
    * @return tickMarginPremium
    **/
+  
   @Schema(description = "プレミアム料刻値<br> ※入札可能銘柄以外は、nullを返します。")
   
-    public Double getTickMarginPremium() {
+  public Double getTickMarginPremium() {  
     return tickMarginPremium;
   }
 
-  public void setTickMarginPremium(Double tickMarginPremium) {
+
+
+  public void setTickMarginPremium(Double tickMarginPremium) { 
     this.tickMarginPremium = tickMarginPremium;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

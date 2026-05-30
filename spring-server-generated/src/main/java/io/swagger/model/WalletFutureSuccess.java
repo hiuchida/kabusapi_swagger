@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,20 +17,32 @@ import javax.validation.constraints.*;
  * WalletFutureSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-11-12T11:41:23.269770450Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class WalletFutureSuccess   {
   @JsonProperty("FutureTradeLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double futureTradeLimit = null;
 
   @JsonProperty("MarginRequirement")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marginRequirement = null;
 
   @JsonProperty("MarginRequirementSell")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marginRequirementSell = null;
 
-  public WalletFutureSuccess futureTradeLimit(Double futureTradeLimit) {
+
+  public WalletFutureSuccess futureTradeLimit(Double futureTradeLimit) { 
+
     this.futureTradeLimit = futureTradeLimit;
     return this;
   }
@@ -34,17 +51,21 @@ public class WalletFutureSuccess   {
    * 新規建玉可能額
    * @return futureTradeLimit
    **/
+  
   @Schema(description = "新規建玉可能額")
   
-    public Double getFutureTradeLimit() {
+  public Double getFutureTradeLimit() {  
     return futureTradeLimit;
   }
 
-  public void setFutureTradeLimit(Double futureTradeLimit) {
+
+
+  public void setFutureTradeLimit(Double futureTradeLimit) { 
     this.futureTradeLimit = futureTradeLimit;
   }
 
-  public WalletFutureSuccess marginRequirement(Double marginRequirement) {
+  public WalletFutureSuccess marginRequirement(Double marginRequirement) { 
+
     this.marginRequirement = marginRequirement;
     return this;
   }
@@ -53,17 +74,21 @@ public class WalletFutureSuccess   {
    * 買い必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。
    * @return marginRequirement
    **/
+  
   @Schema(description = "買い必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
   
-    public Double getMarginRequirement() {
+  public Double getMarginRequirement() {  
     return marginRequirement;
   }
 
-  public void setMarginRequirement(Double marginRequirement) {
+
+
+  public void setMarginRequirement(Double marginRequirement) { 
     this.marginRequirement = marginRequirement;
   }
 
-  public WalletFutureSuccess marginRequirementSell(Double marginRequirementSell) {
+  public WalletFutureSuccess marginRequirementSell(Double marginRequirementSell) { 
+
     this.marginRequirementSell = marginRequirementSell;
     return this;
   }
@@ -72,16 +97,18 @@ public class WalletFutureSuccess   {
    * 売り必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。
    * @return marginRequirementSell
    **/
+  
   @Schema(description = "売り必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
   
-    public Double getMarginRequirementSell() {
+  public Double getMarginRequirementSell() {  
     return marginRequirementSell;
   }
 
-  public void setMarginRequirementSell(Double marginRequirementSell) {
+
+
+  public void setMarginRequirementSell(Double marginRequirementSell) { 
     this.marginRequirementSell = marginRequirementSell;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

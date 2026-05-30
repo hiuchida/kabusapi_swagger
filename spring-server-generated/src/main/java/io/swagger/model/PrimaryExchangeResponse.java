@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,26 @@ import javax.validation.constraints.*;
  * PrimaryExchangeResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class PrimaryExchangeResponse   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("PrimaryExchange")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer primaryExchange = null;
 
-  public PrimaryExchangeResponse symbol(String symbol) {
+
+  public PrimaryExchangeResponse symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -31,17 +45,21 @@ public class PrimaryExchangeResponse   {
    * 銘柄コード<br>※対象商品は、株式のみ
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード<br>※対象商品は、株式のみ")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public PrimaryExchangeResponse primaryExchange(Integer primaryExchange) {
+  public PrimaryExchangeResponse primaryExchange(Integer primaryExchange) { 
+
     this.primaryExchange = primaryExchange;
     return this;
   }
@@ -50,16 +68,18 @@ public class PrimaryExchangeResponse   {
    * 優先市場 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>   </tbody> </table>
    * @return primaryExchange
    **/
+  
   @Schema(description = "優先市場 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>   </tbody> </table>")
   
-    public Integer getPrimaryExchange() {
+  public Integer getPrimaryExchange() {  
     return primaryExchange;
   }
 
-  public void setPrimaryExchange(Integer primaryExchange) {
+
+
+  public void setPrimaryExchange(Integer primaryExchange) { 
     this.primaryExchange = primaryExchange;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

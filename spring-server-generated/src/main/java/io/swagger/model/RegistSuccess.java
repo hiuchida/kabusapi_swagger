@@ -8,6 +8,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +20,8 @@ import javax.validation.constraints.*;
  * RegistSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RegistSuccess   {
@@ -23,7 +29,8 @@ public class RegistSuccess   {
   @Valid
   private List<RequestRegisterSymbols> registList = null;
 
-  public RegistSuccess registList(List<RequestRegisterSymbols> registList) {
+  public RegistSuccess registList(List<RequestRegisterSymbols> registList) { 
+
     this.registList = registList;
     return this;
   }
@@ -40,16 +47,18 @@ public class RegistSuccess   {
    * 現在登録されている銘柄のリスト
    * @return registList
    **/
+  
   @Schema(description = "現在登録されている銘柄のリスト")
-      @Valid
-    public List<RequestRegisterSymbols> getRegistList() {
+  @Valid
+  public List<RequestRegisterSymbols> getRegistList() {  
     return registList;
   }
 
-  public void setRegistList(List<RequestRegisterSymbols> registList) {
+
+
+  public void setRegistList(List<RequestRegisterSymbols> registList) { 
     this.registList = registList;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

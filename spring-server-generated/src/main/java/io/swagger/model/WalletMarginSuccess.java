@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,23 +17,38 @@ import javax.validation.constraints.*;
  * WalletMarginSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class WalletMarginSuccess   {
   @JsonProperty("MarginAccountWallet")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marginAccountWallet = null;
 
   @JsonProperty("DepositkeepRate")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double depositkeepRate = null;
 
   @JsonProperty("ConsignmentDepositRate")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double consignmentDepositRate = null;
 
   @JsonProperty("CashOfConsignmentDepositRate")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double cashOfConsignmentDepositRate = null;
 
-  public WalletMarginSuccess marginAccountWallet(Double marginAccountWallet) {
+
+  public WalletMarginSuccess marginAccountWallet(Double marginAccountWallet) { 
+
     this.marginAccountWallet = marginAccountWallet;
     return this;
   }
@@ -37,17 +57,21 @@ public class WalletMarginSuccess   {
    * 信用新規可能額
    * @return marginAccountWallet
    **/
+  
   @Schema(description = "信用新規可能額")
   
-    public Double getMarginAccountWallet() {
+  public Double getMarginAccountWallet() {  
     return marginAccountWallet;
   }
 
-  public void setMarginAccountWallet(Double marginAccountWallet) {
+
+
+  public void setMarginAccountWallet(Double marginAccountWallet) { 
     this.marginAccountWallet = marginAccountWallet;
   }
 
-  public WalletMarginSuccess depositkeepRate(Double depositkeepRate) {
+  public WalletMarginSuccess depositkeepRate(Double depositkeepRate) { 
+
     this.depositkeepRate = depositkeepRate;
     return this;
   }
@@ -56,17 +80,21 @@ public class WalletMarginSuccess   {
    * 保証金維持率<br>※銘柄指定の場合のみ<br>※銘柄が指定されなかった場合、0.0を返す。
    * @return depositkeepRate
    **/
+  
   @Schema(description = "保証金維持率<br>※銘柄指定の場合のみ<br>※銘柄が指定されなかった場合、0.0を返す。")
   
-    public Double getDepositkeepRate() {
+  public Double getDepositkeepRate() {  
     return depositkeepRate;
   }
 
-  public void setDepositkeepRate(Double depositkeepRate) {
+
+
+  public void setDepositkeepRate(Double depositkeepRate) { 
     this.depositkeepRate = depositkeepRate;
   }
 
-  public WalletMarginSuccess consignmentDepositRate(Double consignmentDepositRate) {
+  public WalletMarginSuccess consignmentDepositRate(Double consignmentDepositRate) { 
+
     this.consignmentDepositRate = consignmentDepositRate;
     return this;
   }
@@ -75,17 +103,21 @@ public class WalletMarginSuccess   {
    * 委託保証金率<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、Noneを返す。
    * @return consignmentDepositRate
    **/
+  
   @Schema(description = "委託保証金率<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、Noneを返す。")
   
-    public Double getConsignmentDepositRate() {
+  public Double getConsignmentDepositRate() {  
     return consignmentDepositRate;
   }
 
-  public void setConsignmentDepositRate(Double consignmentDepositRate) {
+
+
+  public void setConsignmentDepositRate(Double consignmentDepositRate) { 
     this.consignmentDepositRate = consignmentDepositRate;
   }
 
-  public WalletMarginSuccess cashOfConsignmentDepositRate(Double cashOfConsignmentDepositRate) {
+  public WalletMarginSuccess cashOfConsignmentDepositRate(Double cashOfConsignmentDepositRate) { 
+
     this.cashOfConsignmentDepositRate = cashOfConsignmentDepositRate;
     return this;
   }
@@ -94,16 +126,18 @@ public class WalletMarginSuccess   {
    * 現金委託保証金率<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、Noneを返す。
    * @return cashOfConsignmentDepositRate
    **/
+  
   @Schema(description = "現金委託保証金率<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、Noneを返す。")
   
-    public Double getCashOfConsignmentDepositRate() {
+  public Double getCashOfConsignmentDepositRate() {  
     return cashOfConsignmentDepositRate;
   }
 
-  public void setCashOfConsignmentDepositRate(Double cashOfConsignmentDepositRate) {
+
+
+  public void setCashOfConsignmentDepositRate(Double cashOfConsignmentDepositRate) { 
     this.cashOfConsignmentDepositRate = cashOfConsignmentDepositRate;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

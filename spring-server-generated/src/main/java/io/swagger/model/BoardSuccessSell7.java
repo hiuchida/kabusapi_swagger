@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,17 +18,26 @@ import javax.validation.constraints.*;
  */
 @Schema(description = "売気配数量7本目")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class BoardSuccessSell7   {
   @JsonProperty("Price")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double price = null;
 
   @JsonProperty("Qty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double qty = null;
 
-  public BoardSuccessSell7 price(Double price) {
+
+  public BoardSuccessSell7 price(Double price) { 
+
     this.price = price;
     return this;
   }
@@ -32,17 +46,21 @@ public class BoardSuccessSell7   {
    * 値段<br>※株式・先物・オプション銘柄の場合のみ
    * @return price
    **/
+  
   @Schema(description = "値段<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getPrice() {
+  public Double getPrice() {  
     return price;
   }
 
-  public void setPrice(Double price) {
+
+
+  public void setPrice(Double price) { 
     this.price = price;
   }
 
-  public BoardSuccessSell7 qty(Double qty) {
+  public BoardSuccessSell7 qty(Double qty) { 
+
     this.qty = qty;
     return this;
   }
@@ -51,16 +69,18 @@ public class BoardSuccessSell7   {
    * 数量<br>※株式・先物・オプション銘柄の場合のみ
    * @return qty
    **/
+  
   @Schema(description = "数量<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getQty() {
+  public Double getQty() {  
     return qty;
   }
 
-  public void setQty(Double qty) {
+
+
+  public void setQty(Double qty) { 
     this.qty = qty;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

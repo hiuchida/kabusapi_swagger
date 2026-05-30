@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,56 +17,104 @@ import javax.validation.constraints.*;
  * RankingByTickCountResponseRanking
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RankingByTickCountResponseRanking   {
   @JsonProperty("No")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer no = null;
 
   @JsonProperty("Trend")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String trend = null;
 
   @JsonProperty("AverageRanking")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double averageRanking = null;
 
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("SymbolName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbolName = null;
 
   @JsonProperty("CurrentPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double currentPrice = null;
 
   @JsonProperty("ChangeRatio")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changeRatio = null;
 
   @JsonProperty("TickCount")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer tickCount = null;
 
   @JsonProperty("UpCount")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer upCount = null;
 
   @JsonProperty("DownCount")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer downCount = null;
 
   @JsonProperty("ChangePercentage")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changePercentage = null;
 
   @JsonProperty("TradingVolume")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double tradingVolume = null;
 
   @JsonProperty("Turnover")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double turnover = null;
 
   @JsonProperty("ExchangeName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeName = null;
 
   @JsonProperty("CategoryName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String categoryName = null;
 
-  public RankingByTickCountResponseRanking no(Integer no) {
+
+  public RankingByTickCountResponseRanking no(Integer no) { 
+
     this.no = no;
     return this;
   }
@@ -70,17 +123,21 @@ public class RankingByTickCountResponseRanking   {
    * 順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）
    * @return no
    **/
+  
   @Schema(description = "順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）")
   
-    public Integer getNo() {
+  public Integer getNo() {  
     return no;
   }
 
-  public void setNo(Integer no) {
+
+
+  public void setNo(Integer no) { 
     this.no = no;
   }
 
-  public RankingByTickCountResponseRanking trend(String trend) {
+  public RankingByTickCountResponseRanking trend(String trend) { 
+
     this.trend = trend;
     return this;
   }
@@ -89,17 +146,21 @@ public class RankingByTickCountResponseRanking   {
    * トレンド <table>     <thead>         <tr>             <th>定義値</th>             <th>内容</th>         </tr>     </thead>     <tbody>         <tr>             <td>0</td>             <td>対象データ無し</td>         </tr>         <tr>             <td>1</td>             <td>過去10営業日より20位以上上昇</td>         </tr>         <tr>             <td>2</td>             <td>過去10営業日より1～19位上昇</td>         </tr>         <tr>             <td>3</td>             <td>過去10営業日と変わらず</td>         </tr>         <tr>             <td>4</td>             <td>過去10営業日より1～19位下落</td>         </tr>         <tr>             <td>5</td>             <td>過去10営業日より20位以上下落</td>         </tr>     </tbody> </table>
    * @return trend
    **/
+  
   @Schema(description = "トレンド <table>     <thead>         <tr>             <th>定義値</th>             <th>内容</th>         </tr>     </thead>     <tbody>         <tr>             <td>0</td>             <td>対象データ無し</td>         </tr>         <tr>             <td>1</td>             <td>過去10営業日より20位以上上昇</td>         </tr>         <tr>             <td>2</td>             <td>過去10営業日より1～19位上昇</td>         </tr>         <tr>             <td>3</td>             <td>過去10営業日と変わらず</td>         </tr>         <tr>             <td>4</td>             <td>過去10営業日より1～19位下落</td>         </tr>         <tr>             <td>5</td>             <td>過去10営業日より20位以上下落</td>         </tr>     </tbody> </table>")
   
-    public String getTrend() {
+  public String getTrend() {  
     return trend;
   }
 
-  public void setTrend(String trend) {
+
+
+  public void setTrend(String trend) { 
     this.trend = trend;
   }
 
-  public RankingByTickCountResponseRanking averageRanking(Double averageRanking) {
+  public RankingByTickCountResponseRanking averageRanking(Double averageRanking) { 
+
     this.averageRanking = averageRanking;
     return this;
   }
@@ -108,17 +169,21 @@ public class RankingByTickCountResponseRanking   {
    * 平均順位<br>※100位以下は「999」となります
    * @return averageRanking
    **/
+  
   @Schema(description = "平均順位<br>※100位以下は「999」となります")
   
-    public Double getAverageRanking() {
+  public Double getAverageRanking() {  
     return averageRanking;
   }
 
-  public void setAverageRanking(Double averageRanking) {
+
+
+  public void setAverageRanking(Double averageRanking) { 
     this.averageRanking = averageRanking;
   }
 
-  public RankingByTickCountResponseRanking symbol(String symbol) {
+  public RankingByTickCountResponseRanking symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -127,17 +192,21 @@ public class RankingByTickCountResponseRanking   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public RankingByTickCountResponseRanking symbolName(String symbolName) {
+  public RankingByTickCountResponseRanking symbolName(String symbolName) { 
+
     this.symbolName = symbolName;
     return this;
   }
@@ -146,17 +215,21 @@ public class RankingByTickCountResponseRanking   {
    * 銘柄名称
    * @return symbolName
    **/
+  
   @Schema(description = "銘柄名称")
   
-    public String getSymbolName() {
+  public String getSymbolName() {  
     return symbolName;
   }
 
-  public void setSymbolName(String symbolName) {
+
+
+  public void setSymbolName(String symbolName) { 
     this.symbolName = symbolName;
   }
 
-  public RankingByTickCountResponseRanking currentPrice(Double currentPrice) {
+  public RankingByTickCountResponseRanking currentPrice(Double currentPrice) { 
+
     this.currentPrice = currentPrice;
     return this;
   }
@@ -165,17 +238,21 @@ public class RankingByTickCountResponseRanking   {
    * 現在値
    * @return currentPrice
    **/
+  
   @Schema(description = "現在値")
   
-    public Double getCurrentPrice() {
+  public Double getCurrentPrice() {  
     return currentPrice;
   }
 
-  public void setCurrentPrice(Double currentPrice) {
+
+
+  public void setCurrentPrice(Double currentPrice) { 
     this.currentPrice = currentPrice;
   }
 
-  public RankingByTickCountResponseRanking changeRatio(Double changeRatio) {
+  public RankingByTickCountResponseRanking changeRatio(Double changeRatio) { 
+
     this.changeRatio = changeRatio;
     return this;
   }
@@ -184,17 +261,21 @@ public class RankingByTickCountResponseRanking   {
    * 前日比
    * @return changeRatio
    **/
+  
   @Schema(description = "前日比")
   
-    public Double getChangeRatio() {
+  public Double getChangeRatio() {  
     return changeRatio;
   }
 
-  public void setChangeRatio(Double changeRatio) {
+
+
+  public void setChangeRatio(Double changeRatio) { 
     this.changeRatio = changeRatio;
   }
 
-  public RankingByTickCountResponseRanking tickCount(Integer tickCount) {
+  public RankingByTickCountResponseRanking tickCount(Integer tickCount) { 
+
     this.tickCount = tickCount;
     return this;
   }
@@ -203,17 +284,21 @@ public class RankingByTickCountResponseRanking   {
    * TICK回数
    * @return tickCount
    **/
+  
   @Schema(description = "TICK回数")
   
-    public Integer getTickCount() {
+  public Integer getTickCount() {  
     return tickCount;
   }
 
-  public void setTickCount(Integer tickCount) {
+
+
+  public void setTickCount(Integer tickCount) { 
     this.tickCount = tickCount;
   }
 
-  public RankingByTickCountResponseRanking upCount(Integer upCount) {
+  public RankingByTickCountResponseRanking upCount(Integer upCount) { 
+
     this.upCount = upCount;
     return this;
   }
@@ -222,17 +307,21 @@ public class RankingByTickCountResponseRanking   {
    * UP
    * @return upCount
    **/
+  
   @Schema(description = "UP")
   
-    public Integer getUpCount() {
+  public Integer getUpCount() {  
     return upCount;
   }
 
-  public void setUpCount(Integer upCount) {
+
+
+  public void setUpCount(Integer upCount) { 
     this.upCount = upCount;
   }
 
-  public RankingByTickCountResponseRanking downCount(Integer downCount) {
+  public RankingByTickCountResponseRanking downCount(Integer downCount) { 
+
     this.downCount = downCount;
     return this;
   }
@@ -241,17 +330,21 @@ public class RankingByTickCountResponseRanking   {
    * DOWN
    * @return downCount
    **/
+  
   @Schema(description = "DOWN")
   
-    public Integer getDownCount() {
+  public Integer getDownCount() {  
     return downCount;
   }
 
-  public void setDownCount(Integer downCount) {
+
+
+  public void setDownCount(Integer downCount) { 
     this.downCount = downCount;
   }
 
-  public RankingByTickCountResponseRanking changePercentage(Double changePercentage) {
+  public RankingByTickCountResponseRanking changePercentage(Double changePercentage) { 
+
     this.changePercentage = changePercentage;
     return this;
   }
@@ -260,17 +353,21 @@ public class RankingByTickCountResponseRanking   {
    * 騰落率（%）
    * @return changePercentage
    **/
+  
   @Schema(description = "騰落率（%）")
   
-    public Double getChangePercentage() {
+  public Double getChangePercentage() {  
     return changePercentage;
   }
 
-  public void setChangePercentage(Double changePercentage) {
+
+
+  public void setChangePercentage(Double changePercentage) { 
     this.changePercentage = changePercentage;
   }
 
-  public RankingByTickCountResponseRanking tradingVolume(Double tradingVolume) {
+  public RankingByTickCountResponseRanking tradingVolume(Double tradingVolume) { 
+
     this.tradingVolume = tradingVolume;
     return this;
   }
@@ -279,17 +376,21 @@ public class RankingByTickCountResponseRanking   {
    * 売買高<br>売買高を千株単位で表示する<br>※百株の位を四捨五入
    * @return tradingVolume
    **/
+  
   @Schema(description = "売買高<br>売買高を千株単位で表示する<br>※百株の位を四捨五入")
   
-    public Double getTradingVolume() {
+  public Double getTradingVolume() {  
     return tradingVolume;
   }
 
-  public void setTradingVolume(Double tradingVolume) {
+
+
+  public void setTradingVolume(Double tradingVolume) { 
     this.tradingVolume = tradingVolume;
   }
 
-  public RankingByTickCountResponseRanking turnover(Double turnover) {
+  public RankingByTickCountResponseRanking turnover(Double turnover) { 
+
     this.turnover = turnover;
     return this;
   }
@@ -298,17 +399,21 @@ public class RankingByTickCountResponseRanking   {
    * 売買代金<br>売買代金を百万円単位で表示する<br>※十万円の位を四捨五入
    * @return turnover
    **/
+  
   @Schema(description = "売買代金<br>売買代金を百万円単位で表示する<br>※十万円の位を四捨五入")
   
-    public Double getTurnover() {
+  public Double getTurnover() {  
     return turnover;
   }
 
-  public void setTurnover(Double turnover) {
+
+
+  public void setTurnover(Double turnover) { 
     this.turnover = turnover;
   }
 
-  public RankingByTickCountResponseRanking exchangeName(String exchangeName) {
+  public RankingByTickCountResponseRanking exchangeName(String exchangeName) { 
+
     this.exchangeName = exchangeName;
     return this;
   }
@@ -317,17 +422,21 @@ public class RankingByTickCountResponseRanking   {
    * 市場名
    * @return exchangeName
    **/
+  
   @Schema(description = "市場名")
   
-    public String getExchangeName() {
+  public String getExchangeName() {  
     return exchangeName;
   }
 
-  public void setExchangeName(String exchangeName) {
+
+
+  public void setExchangeName(String exchangeName) { 
     this.exchangeName = exchangeName;
   }
 
-  public RankingByTickCountResponseRanking categoryName(String categoryName) {
+  public RankingByTickCountResponseRanking categoryName(String categoryName) { 
+
     this.categoryName = categoryName;
     return this;
   }
@@ -336,16 +445,18 @@ public class RankingByTickCountResponseRanking   {
    * 業種名
    * @return categoryName
    **/
+  
   @Schema(description = "業種名")
   
-    public String getCategoryName() {
+  public String getCategoryName() {  
     return categoryName;
   }
 
-  public void setCategoryName(String categoryName) {
+
+
+  public void setCategoryName(String categoryName) { 
     this.categoryName = categoryName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

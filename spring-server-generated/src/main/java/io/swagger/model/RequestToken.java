@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,14 +17,18 @@ import javax.validation.constraints.*;
  * RequestToken
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RequestToken   {
   @JsonProperty("APIPassword")
+
   private String apIPassword = null;
 
-  public RequestToken apIPassword(String apIPassword) {
+
+  public RequestToken apIPassword(String apIPassword) { 
+
     this.apIPassword = apIPassword;
     return this;
   }
@@ -28,17 +37,20 @@ public class RequestToken   {
    * APIパスワード
    * @return apIPassword
    **/
+  
   @Schema(example = "xxxxxx", required = true, description = "APIパスワード")
-      @NotNull
-
-    public String getApIPassword() {
+  
+  @NotNull
+  public String getApIPassword() {  
     return apIPassword;
   }
 
-  public void setApIPassword(String apIPassword) {
+
+
+  public void setApIPassword(String apIPassword) { 
+
     this.apIPassword = apIPassword;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

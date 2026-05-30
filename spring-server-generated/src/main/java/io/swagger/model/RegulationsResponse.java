@@ -8,6 +8,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,18 +20,23 @@ import javax.validation.constraints.*;
  * RegulationsResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RegulationsResponse   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("RegulationsInfo")
   @Valid
   private List<RegulationsResponseRegulationsInfo> regulationsInfo = null;
 
-  public RegulationsResponse symbol(String symbol) {
+  public RegulationsResponse symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -35,17 +45,21 @@ public class RegulationsResponse   {
    * 銘柄コード<br> ※対象商品は、株式のみ
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード<br> ※対象商品は、株式のみ")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public RegulationsResponse regulationsInfo(List<RegulationsResponseRegulationsInfo> regulationsInfo) {
+  public RegulationsResponse regulationsInfo(List<RegulationsResponseRegulationsInfo> regulationsInfo) { 
+
     this.regulationsInfo = regulationsInfo;
     return this;
   }
@@ -62,16 +76,18 @@ public class RegulationsResponse   {
    * 規制情報
    * @return regulationsInfo
    **/
+  
   @Schema(description = "規制情報")
-      @Valid
-    public List<RegulationsResponseRegulationsInfo> getRegulationsInfo() {
+  @Valid
+  public List<RegulationsResponseRegulationsInfo> getRegulationsInfo() {  
     return regulationsInfo;
   }
 
-  public void setRegulationsInfo(List<RegulationsResponseRegulationsInfo> regulationsInfo) {
+
+
+  public void setRegulationsInfo(List<RegulationsResponseRegulationsInfo> regulationsInfo) { 
     this.regulationsInfo = regulationsInfo;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

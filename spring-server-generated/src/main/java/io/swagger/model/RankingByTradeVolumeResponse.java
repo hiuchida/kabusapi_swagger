@@ -8,6 +8,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,21 +20,29 @@ import javax.validation.constraints.*;
  * RankingByTradeVolumeResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RankingByTradeVolumeResponse  implements InlineResponse200 {
   @JsonProperty("Type")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String type = null;
 
   @JsonProperty("ExchangeDivision")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeDivision = null;
 
   @JsonProperty("Ranking")
   @Valid
   private List<RankingByTradeVolumeResponseRanking> ranking = null;
 
-  public RankingByTradeVolumeResponse type(String type) {
+  public RankingByTradeVolumeResponse type(String type) { 
+
     this.type = type;
     return this;
   }
@@ -38,17 +51,21 @@ public class RankingByTradeVolumeResponse  implements InlineResponse200 {
    * 種別
    * @return type
    **/
+  
   @Schema(description = "種別")
   
-    public String getType() {
+  public String getType() {  
     return type;
   }
 
-  public void setType(String type) {
+
+
+  public void setType(String type) { 
     this.type = type;
   }
 
-  public RankingByTradeVolumeResponse exchangeDivision(String exchangeDivision) {
+  public RankingByTradeVolumeResponse exchangeDivision(String exchangeDivision) { 
+
     this.exchangeDivision = exchangeDivision;
     return this;
   }
@@ -57,17 +74,21 @@ public class RankingByTradeVolumeResponse  implements InlineResponse200 {
    * 市場
    * @return exchangeDivision
    **/
+  
   @Schema(description = "市場")
   
-    public String getExchangeDivision() {
+  public String getExchangeDivision() {  
     return exchangeDivision;
   }
 
-  public void setExchangeDivision(String exchangeDivision) {
+
+
+  public void setExchangeDivision(String exchangeDivision) { 
     this.exchangeDivision = exchangeDivision;
   }
 
-  public RankingByTradeVolumeResponse ranking(List<RankingByTradeVolumeResponseRanking> ranking) {
+  public RankingByTradeVolumeResponse ranking(List<RankingByTradeVolumeResponseRanking> ranking) { 
+
     this.ranking = ranking;
     return this;
   }
@@ -84,16 +105,18 @@ public class RankingByTradeVolumeResponse  implements InlineResponse200 {
    * ランキング
    * @return ranking
    **/
+  
   @Schema(description = "ランキング")
-      @Valid
-    public List<RankingByTradeVolumeResponseRanking> getRanking() {
+  @Valid
+  public List<RankingByTradeVolumeResponseRanking> getRanking() {  
     return ranking;
   }
 
-  public void setRanking(List<RankingByTradeVolumeResponseRanking> ranking) {
+
+
+  public void setRanking(List<RankingByTradeVolumeResponseRanking> ranking) { 
     this.ranking = ranking;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

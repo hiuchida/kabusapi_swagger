@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,74 +17,140 @@ import javax.validation.constraints.*;
  * PositionsSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class PositionsSuccess   {
   @JsonProperty("ExecutionID")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String executionID = null;
 
   @JsonProperty("AccountType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer accountType = null;
 
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("SymbolName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbolName = null;
 
   @JsonProperty("Exchange")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer exchange = null;
 
   @JsonProperty("ExchangeName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeName = null;
 
   @JsonProperty("SecurityType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer securityType = null;
 
   @JsonProperty("ExecutionDay")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer executionDay = null;
 
   @JsonProperty("Price")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double price = null;
 
   @JsonProperty("LeavesQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double leavesQty = null;
 
   @JsonProperty("HoldQty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double holdQty = null;
 
   @JsonProperty("Side")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String side = null;
 
   @JsonProperty("Expenses")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double expenses = null;
 
   @JsonProperty("Commission")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double commission = null;
 
   @JsonProperty("CommissionTax")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double commissionTax = null;
 
   @JsonProperty("ExpireDay")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer expireDay = null;
 
   @JsonProperty("MarginTradeType")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer marginTradeType = null;
 
   @JsonProperty("CurrentPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double currentPrice = null;
 
   @JsonProperty("Valuation")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double valuation = null;
 
   @JsonProperty("ProfitLoss")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double profitLoss = null;
 
   @JsonProperty("ProfitLossRate")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double profitLossRate = null;
 
-  public PositionsSuccess executionID(String executionID) {
+
+  public PositionsSuccess executionID(String executionID) { 
+
     this.executionID = executionID;
     return this;
   }
@@ -88,17 +159,21 @@ public class PositionsSuccess   {
    * 約定番号<br>※現物取引では、nullが返ります。
    * @return executionID
    **/
+  
   @Schema(description = "約定番号<br>※現物取引では、nullが返ります。")
   
-    public String getExecutionID() {
+  public String getExecutionID() {  
     return executionID;
   }
 
-  public void setExecutionID(String executionID) {
+
+
+  public void setExecutionID(String executionID) { 
     this.executionID = executionID;
   }
 
-  public PositionsSuccess accountType(Integer accountType) {
+  public PositionsSuccess accountType(Integer accountType) { 
+
     this.accountType = accountType;
     return this;
   }
@@ -107,17 +182,21 @@ public class PositionsSuccess   {
    * 口座種別 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>一般</td>       </tr>       <tr>           <td>4</td>           <td>特定</td>       </tr>       <tr>           <td>12</td>           <td>法人</td>       </tr>   </tbody> </table>
    * @return accountType
    **/
+  
   @Schema(description = "口座種別 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>2</td>           <td>一般</td>       </tr>       <tr>           <td>4</td>           <td>特定</td>       </tr>       <tr>           <td>12</td>           <td>法人</td>       </tr>   </tbody> </table>")
   
-    public Integer getAccountType() {
+  public Integer getAccountType() {  
     return accountType;
   }
 
-  public void setAccountType(Integer accountType) {
+
+
+  public void setAccountType(Integer accountType) { 
     this.accountType = accountType;
   }
 
-  public PositionsSuccess symbol(String symbol) {
+  public PositionsSuccess symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -126,17 +205,21 @@ public class PositionsSuccess   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public PositionsSuccess symbolName(String symbolName) {
+  public PositionsSuccess symbolName(String symbolName) { 
+
     this.symbolName = symbolName;
     return this;
   }
@@ -145,17 +228,21 @@ public class PositionsSuccess   {
    * 銘柄名
    * @return symbolName
    **/
+  
   @Schema(description = "銘柄名")
   
-    public String getSymbolName() {
+  public String getSymbolName() {  
     return symbolName;
   }
 
-  public void setSymbolName(String symbolName) {
+
+
+  public void setSymbolName(String symbolName) { 
     this.symbolName = symbolName;
   }
 
-  public PositionsSuccess exchange(Integer exchange) {
+  public PositionsSuccess exchange(Integer exchange) { 
+
     this.exchange = exchange;
     return this;
   }
@@ -164,17 +251,21 @@ public class PositionsSuccess   {
    * 市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>
    * @return exchange
    **/
+  
   @Schema(description = "市場コード <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>東証</td>       </tr>       <tr>           <td>3</td>           <td>名証</td>       </tr>       <tr>           <td>5</td>           <td>福証</td>       </tr>       <tr>           <td>6</td>           <td>札証</td>       </tr>       <tr>           <td>2</td>           <td>日通し</td>       </tr>       <tr>           <td>23</td>           <td>日中</td>       </tr>       <tr>           <td>24</td>           <td>夜間</td>       </tr>   </tbody> </table>")
   
-    public Integer getExchange() {
+  public Integer getExchange() {  
     return exchange;
   }
 
-  public void setExchange(Integer exchange) {
+
+
+  public void setExchange(Integer exchange) { 
     this.exchange = exchange;
   }
 
-  public PositionsSuccess exchangeName(String exchangeName) {
+  public PositionsSuccess exchangeName(String exchangeName) { 
+
     this.exchangeName = exchangeName;
     return this;
   }
@@ -183,17 +274,21 @@ public class PositionsSuccess   {
    * 市場名
    * @return exchangeName
    **/
+  
   @Schema(description = "市場名")
   
-    public String getExchangeName() {
+  public String getExchangeName() {  
     return exchangeName;
   }
 
-  public void setExchangeName(String exchangeName) {
+
+
+  public void setExchangeName(String exchangeName) { 
     this.exchangeName = exchangeName;
   }
 
-  public PositionsSuccess securityType(Integer securityType) {
+  public PositionsSuccess securityType(Integer securityType) { 
+
     this.securityType = securityType;
     return this;
   }
@@ -202,17 +297,21 @@ public class PositionsSuccess   {
    * 銘柄種別<br>※先物・オプション銘柄の場合のみ
    * @return securityType
    **/
+  
   @Schema(description = "銘柄種別<br>※先物・オプション銘柄の場合のみ")
   
-    public Integer getSecurityType() {
+  public Integer getSecurityType() {  
     return securityType;
   }
 
-  public void setSecurityType(Integer securityType) {
+
+
+  public void setSecurityType(Integer securityType) { 
     this.securityType = securityType;
   }
 
-  public PositionsSuccess executionDay(Integer executionDay) {
+  public PositionsSuccess executionDay(Integer executionDay) { 
+
     this.executionDay = executionDay;
     return this;
   }
@@ -221,17 +320,21 @@ public class PositionsSuccess   {
    * 約定日（建玉日）<br>※信用・先物・オプションの場合のみ<br>※現物取引では、nullが返ります。
    * @return executionDay
    **/
+  
   @Schema(description = "約定日（建玉日）<br>※信用・先物・オプションの場合のみ<br>※現物取引では、nullが返ります。")
   
-    public Integer getExecutionDay() {
+  public Integer getExecutionDay() {  
     return executionDay;
   }
 
-  public void setExecutionDay(Integer executionDay) {
+
+
+  public void setExecutionDay(Integer executionDay) { 
     this.executionDay = executionDay;
   }
 
-  public PositionsSuccess price(Double price) {
+  public PositionsSuccess price(Double price) { 
+
     this.price = price;
     return this;
   }
@@ -240,17 +343,21 @@ public class PositionsSuccess   {
    * 値段
    * @return price
    **/
+  
   @Schema(description = "値段")
   
-    public Double getPrice() {
+  public Double getPrice() {  
     return price;
   }
 
-  public void setPrice(Double price) {
+
+
+  public void setPrice(Double price) { 
     this.price = price;
   }
 
-  public PositionsSuccess leavesQty(Double leavesQty) {
+  public PositionsSuccess leavesQty(Double leavesQty) { 
+
     this.leavesQty = leavesQty;
     return this;
   }
@@ -259,17 +366,21 @@ public class PositionsSuccess   {
    * 残数量（保有数量）
    * @return leavesQty
    **/
+  
   @Schema(description = "残数量（保有数量）")
   
-    public Double getLeavesQty() {
+  public Double getLeavesQty() {  
     return leavesQty;
   }
 
-  public void setLeavesQty(Double leavesQty) {
+
+
+  public void setLeavesQty(Double leavesQty) { 
     this.leavesQty = leavesQty;
   }
 
-  public PositionsSuccess holdQty(Double holdQty) {
+  public PositionsSuccess holdQty(Double holdQty) { 
+
     this.holdQty = holdQty;
     return this;
   }
@@ -278,17 +389,21 @@ public class PositionsSuccess   {
    * 拘束数量（返済のために拘束されている数量）
    * @return holdQty
    **/
+  
   @Schema(description = "拘束数量（返済のために拘束されている数量）")
   
-    public Double getHoldQty() {
+  public Double getHoldQty() {  
     return holdQty;
   }
 
-  public void setHoldQty(Double holdQty) {
+
+
+  public void setHoldQty(Double holdQty) { 
     this.holdQty = holdQty;
   }
 
-  public PositionsSuccess side(String side) {
+  public PositionsSuccess side(String side) { 
+
     this.side = side;
     return this;
   }
@@ -297,17 +412,21 @@ public class PositionsSuccess   {
    * 売買区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>売</td>       </tr>       <tr>           <td>2</td>           <td>買</td>       </tr>   </tbody> </table>
    * @return side
    **/
+  
   @Schema(description = "売買区分 <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>売</td>       </tr>       <tr>           <td>2</td>           <td>買</td>       </tr>   </tbody> </table>")
   
-    public String getSide() {
+  public String getSide() {  
     return side;
   }
 
-  public void setSide(String side) {
+
+
+  public void setSide(String side) { 
     this.side = side;
   }
 
-  public PositionsSuccess expenses(Double expenses) {
+  public PositionsSuccess expenses(Double expenses) { 
+
     this.expenses = expenses;
     return this;
   }
@@ -316,17 +435,21 @@ public class PositionsSuccess   {
    * 諸経費<br>※信用・先物・オプションの場合のみ
    * @return expenses
    **/
+  
   @Schema(description = "諸経費<br>※信用・先物・オプションの場合のみ")
   
-    public Double getExpenses() {
+  public Double getExpenses() {  
     return expenses;
   }
 
-  public void setExpenses(Double expenses) {
+
+
+  public void setExpenses(Double expenses) { 
     this.expenses = expenses;
   }
 
-  public PositionsSuccess commission(Double commission) {
+  public PositionsSuccess commission(Double commission) { 
+
     this.commission = commission;
     return this;
   }
@@ -335,17 +458,21 @@ public class PositionsSuccess   {
    * 手数料<br>※信用・先物・オプションの場合のみ
    * @return commission
    **/
+  
   @Schema(description = "手数料<br>※信用・先物・オプションの場合のみ")
   
-    public Double getCommission() {
+  public Double getCommission() {  
     return commission;
   }
 
-  public void setCommission(Double commission) {
+
+
+  public void setCommission(Double commission) { 
     this.commission = commission;
   }
 
-  public PositionsSuccess commissionTax(Double commissionTax) {
+  public PositionsSuccess commissionTax(Double commissionTax) { 
+
     this.commissionTax = commissionTax;
     return this;
   }
@@ -354,17 +481,21 @@ public class PositionsSuccess   {
    * 手数料消費税<br>※信用・先物・オプションの場合のみ
    * @return commissionTax
    **/
+  
   @Schema(description = "手数料消費税<br>※信用・先物・オプションの場合のみ")
   
-    public Double getCommissionTax() {
+  public Double getCommissionTax() {  
     return commissionTax;
   }
 
-  public void setCommissionTax(Double commissionTax) {
+
+
+  public void setCommissionTax(Double commissionTax) { 
     this.commissionTax = commissionTax;
   }
 
-  public PositionsSuccess expireDay(Integer expireDay) {
+  public PositionsSuccess expireDay(Integer expireDay) { 
+
     this.expireDay = expireDay;
     return this;
   }
@@ -373,17 +504,21 @@ public class PositionsSuccess   {
    * 返済期日<br>※信用・先物・オプションの場合のみ
    * @return expireDay
    **/
+  
   @Schema(description = "返済期日<br>※信用・先物・オプションの場合のみ")
   
-    public Integer getExpireDay() {
+  public Integer getExpireDay() {  
     return expireDay;
   }
 
-  public void setExpireDay(Integer expireDay) {
+
+
+  public void setExpireDay(Integer expireDay) { 
     this.expireDay = expireDay;
   }
 
-  public PositionsSuccess marginTradeType(Integer marginTradeType) {
+  public PositionsSuccess marginTradeType(Integer marginTradeType) { 
+
     this.marginTradeType = marginTradeType;
     return this;
   }
@@ -392,17 +527,21 @@ public class PositionsSuccess   {
    * 信用取引区分<br>※信用の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>制度信用</td>       </tr>       <tr>           <td>2</td>           <td>一般信用（長期）</td>       </tr>       <tr>           <td>3</td>           <td>一般信用（デイトレ）</td>       </tr>   </tbody> </table>
    * @return marginTradeType
    **/
+  
   @Schema(description = "信用取引区分<br>※信用の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>1</td>           <td>制度信用</td>       </tr>       <tr>           <td>2</td>           <td>一般信用（長期）</td>       </tr>       <tr>           <td>3</td>           <td>一般信用（デイトレ）</td>       </tr>   </tbody> </table>")
   
-    public Integer getMarginTradeType() {
+  public Integer getMarginTradeType() {  
     return marginTradeType;
   }
 
-  public void setMarginTradeType(Integer marginTradeType) {
+
+
+  public void setMarginTradeType(Integer marginTradeType) { 
     this.marginTradeType = marginTradeType;
   }
 
-  public PositionsSuccess currentPrice(Double currentPrice) {
+  public PositionsSuccess currentPrice(Double currentPrice) { 
+
     this.currentPrice = currentPrice;
     return this;
   }
@@ -411,17 +550,21 @@ public class PositionsSuccess   {
    * 現在値<br>追加情報出力フラグ：falseの場合、null
    * @return currentPrice
    **/
+  
   @Schema(description = "現在値<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getCurrentPrice() {
+  public Double getCurrentPrice() {  
     return currentPrice;
   }
 
-  public void setCurrentPrice(Double currentPrice) {
+
+
+  public void setCurrentPrice(Double currentPrice) { 
     this.currentPrice = currentPrice;
   }
 
-  public PositionsSuccess valuation(Double valuation) {
+  public PositionsSuccess valuation(Double valuation) { 
+
     this.valuation = valuation;
     return this;
   }
@@ -430,17 +573,21 @@ public class PositionsSuccess   {
    * 評価金額<br>追加情報出力フラグ：falseの場合、null
    * @return valuation
    **/
+  
   @Schema(description = "評価金額<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getValuation() {
+  public Double getValuation() {  
     return valuation;
   }
 
-  public void setValuation(Double valuation) {
+
+
+  public void setValuation(Double valuation) { 
     this.valuation = valuation;
   }
 
-  public PositionsSuccess profitLoss(Double profitLoss) {
+  public PositionsSuccess profitLoss(Double profitLoss) { 
+
     this.profitLoss = profitLoss;
     return this;
   }
@@ -449,17 +596,21 @@ public class PositionsSuccess   {
    * 評価損益額<br>追加情報出力フラグ：falseの場合、null
    * @return profitLoss
    **/
+  
   @Schema(description = "評価損益額<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getProfitLoss() {
+  public Double getProfitLoss() {  
     return profitLoss;
   }
 
-  public void setProfitLoss(Double profitLoss) {
+
+
+  public void setProfitLoss(Double profitLoss) { 
     this.profitLoss = profitLoss;
   }
 
-  public PositionsSuccess profitLossRate(Double profitLossRate) {
+  public PositionsSuccess profitLossRate(Double profitLossRate) { 
+
     this.profitLossRate = profitLossRate;
     return this;
   }
@@ -468,16 +619,18 @@ public class PositionsSuccess   {
    * 評価損益率<br>追加情報出力フラグ：falseの場合、null
    * @return profitLossRate
    **/
+  
   @Schema(description = "評価損益率<br>追加情報出力フラグ：falseの場合、null")
   
-    public Double getProfitLossRate() {
+  public Double getProfitLossRate() {  
     return profitLossRate;
   }
 
-  public void setProfitLossRate(Double profitLossRate) {
+
+
+  public void setProfitLossRate(Double profitLossRate) { 
     this.profitLossRate = profitLossRate;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

@@ -8,6 +8,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +20,8 @@ import javax.validation.constraints.*;
  * RequestUnregister
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RequestUnregister   {
@@ -23,7 +29,8 @@ public class RequestUnregister   {
   @Valid
   private List<RequestRegisterSymbols> symbols = null;
 
-  public RequestUnregister symbols(List<RequestRegisterSymbols> symbols) {
+  public RequestUnregister symbols(List<RequestRegisterSymbols> symbols) { 
+
     this.symbols = symbols;
     return this;
   }
@@ -40,16 +47,18 @@ public class RequestUnregister   {
    * ※為替銘柄を登録する場合、銘柄名は\"通貨A\" + \"/\" + \"通貨B\"、市場コードは\"300\"で指定してください。 例：'Symbol': 'EUR/USD', \"Exchange\": 300
    * @return symbols
    **/
+  
   @Schema(description = "※為替銘柄を登録する場合、銘柄名は\"通貨A\" + \"/\" + \"通貨B\"、市場コードは\"300\"で指定してください。 例：'Symbol': 'EUR/USD', \"Exchange\": 300")
-      @Valid
-    public List<RequestRegisterSymbols> getSymbols() {
+  @Valid
+  public List<RequestRegisterSymbols> getSymbols() {  
     return symbols;
   }
 
-  public void setSymbols(List<RequestRegisterSymbols> symbols) {
+
+
+  public void setSymbols(List<RequestRegisterSymbols> symbols) { 
     this.symbols = symbols;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

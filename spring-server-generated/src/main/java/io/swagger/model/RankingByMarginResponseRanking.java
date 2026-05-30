@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,41 +17,74 @@ import javax.validation.constraints.*;
  * RankingByMarginResponseRanking
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RankingByMarginResponseRanking   {
   @JsonProperty("No")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer no = null;
 
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("SymbolName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbolName = null;
 
   @JsonProperty("SellRapidPaymentPercentage")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double sellRapidPaymentPercentage = null;
 
   @JsonProperty("SellLastWeekRatio")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double sellLastWeekRatio = null;
 
   @JsonProperty("BuyRapidPaymentPercentage")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double buyRapidPaymentPercentage = null;
 
   @JsonProperty("BuyLastWeekRatio")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double buyLastWeekRatio = null;
 
   @JsonProperty("Ratio")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double ratio = null;
 
   @JsonProperty("ExchangeName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String exchangeName = null;
 
   @JsonProperty("CategoryName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String categoryName = null;
 
-  public RankingByMarginResponseRanking no(Integer no) {
+
+  public RankingByMarginResponseRanking no(Integer no) { 
+
     this.no = no;
     return this;
   }
@@ -55,17 +93,21 @@ public class RankingByMarginResponseRanking   {
    * 順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）
    * @return no
    **/
+  
   @Schema(description = "順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）")
   
-    public Integer getNo() {
+  public Integer getNo() {  
     return no;
   }
 
-  public void setNo(Integer no) {
+
+
+  public void setNo(Integer no) { 
     this.no = no;
   }
 
-  public RankingByMarginResponseRanking symbol(String symbol) {
+  public RankingByMarginResponseRanking symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -74,17 +116,21 @@ public class RankingByMarginResponseRanking   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public RankingByMarginResponseRanking symbolName(String symbolName) {
+  public RankingByMarginResponseRanking symbolName(String symbolName) { 
+
     this.symbolName = symbolName;
     return this;
   }
@@ -93,17 +139,21 @@ public class RankingByMarginResponseRanking   {
    * 銘柄名称
    * @return symbolName
    **/
+  
   @Schema(description = "銘柄名称")
   
-    public String getSymbolName() {
+  public String getSymbolName() {  
     return symbolName;
   }
 
-  public void setSymbolName(String symbolName) {
+
+
+  public void setSymbolName(String symbolName) { 
     this.symbolName = symbolName;
   }
 
-  public RankingByMarginResponseRanking sellRapidPaymentPercentage(Double sellRapidPaymentPercentage) {
+  public RankingByMarginResponseRanking sellRapidPaymentPercentage(Double sellRapidPaymentPercentage) { 
+
     this.sellRapidPaymentPercentage = sellRapidPaymentPercentage;
     return this;
   }
@@ -112,17 +162,21 @@ public class RankingByMarginResponseRanking   {
    * 売残（千株）
    * @return sellRapidPaymentPercentage
    **/
+  
   @Schema(description = "売残（千株）")
   
-    public Double getSellRapidPaymentPercentage() {
+  public Double getSellRapidPaymentPercentage() {  
     return sellRapidPaymentPercentage;
   }
 
-  public void setSellRapidPaymentPercentage(Double sellRapidPaymentPercentage) {
+
+
+  public void setSellRapidPaymentPercentage(Double sellRapidPaymentPercentage) { 
     this.sellRapidPaymentPercentage = sellRapidPaymentPercentage;
   }
 
-  public RankingByMarginResponseRanking sellLastWeekRatio(Double sellLastWeekRatio) {
+  public RankingByMarginResponseRanking sellLastWeekRatio(Double sellLastWeekRatio) { 
+
     this.sellLastWeekRatio = sellLastWeekRatio;
     return this;
   }
@@ -131,17 +185,21 @@ public class RankingByMarginResponseRanking   {
    * 売残前週比
    * @return sellLastWeekRatio
    **/
+  
   @Schema(description = "売残前週比")
   
-    public Double getSellLastWeekRatio() {
+  public Double getSellLastWeekRatio() {  
     return sellLastWeekRatio;
   }
 
-  public void setSellLastWeekRatio(Double sellLastWeekRatio) {
+
+
+  public void setSellLastWeekRatio(Double sellLastWeekRatio) { 
     this.sellLastWeekRatio = sellLastWeekRatio;
   }
 
-  public RankingByMarginResponseRanking buyRapidPaymentPercentage(Double buyRapidPaymentPercentage) {
+  public RankingByMarginResponseRanking buyRapidPaymentPercentage(Double buyRapidPaymentPercentage) { 
+
     this.buyRapidPaymentPercentage = buyRapidPaymentPercentage;
     return this;
   }
@@ -150,17 +208,21 @@ public class RankingByMarginResponseRanking   {
    * 買残（千株）
    * @return buyRapidPaymentPercentage
    **/
+  
   @Schema(description = "買残（千株）")
   
-    public Double getBuyRapidPaymentPercentage() {
+  public Double getBuyRapidPaymentPercentage() {  
     return buyRapidPaymentPercentage;
   }
 
-  public void setBuyRapidPaymentPercentage(Double buyRapidPaymentPercentage) {
+
+
+  public void setBuyRapidPaymentPercentage(Double buyRapidPaymentPercentage) { 
     this.buyRapidPaymentPercentage = buyRapidPaymentPercentage;
   }
 
-  public RankingByMarginResponseRanking buyLastWeekRatio(Double buyLastWeekRatio) {
+  public RankingByMarginResponseRanking buyLastWeekRatio(Double buyLastWeekRatio) { 
+
     this.buyLastWeekRatio = buyLastWeekRatio;
     return this;
   }
@@ -169,17 +231,21 @@ public class RankingByMarginResponseRanking   {
    * 買残前週比
    * @return buyLastWeekRatio
    **/
+  
   @Schema(description = "買残前週比")
   
-    public Double getBuyLastWeekRatio() {
+  public Double getBuyLastWeekRatio() {  
     return buyLastWeekRatio;
   }
 
-  public void setBuyLastWeekRatio(Double buyLastWeekRatio) {
+
+
+  public void setBuyLastWeekRatio(Double buyLastWeekRatio) { 
     this.buyLastWeekRatio = buyLastWeekRatio;
   }
 
-  public RankingByMarginResponseRanking ratio(Double ratio) {
+  public RankingByMarginResponseRanking ratio(Double ratio) { 
+
     this.ratio = ratio;
     return this;
   }
@@ -188,17 +254,21 @@ public class RankingByMarginResponseRanking   {
    * 倍率
    * @return ratio
    **/
+  
   @Schema(description = "倍率")
   
-    public Double getRatio() {
+  public Double getRatio() {  
     return ratio;
   }
 
-  public void setRatio(Double ratio) {
+
+
+  public void setRatio(Double ratio) { 
     this.ratio = ratio;
   }
 
-  public RankingByMarginResponseRanking exchangeName(String exchangeName) {
+  public RankingByMarginResponseRanking exchangeName(String exchangeName) { 
+
     this.exchangeName = exchangeName;
     return this;
   }
@@ -207,17 +277,21 @@ public class RankingByMarginResponseRanking   {
    * 市場名
    * @return exchangeName
    **/
+  
   @Schema(description = "市場名")
   
-    public String getExchangeName() {
+  public String getExchangeName() {  
     return exchangeName;
   }
 
-  public void setExchangeName(String exchangeName) {
+
+
+  public void setExchangeName(String exchangeName) { 
     this.exchangeName = exchangeName;
   }
 
-  public RankingByMarginResponseRanking categoryName(String categoryName) {
+  public RankingByMarginResponseRanking categoryName(String categoryName) { 
+
     this.categoryName = categoryName;
     return this;
   }
@@ -226,16 +300,18 @@ public class RankingByMarginResponseRanking   {
    * 業種名
    * @return categoryName
    **/
+  
   @Schema(description = "業種名")
   
-    public String getCategoryName() {
+  public String getCategoryName() {  
     return categoryName;
   }
 
-  public void setCategoryName(String categoryName) {
+
+
+  public void setCategoryName(String categoryName) { 
     this.categoryName = categoryName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

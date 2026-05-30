@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,20 +17,32 @@ import javax.validation.constraints.*;
  * WalletOptionSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class WalletOptionSuccess   {
   @JsonProperty("OptionBuyTradeLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double optionBuyTradeLimit = null;
 
   @JsonProperty("OptionSellTradeLimit")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double optionSellTradeLimit = null;
 
   @JsonProperty("MarginRequirement")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double marginRequirement = null;
 
-  public WalletOptionSuccess optionBuyTradeLimit(Double optionBuyTradeLimit) {
+
+  public WalletOptionSuccess optionBuyTradeLimit(Double optionBuyTradeLimit) { 
+
     this.optionBuyTradeLimit = optionBuyTradeLimit;
     return this;
   }
@@ -34,17 +51,21 @@ public class WalletOptionSuccess   {
    * 買新規建玉可能額
    * @return optionBuyTradeLimit
    **/
+  
   @Schema(description = "買新規建玉可能額")
   
-    public Double getOptionBuyTradeLimit() {
+  public Double getOptionBuyTradeLimit() {  
     return optionBuyTradeLimit;
   }
 
-  public void setOptionBuyTradeLimit(Double optionBuyTradeLimit) {
+
+
+  public void setOptionBuyTradeLimit(Double optionBuyTradeLimit) { 
     this.optionBuyTradeLimit = optionBuyTradeLimit;
   }
 
-  public WalletOptionSuccess optionSellTradeLimit(Double optionSellTradeLimit) {
+  public WalletOptionSuccess optionSellTradeLimit(Double optionSellTradeLimit) { 
+
     this.optionSellTradeLimit = optionSellTradeLimit;
     return this;
   }
@@ -53,17 +74,21 @@ public class WalletOptionSuccess   {
    * 売新規建玉可能額
    * @return optionSellTradeLimit
    **/
+  
   @Schema(description = "売新規建玉可能額")
   
-    public Double getOptionSellTradeLimit() {
+  public Double getOptionSellTradeLimit() {  
     return optionSellTradeLimit;
   }
 
-  public void setOptionSellTradeLimit(Double optionSellTradeLimit) {
+
+
+  public void setOptionSellTradeLimit(Double optionSellTradeLimit) { 
     this.optionSellTradeLimit = optionSellTradeLimit;
   }
 
-  public WalletOptionSuccess marginRequirement(Double marginRequirement) {
+  public WalletOptionSuccess marginRequirement(Double marginRequirement) { 
+
     this.marginRequirement = marginRequirement;
     return this;
   }
@@ -72,16 +97,18 @@ public class WalletOptionSuccess   {
    * 必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。
    * @return marginRequirement
    **/
+  
   @Schema(description = "必要証拠金額<br>※銘柄指定の場合のみ。<br>※銘柄が指定されなかった場合、空を返す。")
   
-    public Double getMarginRequirement() {
+  public Double getMarginRequirement() {  
     return marginRequirement;
   }
 
-  public void setMarginRequirement(Double marginRequirement) {
+
+
+  public void setMarginRequirement(Double marginRequirement) { 
     this.marginRequirement = marginRequirement;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

@@ -7,6 +7,11 @@ import io.swagger.model.MarginPremiumResponseDayTrade;
 import io.swagger.model.MarginPremiumResponseGeneralMargin;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,20 +19,32 @@ import javax.validation.constraints.*;
  * MarginPremiumResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class MarginPremiumResponse   {
   @JsonProperty("Symbol")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String symbol = null;
 
   @JsonProperty("GeneralMargin")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private MarginPremiumResponseGeneralMargin generalMargin = null;
 
   @JsonProperty("DayTrade")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private MarginPremiumResponseDayTrade dayTrade = null;
 
-  public MarginPremiumResponse symbol(String symbol) {
+
+  public MarginPremiumResponse symbol(String symbol) { 
+
     this.symbol = symbol;
     return this;
   }
@@ -36,17 +53,21 @@ public class MarginPremiumResponse   {
    * 銘柄コード
    * @return symbol
    **/
+  
   @Schema(description = "銘柄コード")
   
-    public String getSymbol() {
+  public String getSymbol() {  
     return symbol;
   }
 
-  public void setSymbol(String symbol) {
+
+
+  public void setSymbol(String symbol) { 
     this.symbol = symbol;
   }
 
-  public MarginPremiumResponse generalMargin(MarginPremiumResponseGeneralMargin generalMargin) {
+  public MarginPremiumResponse generalMargin(MarginPremiumResponseGeneralMargin generalMargin) { 
+
     this.generalMargin = generalMargin;
     return this;
   }
@@ -55,18 +76,22 @@ public class MarginPremiumResponse   {
    * Get generalMargin
    * @return generalMargin
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public MarginPremiumResponseGeneralMargin getGeneralMargin() {
+@Valid
+  public MarginPremiumResponseGeneralMargin getGeneralMargin() {  
     return generalMargin;
   }
 
-  public void setGeneralMargin(MarginPremiumResponseGeneralMargin generalMargin) {
+
+
+  public void setGeneralMargin(MarginPremiumResponseGeneralMargin generalMargin) { 
     this.generalMargin = generalMargin;
   }
 
-  public MarginPremiumResponse dayTrade(MarginPremiumResponseDayTrade dayTrade) {
+  public MarginPremiumResponse dayTrade(MarginPremiumResponseDayTrade dayTrade) { 
+
     this.dayTrade = dayTrade;
     return this;
   }
@@ -75,17 +100,19 @@ public class MarginPremiumResponse   {
    * Get dayTrade
    * @return dayTrade
    **/
+  
   @Schema(description = "")
   
-    @Valid
-    public MarginPremiumResponseDayTrade getDayTrade() {
+@Valid
+  public MarginPremiumResponseDayTrade getDayTrade() {  
     return dayTrade;
   }
 
-  public void setDayTrade(MarginPremiumResponseDayTrade dayTrade) {
+
+
+  public void setDayTrade(MarginPremiumResponseDayTrade dayTrade) { 
     this.dayTrade = dayTrade;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,17 +17,26 @@ import javax.validation.constraints.*;
  * OrderSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class OrderSuccess   {
   @JsonProperty("Result")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer result = null;
 
   @JsonProperty("OrderId")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String orderId = null;
 
-  public OrderSuccess result(Integer result) {
+
+  public OrderSuccess result(Integer result) { 
+
     this.result = result;
     return this;
   }
@@ -31,17 +45,21 @@ public class OrderSuccess   {
    * 結果コード<br>0が成功。それ以外はエラーコード。
    * @return result
    **/
+  
   @Schema(example = "0", description = "結果コード<br>0が成功。それ以外はエラーコード。")
   
-    public Integer getResult() {
+  public Integer getResult() {  
     return result;
   }
 
-  public void setResult(Integer result) {
+
+
+  public void setResult(Integer result) { 
     this.result = result;
   }
 
-  public OrderSuccess orderId(String orderId) {
+  public OrderSuccess orderId(String orderId) { 
+
     this.orderId = orderId;
     return this;
   }
@@ -50,16 +68,18 @@ public class OrderSuccess   {
    * 受付注文番号
    * @return orderId
    **/
+  
   @Schema(example = "20200529A01N06848002", description = "受付注文番号")
   
-    public String getOrderId() {
+  public String getOrderId() {  
     return orderId;
   }
 
-  public void setOrderId(String orderId) {
+
+
+  public void setOrderId(String orderId) { 
     this.orderId = orderId;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

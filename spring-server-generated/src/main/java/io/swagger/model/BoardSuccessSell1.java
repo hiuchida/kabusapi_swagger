@@ -6,6 +6,11 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,23 +19,38 @@ import javax.validation.constraints.*;
  */
 @Schema(description = "売気配数量1本目")
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class BoardSuccessSell1   {
   @JsonProperty("Time")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private OffsetDateTime time = null;
 
   @JsonProperty("Sign")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String sign = null;
 
   @JsonProperty("Price")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double price = null;
 
   @JsonProperty("Qty")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double qty = null;
 
-  public BoardSuccessSell1 time(OffsetDateTime time) {
+
+  public BoardSuccessSell1 time(OffsetDateTime time) { 
+
     this.time = time;
     return this;
   }
@@ -39,18 +59,22 @@ public class BoardSuccessSell1   {
    * 時刻<br>※株式銘柄の場合のみ
    * @return time
    **/
+  
   @Schema(description = "時刻<br>※株式銘柄の場合のみ")
   
-    @Valid
-    public OffsetDateTime getTime() {
+@Valid
+  public OffsetDateTime getTime() {  
     return time;
   }
 
-  public void setTime(OffsetDateTime time) {
+
+
+  public void setTime(OffsetDateTime time) { 
     this.time = time;
   }
 
-  public BoardSuccessSell1 sign(String sign) {
+  public BoardSuccessSell1 sign(String sign) { 
+
     this.sign = sign;
     return this;
   }
@@ -59,17 +83,21 @@ public class BoardSuccessSell1   {
    * 気配フラグ<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>
    * @return sign
    **/
+  
   @Schema(description = "気配フラグ<br>※株式・先物・オプション銘柄の場合のみ <table>   <thead>       <tr>           <th>定義値</th>           <th>説明</th>       </tr>   </thead>   <tbody>       <tr>           <td>0000</td>           <td>事象なし</td>       </tr>       <tr>           <td>0101</td>           <td>一般気配</td>       </tr>       <tr>           <td>0102</td>           <td>特別気配</td>       </tr>       <tr>           <td>0103</td>           <td>注意気配</td>       </tr>       <tr>           <td>0107</td>           <td>寄前気配</td>       </tr>       <tr>           <td>0108</td>           <td>停止前特別気配</td>       </tr>       <tr>           <td>0109</td>           <td>引け後気配</td>       </tr>       <tr>           <td>0116</td>           <td>寄前気配約定成立ポイントなし</td>       </tr>       <tr>           <td>0117</td>           <td>寄前気配約定成立ポイントあり</td>       </tr>       <tr>           <td>0118</td>           <td>連続約定気配</td>       </tr>       <tr>           <td>0119</td>           <td>停止前の連続約定気配</td>       </tr>       <tr>           <td>0120</td>           <td>買い上がり売り下がり中</td>       </tr>   </tbody> </table>")
   
-    public String getSign() {
+  public String getSign() {  
     return sign;
   }
 
-  public void setSign(String sign) {
+
+
+  public void setSign(String sign) { 
     this.sign = sign;
   }
 
-  public BoardSuccessSell1 price(Double price) {
+  public BoardSuccessSell1 price(Double price) { 
+
     this.price = price;
     return this;
   }
@@ -78,17 +106,21 @@ public class BoardSuccessSell1   {
    * 値段<br>※株式・先物・オプション銘柄の場合のみ
    * @return price
    **/
+  
   @Schema(description = "値段<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getPrice() {
+  public Double getPrice() {  
     return price;
   }
 
-  public void setPrice(Double price) {
+
+
+  public void setPrice(Double price) { 
     this.price = price;
   }
 
-  public BoardSuccessSell1 qty(Double qty) {
+  public BoardSuccessSell1 qty(Double qty) { 
+
     this.qty = qty;
     return this;
   }
@@ -97,16 +129,18 @@ public class BoardSuccessSell1   {
    * 数量<br>※株式・先物・オプション銘柄の場合のみ
    * @return qty
    **/
+  
   @Schema(description = "数量<br>※株式・先物・オプション銘柄の場合のみ")
   
-    public Double getQty() {
+  public Double getQty() {  
     return qty;
   }
 
-  public void setQty(Double qty) {
+
+
+  public void setQty(Double qty) { 
     this.qty = qty;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

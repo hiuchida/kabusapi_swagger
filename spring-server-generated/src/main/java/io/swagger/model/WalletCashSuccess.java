@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,20 +17,32 @@ import javax.validation.constraints.*;
  * WalletCashSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class WalletCashSuccess   {
   @JsonProperty("StockAccountWallet")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double stockAccountWallet = null;
 
   @JsonProperty("AuKCStockAccountWallet")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double auKCStockAccountWallet = null;
 
   @JsonProperty("AuJbnStockAccountWallet")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double auJbnStockAccountWallet = null;
 
-  public WalletCashSuccess stockAccountWallet(Double stockAccountWallet) {
+
+  public WalletCashSuccess stockAccountWallet(Double stockAccountWallet) { 
+
     this.stockAccountWallet = stockAccountWallet;
     return this;
   }
@@ -34,17 +51,21 @@ public class WalletCashSuccess   {
    * 現物買付可能額<br> ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する<br> ※auマネーコネクトが無効の場合、auカブコム証券の可能額のみを表示する
    * @return stockAccountWallet
    **/
+  
   @Schema(description = "現物買付可能額<br> ※auマネーコネクトが有効の場合、auじぶん銀行の残高を含めた合計可能額を表示する<br> ※auマネーコネクトが無効の場合、auカブコム証券の可能額のみを表示する")
   
-    public Double getStockAccountWallet() {
+  public Double getStockAccountWallet() {  
     return stockAccountWallet;
   }
 
-  public void setStockAccountWallet(Double stockAccountWallet) {
+
+
+  public void setStockAccountWallet(Double stockAccountWallet) { 
     this.stockAccountWallet = stockAccountWallet;
   }
 
-  public WalletCashSuccess auKCStockAccountWallet(Double auKCStockAccountWallet) {
+  public WalletCashSuccess auKCStockAccountWallet(Double auKCStockAccountWallet) { 
+
     this.auKCStockAccountWallet = auKCStockAccountWallet;
     return this;
   }
@@ -53,17 +74,21 @@ public class WalletCashSuccess   {
    * うち、auカブコム証券可能額
    * @return auKCStockAccountWallet
    **/
+  
   @Schema(description = "うち、auカブコム証券可能額")
   
-    public Double getAuKCStockAccountWallet() {
+  public Double getAuKCStockAccountWallet() {  
     return auKCStockAccountWallet;
   }
 
-  public void setAuKCStockAccountWallet(Double auKCStockAccountWallet) {
+
+
+  public void setAuKCStockAccountWallet(Double auKCStockAccountWallet) { 
     this.auKCStockAccountWallet = auKCStockAccountWallet;
   }
 
-  public WalletCashSuccess auJbnStockAccountWallet(Double auJbnStockAccountWallet) {
+  public WalletCashSuccess auJbnStockAccountWallet(Double auJbnStockAccountWallet) { 
+
     this.auJbnStockAccountWallet = auJbnStockAccountWallet;
     return this;
   }
@@ -72,16 +97,18 @@ public class WalletCashSuccess   {
    * うち、auじぶん銀行残高<br>※auマネーコネクトが無効の場合、「0」を表示する
    * @return auJbnStockAccountWallet
    **/
+  
   @Schema(description = "うち、auじぶん銀行残高<br>※auマネーコネクトが無効の場合、「0」を表示する")
   
-    public Double getAuJbnStockAccountWallet() {
+  public Double getAuJbnStockAccountWallet() {  
     return auJbnStockAccountWallet;
   }
 
-  public void setAuJbnStockAccountWallet(Double auJbnStockAccountWallet) {
+
+
+  public void setAuJbnStockAccountWallet(Double auJbnStockAccountWallet) { 
     this.auJbnStockAccountWallet = auJbnStockAccountWallet;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

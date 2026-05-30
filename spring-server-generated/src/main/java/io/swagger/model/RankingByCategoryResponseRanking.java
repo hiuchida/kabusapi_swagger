@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
+import org.openapitools.jackson.nullable.JsonNullable;
+import io.swagger.configuration.NotUndefined;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -12,38 +17,68 @@ import javax.validation.constraints.*;
  * RankingByCategoryResponseRanking
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2023-06-30T15:11:33.432082584Z[GMT]")
+@NotUndefined
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2026-05-30T09:09:44.624556435Z[GMT]")
 
 
 public class RankingByCategoryResponseRanking   {
   @JsonProperty("No")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Integer no = null;
 
   @JsonProperty("Trend")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String trend = null;
 
   @JsonProperty("AverageRanking")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double averageRanking = null;
 
   @JsonProperty("Category")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String category = null;
 
   @JsonProperty("CategoryName")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String categoryName = null;
 
   @JsonProperty("CurrentPrice")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double currentPrice = null;
 
   @JsonProperty("ChangeRatio")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changeRatio = null;
 
   @JsonProperty("CurrentPriceTime")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private String currentPriceTime = null;
 
   @JsonProperty("ChangePercentage")
+
+  @JsonInclude(JsonInclude.Include.NON_ABSENT)  // Exclude from JSON if absent
+  @JsonSetter(nulls = Nulls.FAIL)    // FAIL setting if the value is null
   private Double changePercentage = null;
 
-  public RankingByCategoryResponseRanking no(Integer no) {
+
+  public RankingByCategoryResponseRanking no(Integer no) { 
+
     this.no = no;
     return this;
   }
@@ -52,17 +87,21 @@ public class RankingByCategoryResponseRanking   {
    * 順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）
    * @return no
    **/
+  
   @Schema(description = "順位<br>※ランキング内で同じ順位が返却される場合があります（10位が2件など）")
   
-    public Integer getNo() {
+  public Integer getNo() {  
     return no;
   }
 
-  public void setNo(Integer no) {
+
+
+  public void setNo(Integer no) { 
     this.no = no;
   }
 
-  public RankingByCategoryResponseRanking trend(String trend) {
+  public RankingByCategoryResponseRanking trend(String trend) { 
+
     this.trend = trend;
     return this;
   }
@@ -71,17 +110,21 @@ public class RankingByCategoryResponseRanking   {
    * トレンド <table>   <thead>       <tr>           <th>定義値</th>           <th>内容</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>対象データ無し</td>       </tr>       <tr>           <td>1</td>           <td>過去10営業日より20位以上上昇</td>       </tr>       <tr>           <td>2</td>           <td>過去10営業日より1～19位上昇</td>       </tr>       <tr>           <td>3</td>           <td>過去10営業日と変わらず</td>       </tr>       <tr>           <td>4</td>           <td>過去10営業日より1～19位下落</td>       </tr>       <tr>           <td>5</td>           <td>過去10営業日より20位以上下落</td>       </tr>   </tbody> </table>
    * @return trend
    **/
+  
   @Schema(description = "トレンド <table>   <thead>       <tr>           <th>定義値</th>           <th>内容</th>       </tr>   </thead>   <tbody>       <tr>           <td>0</td>           <td>対象データ無し</td>       </tr>       <tr>           <td>1</td>           <td>過去10営業日より20位以上上昇</td>       </tr>       <tr>           <td>2</td>           <td>過去10営業日より1～19位上昇</td>       </tr>       <tr>           <td>3</td>           <td>過去10営業日と変わらず</td>       </tr>       <tr>           <td>4</td>           <td>過去10営業日より1～19位下落</td>       </tr>       <tr>           <td>5</td>           <td>過去10営業日より20位以上下落</td>       </tr>   </tbody> </table>")
   
-    public String getTrend() {
+  public String getTrend() {  
     return trend;
   }
 
-  public void setTrend(String trend) {
+
+
+  public void setTrend(String trend) { 
     this.trend = trend;
   }
 
-  public RankingByCategoryResponseRanking averageRanking(Double averageRanking) {
+  public RankingByCategoryResponseRanking averageRanking(Double averageRanking) { 
+
     this.averageRanking = averageRanking;
     return this;
   }
@@ -90,17 +133,21 @@ public class RankingByCategoryResponseRanking   {
    * 平均順位<br>※100位以下は「999」となります
    * @return averageRanking
    **/
+  
   @Schema(description = "平均順位<br>※100位以下は「999」となります")
   
-    public Double getAverageRanking() {
+  public Double getAverageRanking() {  
     return averageRanking;
   }
 
-  public void setAverageRanking(Double averageRanking) {
+
+
+  public void setAverageRanking(Double averageRanking) { 
     this.averageRanking = averageRanking;
   }
 
-  public RankingByCategoryResponseRanking category(String category) {
+  public RankingByCategoryResponseRanking category(String category) { 
+
     this.category = category;
     return this;
   }
@@ -109,17 +156,21 @@ public class RankingByCategoryResponseRanking   {
    * 業種コード
    * @return category
    **/
+  
   @Schema(description = "業種コード")
   
-    public String getCategory() {
+  public String getCategory() {  
     return category;
   }
 
-  public void setCategory(String category) {
+
+
+  public void setCategory(String category) { 
     this.category = category;
   }
 
-  public RankingByCategoryResponseRanking categoryName(String categoryName) {
+  public RankingByCategoryResponseRanking categoryName(String categoryName) { 
+
     this.categoryName = categoryName;
     return this;
   }
@@ -128,17 +179,21 @@ public class RankingByCategoryResponseRanking   {
    * 業種名
    * @return categoryName
    **/
+  
   @Schema(description = "業種名")
   
-    public String getCategoryName() {
+  public String getCategoryName() {  
     return categoryName;
   }
 
-  public void setCategoryName(String categoryName) {
+
+
+  public void setCategoryName(String categoryName) { 
     this.categoryName = categoryName;
   }
 
-  public RankingByCategoryResponseRanking currentPrice(Double currentPrice) {
+  public RankingByCategoryResponseRanking currentPrice(Double currentPrice) { 
+
     this.currentPrice = currentPrice;
     return this;
   }
@@ -147,17 +202,21 @@ public class RankingByCategoryResponseRanking   {
    * 現在値
    * @return currentPrice
    **/
+  
   @Schema(description = "現在値")
   
-    public Double getCurrentPrice() {
+  public Double getCurrentPrice() {  
     return currentPrice;
   }
 
-  public void setCurrentPrice(Double currentPrice) {
+
+
+  public void setCurrentPrice(Double currentPrice) { 
     this.currentPrice = currentPrice;
   }
 
-  public RankingByCategoryResponseRanking changeRatio(Double changeRatio) {
+  public RankingByCategoryResponseRanking changeRatio(Double changeRatio) { 
+
     this.changeRatio = changeRatio;
     return this;
   }
@@ -166,17 +225,21 @@ public class RankingByCategoryResponseRanking   {
    * 前日比
    * @return changeRatio
    **/
+  
   @Schema(description = "前日比")
   
-    public Double getChangeRatio() {
+  public Double getChangeRatio() {  
     return changeRatio;
   }
 
-  public void setChangeRatio(Double changeRatio) {
+
+
+  public void setChangeRatio(Double changeRatio) { 
     this.changeRatio = changeRatio;
   }
 
-  public RankingByCategoryResponseRanking currentPriceTime(String currentPriceTime) {
+  public RankingByCategoryResponseRanking currentPriceTime(String currentPriceTime) { 
+
     this.currentPriceTime = currentPriceTime;
     return this;
   }
@@ -185,17 +248,21 @@ public class RankingByCategoryResponseRanking   {
    * 時刻<br>HH:mm<br>※日付は返しません
    * @return currentPriceTime
    **/
+  
   @Schema(description = "時刻<br>HH:mm<br>※日付は返しません")
   
-    public String getCurrentPriceTime() {
+  public String getCurrentPriceTime() {  
     return currentPriceTime;
   }
 
-  public void setCurrentPriceTime(String currentPriceTime) {
+
+
+  public void setCurrentPriceTime(String currentPriceTime) { 
     this.currentPriceTime = currentPriceTime;
   }
 
-  public RankingByCategoryResponseRanking changePercentage(Double changePercentage) {
+  public RankingByCategoryResponseRanking changePercentage(Double changePercentage) { 
+
     this.changePercentage = changePercentage;
     return this;
   }
@@ -204,16 +271,18 @@ public class RankingByCategoryResponseRanking   {
    * 騰落率（%）
    * @return changePercentage
    **/
+  
   @Schema(description = "騰落率（%）")
   
-    public Double getChangePercentage() {
+  public Double getChangePercentage() {  
     return changePercentage;
   }
 
-  public void setChangePercentage(Double changePercentage) {
+
+
+  public void setChangePercentage(Double changePercentage) { 
     this.changePercentage = changePercentage;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
